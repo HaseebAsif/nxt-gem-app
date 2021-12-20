@@ -1,13 +1,13 @@
 import React from "react";
 
 // SEO
-import SEO from "components/seo";
+import SEO from "../components/seo";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-[url('/assets/background_app.png')] h-[5500px] bg-no-repeat bg-cover">
       <SEO />
-      Hello World
+      <div>Hello World</div>
     </div>
   );
 };
