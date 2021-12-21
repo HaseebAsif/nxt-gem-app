@@ -6,12 +6,12 @@ const WebNavbar = () => {
       <div className="flex-shrink-0 flex items-center">
         <img
           className="block lg:hidden h-8 w-auto"
-          src="assets/Homepage-Assets/nexgen-Logo.png"
+          src="/assets/Homepage-Assets/nexgen-Logo.png"
           alt="NEXGen"
         />
         <img
           className="hidden lg:block h-8 w-auto"
-          src="assets/Homepage-Assets/nexgen-Logo.png"
+          src="/assets/Homepage-Assets/nexgen-Logo.png"
           alt="NEXGen"
         />
       </div>
