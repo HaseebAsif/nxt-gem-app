@@ -3,6 +3,7 @@ import Hero from "../components/hero";
 import Top10Projects from "components/top10Projects";
 // SEO
 import SEO from "../components/seo";
+import MovingHeading from "components/movingHeading";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <SEO />
       <Hero />
       <Top10Projects />
+      <MovingHeading/>
     </div>
   );
 };
