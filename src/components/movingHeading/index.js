@@ -14,25 +14,25 @@ const MovingHeading = ({ heading }) => {
           />
           <Slide bottom cascade>
             <div className={styles.SC_Slide}>
-              <h1 className="text-xl w-max px-4 md:text-3xl text-white">
+              <h1 className="text-xl w-max px-4 md:text-4xl text-white">
                 {heading}
               </h1>
             </div>
             <div className={styles.SC_Slide}>
               {/* <img src={"./assets/Picture-Assets/Top-1.jpg"} /> */}
-              <h1 className="text-xl w-max px-4 md:text-3xl text-white">
+              <h1 className="text-xl w-max px-4 md:text-4xl text-white">
                 {heading}
               </h1>
             </div>
             <div className={styles.SC_Slide}>
               {/* <img src={"./assets/Picture-Assets/Top-1.jpg"} /> */}
-              <h1 className="text-xl w-max px-4 md:text-3xl text-white">
+              <h1 className="text-xl w-max px-4 md:text-4xl text-white">
                 {heading}
               </h1>
             </div>
             <div className={styles.SC_Slide}>
               {/* <img src={"./assets/Picture-Assets/Top-1.jpg"} /> */}
-              <h1 className="text-xl w-max px-4 md:text-3xl text-white">
+              <h1 className="text-xl w-max px-4 md:text-4xl text-white">
                 {heading}
               </h1>
             </div>
