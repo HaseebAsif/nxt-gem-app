@@ -12,7 +12,7 @@ const Home = () => {
       <SEO />
       <Hero />
       <Top10Projects />
-      <MovingHeading />
+      <MovingHeading heading="ONE OF THE LARGEST PLAY-TO-EARN" />
       <TopStories />
     </div>
   );
