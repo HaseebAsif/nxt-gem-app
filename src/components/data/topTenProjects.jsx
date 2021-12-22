@@ -1,4 +1,4 @@
-export const IMAGES = [
+export const TopTenProjectsData = [
   {
     id: 1,
     src: "/assets/Picture-Assets/Blog-11.jpg",
@@ -36,4 +36,3 @@ export const IMAGES = [
     height: "11rem",
   },
 ];
-

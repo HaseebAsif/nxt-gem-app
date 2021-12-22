@@ -1,9 +1,12 @@
 import React from "react";
-import Hero from "../components/hero";
-import Top10Projects from "components/top10Projects";
 // SEO
 import SEO from "../components/seo";
+
+//Components
+import Hero from "../components/hero";
+import Top10Projects from "components/top10Projects";
 import MovingHeading from "components/movingHeading";
+import TopViews from "components/topViews";
 
 const Home = () => {
   return (
@@ -12,6 +15,7 @@ const Home = () => {
       <Hero />
       <Top10Projects />
       <MovingHeading/>
+      <TopViews/>
     </div>
   );
 };

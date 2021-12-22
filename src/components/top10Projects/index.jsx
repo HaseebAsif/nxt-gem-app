@@ -2,7 +2,7 @@ import SectionHeader from "components/sectionHeading";
 import React, { useState } from "react";
 import Slider from "react-slick";
 
-import { IMAGES } from "../data/data";
+import { TopTenProjectsData } from "../data/topTenProjects";
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -86,13 +86,9 @@ const Top10Projects = () => {
   return (
     <div>
       <SectionHeader heading="Top 10 Projects" />
-      {ImageSlider(IMAGES)}
+      {ImageSlider(TopTenProjectsData)}
     </div>
   );
 };
 
 export default Top10Projects;
-
-// 1.
-
-// 2.
