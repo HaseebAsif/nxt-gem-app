@@ -36,7 +36,7 @@
 }
 .slick-slider {
   padding-inline: 10vw;
-  padding-block: 5vw;
+  padding-block: 12vw;
 }
 
 .nextArrow {
@@ -61,7 +61,8 @@
   width: 100%;
   height: 8rem;
   position: relative;
-  background: white;
+  background: linear-gradient(to right, rgb(48, 48, 48) 0%, transparent 100%);
+
   /* box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2); */
   overflow: hidden;
   display: flex;
@@ -85,7 +86,7 @@
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
 }
 
@@ -95,7 +96,6 @@
   width: 20rem;
   position: absolute;
   content: "";
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 1;
 }
 .SC-Slider::before {
@@ -110,7 +110,7 @@
 
 @media screen and (max-width: 400px) {
   .SC-Slide span {
-    padding: 0.3rem;
+    padding: 0rem;
   }
 
   .SC-Slider::before,

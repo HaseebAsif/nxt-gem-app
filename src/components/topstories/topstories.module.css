@@ -1,0 +1,151 @@
+.singlePContainer {
+  background: linear-gradient(-30deg, rgb(3 106 126) 45%, #035b6c 45%);
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.8s all;
+  margin: 2%;
+  padding-bottom: 10px;
+}
+
+.singlePContainer:hover {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.8);
+}
+
+.singlePContainer img {
+  width: 100%;
+  height: 16rem;
+  border-radius: 6px 6px 0px 0px;
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+
+.singlePContainerBody h1 {
+  text-align: center;
+  color: white;
+  letter-spacing: 1.4px;
+  padding: 1rem 0rem 0rem 0rem;
+  margin: 1.2rem 5rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  border-bottom: 0.1px solid white;
+}
+
+@media screen and (min-width: 400px) {
+  .singlePContainerBody.firstProject h1 {
+    margin: 1.2rem 2.4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .SingleProjectQ {
+    padding-right: 30px !important;
+  }
+}
+
+.container_top_stories {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (max-width: 1200px) {
+  .container_top_stories {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 992px) {
+  .container_top_stories {
+    max-width: 960px;
+  }
+}
+@media (max-width: 768px) {
+  .container_top_stories {
+    max-width: 720px;
+  }
+}
+@media (max-width: 576px) {
+  .container_top_stories {
+    max-width: 540px;
+  }
+}
+
+/*==================== BUTTON ANIMATION START ====================*/
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0rem;
+}
+
+.wrapper button {
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+  border-radius: 3px;
+}
+
+.wrapper button span {
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper button:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: white;
+  transition: all 0.35s;
+}
+
+.wrapper button:hover {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.wrapper button:hover:after {
+  height: 100%;
+}
+/*==================== BUTTON ANIMATION END ====================*/
+
+/* ============ PROJECT BLUR ON HOVER START ============= */
+
+/* SIBLING FADE: fade out siblings around a hovered item */
+.sibling_fade {
+  visibility: hidden;
+}
+/* Prevents :hover from triggering in the gaps between items */
+
+.sibling_fade > * {
+  visibility: visible;
+}
+/* Brings the child items back in, even though the parent is `hidden` */
+
+.sibling_fade > * {
+  transition: opacity 250ms linear 200ms, transform 250ms ease-in-out 200ms;
+}
+/* Makes the fades smooth with a slight delay to prevent jumps as the mouse moves between items */
+
+.sibling_fade:hover > * {
+  opacity: 0.4;
+  transform: scale(0.9);
+}
+/* Fade out all items when the parent is hovered */
+
+.sibling_fade > *:hover {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 10ms, 10ms;
+}
