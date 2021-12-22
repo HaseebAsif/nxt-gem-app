@@ -23,7 +23,7 @@ const SingleCard = ({ Title, Image, index, styles }) => {
                 </div>
                 <div className={styles.wrapper}>
                   <button>
-                    <span>View More</span>
+                    <span>Read More</span>
                   </button>
                 </div>
               </div>
