@@ -1,2 +1,6 @@
-.single_large_video_views div{
+@media (max-width: 650px) {
+  .single_large_video_views div {
+    width: 95vw !important;
+    height: 40vh !important;
+  }
 }
