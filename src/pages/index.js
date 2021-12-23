@@ -9,10 +9,11 @@ import MovingHeading from "components/movingHeading";
 import TopViews from "components/topViews";
 import TopStories from "components/topstories";
 import OurTeam from "components/ourTeam";
+import OurPartners from "components/ourpartners";
 
 const Home = () => {
   return (
-    <div className="bg-[url('/assets/background_app.png')] h-[5500px] bg-no-repeat bg-cover">
+    <div className="bg-[url('/assets/background_app.png')] h-fit bg-no-repeat bg-cover">
       <SEO />
       <Hero />
       <Top10Projects />
@@ -20,6 +21,7 @@ const Home = () => {
       <TopViews />
       <TopStories />
       <OurTeam />
+      <OurPartners/>
     </div>
   );
 };
