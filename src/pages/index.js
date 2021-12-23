@@ -8,6 +8,7 @@ import Top10Projects from "components/top10Projects";
 import MovingHeading from "components/movingHeading";
 import TopViews from "components/topViews";
 import TopStories from "components/topstories";
+import OurTeam from "components/ourTeam";
 
 const Home = () => {
   return (
@@ -16,8 +17,9 @@ const Home = () => {
       <Hero />
       <Top10Projects />
       <MovingHeading heading="ONE OF THE LARGEST PLAY-TO-EARN" />
-      <TopStories />
       <TopViews />
+      <TopStories />
+      <OurTeam />
     </div>
   );
 };

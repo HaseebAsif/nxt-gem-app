@@ -1,7 +1,7 @@
 import SectionHeader from "components/sectionHeading";
 import React from "react";
 
-import { states } from "../data/topstoriesdata";
+import { topStoriesData } from "../data/topstoriesdata";
 import SingleCard from "./singlecard";
 import styles from "./topstories.module.css";
 
@@ -14,7 +14,7 @@ const TopStories = () => {
           <div
             className={`flex flex-wrap items-center justify-center overflow-hidden ${styles.sibling_fade}`}
           >
-            {states.projects.map((prev, i) => {
+            {topStoriesData.map((prev, i) => {
               const { title, img } = prev;
               return (
                 <SingleCard
