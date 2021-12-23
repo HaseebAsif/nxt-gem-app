@@ -9,7 +9,7 @@ const MovingHeading = ({ heading }) => {
       <div className={styles.SkillsContainer}>
         <div className={styles.SC_Slider}>
           <img
-            src="/assets/Picture-Assets/Top-1.jpg"
+            src="/assets/Top-Stories-Assets/Top-Stories-1.jpg"
             className="absolute w-1/4 h-full left-0 z-50 object-contain md:w-max"
           />
           <Slide bottom cascade>

@@ -5,9 +5,9 @@ import React from "react";
 
 const TopViews = () => {
   return (
-    <div>
+    <div className="mb-24 sm:mb-48">
       <div className="mt-24">
-        <SectionHeader heading="Top Views" />
+        <SectionHeader heading="Top Views" value="2" />
       </div>
       <div className="flex items-center justify-around flex-col lg:flex-row lg:mx-12 xl:mx-48">
         <SingleLargeVideoViews />

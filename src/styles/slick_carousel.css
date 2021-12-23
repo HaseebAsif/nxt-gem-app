@@ -15,7 +15,6 @@
   top: 45%;
   left: 250px;
   z-index: 100;
-  cursor: pointer;
   font-size: 2.5rem;
   display: flex;
   align-items: center;
@@ -23,7 +22,6 @@
 }
 .slick-slider {
   padding-inline: 10vw;
-  padding-block: 12vw;
 }
 
 .nextArrow {
@@ -31,6 +29,5 @@
   top: 45%;
   right: 250px;
   z-index: 100;
-  cursor: pointer;
   font-size: 2.5rem;
 }

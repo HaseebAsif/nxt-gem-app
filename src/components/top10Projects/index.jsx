@@ -7,7 +7,7 @@ import { TopTenProjectsData } from "../data/topTenProjects";
 const NextArrow = ({ onClick }) => {
   return (
     <div
-      className="nextArrow text-blue-300 rounded-full bg-black opacity-50 px-5 py-2 font-bold text-xl"
+      className="nextArrow hidden sm:block text-blue-300 rounded-full bg-black opacity-50 px-5 py-2 font-bold text-xl"
       onClick={onClick}
     >
       <div>
@@ -20,7 +20,7 @@ const NextArrow = ({ onClick }) => {
 const PrevArrow = ({ onClick }) => {
   return (
     <div
-      className="prevArrow text-blue-300 rounded-full bg-black opacity-50 px-5 py-2 font-bold text-xl"
+      className="prevArrow hidden sm:block text-blue-300 rounded-full bg-black opacity-50 px-5 py-2 font-bold text-xl"
       onClick={onClick}
     >
       <div>
@@ -84,8 +84,8 @@ const ImageSlider = (images, slidesToShow = 3) => {
 
 const Top10Projects = () => {
   return (
-    <div>
-      <SectionHeader heading="Top 10 Projects" />
+    <div className="mb-20">
+      <SectionHeader heading="Top 10 Projects" value="1" />
       {ImageSlider(TopTenProjectsData)}
     </div>
   );

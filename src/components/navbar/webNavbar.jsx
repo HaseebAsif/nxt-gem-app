@@ -2,7 +2,7 @@ import React from "react";
 
 const WebNavbar = () => {
   return (
-    <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
+    <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start overflow-hidden">
       <div className="flex-shrink-0 flex items-center">
         <img
           className="block lg:hidden h-8 w-auto"

@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white p-20">
-      <div className="grid grid-cols-1 my-5 lg:grid-cols-3 md:grid-cols-2">
-        <div>
+    <div className="bg-black text-white p-[20px] sm:p-20">
+      <div className="grid grid-cols-1 py-5 lg:grid-cols-3 md:grid-cols-2">
+        <div className="mt-4 sm:mt-0">
           <div className="text-2xl font-bold">Submit Project</div>
           <div>
             <div>Lorem, ipsum.</div>
@@ -12,9 +12,9 @@ const Footer = () => {
             <div>Lorem, ipsum.</div>
           </div>
         </div>
-        <div>
+        <div className="mt-4 sm:mt-0">
           <div className="text-2xl font-bold">Contact</div>
-          <div className="w-11/12">
+          <div className="sm:w-11/12">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             nisi laudantium blanditiis omnis, quasi similique facilis adipisci
             ullam ab dicta.Lorem ipsum dolor sit amet consectetur adipisicing
@@ -22,7 +22,7 @@ const Footer = () => {
             facilis adipisci ullam ab dicta.
           </div>
         </div>
-        <div className="ml-5">
+        <div className="mt-4 sm:ml-5 sm:mt-0">
           <div className="text-2xl font-bold">Stay in touch</div>
           <div className="flex flex-col ">
             <input type="text" className="rounded-md my-3 text-black p-1" />
@@ -41,7 +41,7 @@ const Footer = () => {
             className="w-48"
           />
         </div>
-        <div>
+        <div className="flex h-fit mt-4 sm:mt-0">
           <a href="/" className="border-r-2 pr-3 mr-3">
             Terms & Condition
           </a>
@@ -50,7 +50,7 @@ const Footer = () => {
           </a>
           <a href="/">Disclaimer</a>
         </div>
-        <div>2021 privacy policy</div>
+        <div className="mt-4 sm:mt-0">2021 privacy policy</div>
       </div>
     </div>
   );
