@@ -1,0 +1,36 @@
+/* Slick Carousel */
+.slide {
+  transform: scale(0.7);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+
+.slideWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.prevArrow {
+  position: absolute;
+  top: 45%;
+  left: 250px;
+  z-index: 100;
+  cursor: pointer;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-slider {
+  padding-inline: 10vw;
+  padding-block: 12vw;
+}
+
+.nextArrow {
+  position: absolute;
+  top: 45%;
+  right: 250px;
+  z-index: 100;
+  cursor: pointer;
+  font-size: 2.5rem;
+}

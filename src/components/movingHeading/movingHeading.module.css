@@ -1,0 +1,69 @@
+.SkillsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+}
+
+.SC_Slider {
+  width: 100%;
+  height: 8rem;
+  position: relative;
+  background: linear-gradient(to right, rgb(48, 48, 48) 0%, transparent 100%);
+
+  /* box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2); */
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.SC_Slide {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  animation: slideshow 8s linear infinite;
+}
+
+.SC_Slide span {
+  padding: 3rem;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.SC_Slider::before,
+.SC_Slider::after {
+  height: 10rem;
+  width: 20rem;
+  position: absolute;
+  content: "";
+  z-index: 1;
+}
+.SC_Slider::before {
+  left: 0;
+  top: 0;
+}
+.SC_Slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+@media screen and (max-width: 400px) {
+  .SC_Slide span {
+    padding: 0rem;
+  }
+
+  .SC_Slider::before,
+  .SC_Slider::after {
+    height: 10rem;
+    width: 6rem;
+  }
+}

@@ -7,6 +7,7 @@ import Hero from "../components/hero";
 import Top10Projects from "components/top10Projects";
 import MovingHeading from "components/movingHeading";
 import TopViews from "components/topViews";
+import TopStories from "components/topstories";
 
 const Home = () => {
   return (
@@ -14,8 +15,10 @@ const Home = () => {
       <SEO />
       <Hero />
       <Top10Projects />
-      <MovingHeading/>
-      <TopViews/>
+      <MovingHeading />
+      <TopViews />
+      <MovingHeading heading="ONE OF THE LARGEST PLAY-TO-EARN" />
+      <TopStories />
     </div>
   );
 };
