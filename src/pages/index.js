@@ -10,12 +10,14 @@ import TopViews from "components/topViews";
 import TopStories from "components/topstories";
 import OurTeam from "components/ourTeam";
 import OurPartners from "components/ourpartners";
+import SideIcons from "components/sideicons";
 
 const Home = () => {
   return (
     <div className="bg-[url('/assets/background_app.png')] h-fit bg-no-repeat bg-cover">
       <SEO />
       <Hero />
+      <SideIcons/>
       <Top10Projects />
       <MovingHeading heading="ONE OF THE LARGEST PLAY-TO-EARN" />
       <TopViews />
