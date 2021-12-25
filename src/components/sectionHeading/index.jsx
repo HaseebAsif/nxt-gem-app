@@ -3,22 +3,52 @@ import React from "react";
 const SectionHeader = ({ heading, value }) => {
   const valueChecker = () => {
     if (value === "1") {
-      return <img src="/assets/Homepage-Assets/TOP-10-PROJECTS.png" alt="" />;
+      return (
+        <img
+          src="/assets/Homepage-Assets/TOP-10-PROJECTS.png"
+          className="w-11/12 md:w-1/3"
+          alt=""
+        />
+      );
     } else if (value === "2") {
-      return <img src="/assets/Homepage-Assets/TOP-VIEWS.png" alt="" />;
+      return (
+        <img
+          src="/assets/Homepage-Assets/TOP-VIEWS.png"
+          className="w-11/12 md:w-1/3"
+          alt=""
+        />
+      );
     } else if (value === "3") {
-      return <img src="/assets/Homepage-Assets/TOP-STORIES.png" alt="" />;
+      return (
+        <img
+          src="/assets/Homepage-Assets/TOP-STORIES.png"
+          className="w-11/12 md:w-1/3"
+          alt=""
+        />
+      );
     } else if (value === "4") {
-      return <img src="/assets/Homepage-Assets/OUR-TEAM.png" alt="" />;
+      return (
+        <img
+          src="/assets/Homepage-Assets/OUR-TEAM.png"
+          className="w-11/12 md:w-1/3"
+          alt=""
+        />
+      );
     } else if (value === "5") {
-      return <img src="/assets/Homepage-Assets/OUR-PARTNERS.png" alt="" />;
+      return (
+        <img
+          src="/assets/Homepage-Assets/OUR-PARTNERS.png"
+          className="w-11/12 md:w-2/5"
+          alt=""
+        />
+      );
     }
   };
   return (
     <div className="text-center">
       {value ? (
         <div className="flex justify-center static bottom-[100px] md:relative">
-          <div className="w-11/12 md:w-1/3">{valueChecker()}</div>
+          {valueChecker()}
         </div>
       ) : (
         <>

@@ -1,12 +1,12 @@
 @media (min-width: 1300px) {
   .single_large_video_views div {
-    width: 1000px !important;
-    height: 500px !important;
+    width: 840px !important;
+    height: 472.8px !important;
   }
 }
 @media (max-width: 650px) {
   .single_large_video_views div {
     width: 95vw !important;
-    height: 40vh !important;
+    height: 25vh !important;
   }
 }
