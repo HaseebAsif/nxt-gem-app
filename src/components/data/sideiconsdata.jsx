@@ -9,7 +9,7 @@ export const SideIconsData = [
   },
   {
     icon: "/assets/Social-Media-Links-Assets/linkedin-icon.png",
-    link: "https://www.facebook.com/nxtgem.io",
+    link: "https://www.linkedin.com/company/nxtgem-io",
   },
   {
     icon: "/assets/Social-Media-Links-Assets/youtube-icon.png",
@@ -21,6 +21,6 @@ export const SideIconsData = [
   },
   {
     icon: "/assets/Social-Media-Links-Assets/telegram-icon.png",
-    link: "https://twitter.com/nxtgem_io",
+    link: "https://t.me/nxtgem_io",
   },
 ];

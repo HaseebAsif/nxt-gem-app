@@ -4,13 +4,16 @@ import SEO from "../components/seo";
 
 //Components
 import Hero from "../components/hero";
-import Top10Projects from "components/top10Projects";
+const Top10Projects = dynamic(() => import("components/Top10Projects"), {
+  ssr: false,
+});
 import MovingHeading from "components/movingHeading";
 import TopViews from "components/topViews";
-import TopStories from "components/topstories";
+import TopStories from "components/topStories";
 import OurTeam from "components/ourTeam";
-import OurPartners from "components/ourpartners";
-import SideIcons from "components/sideicons";
+import OurPartners from "components/ourPartners";
+import SideIcons from "components/sideSocialIcons";
+import dynamic from "next/dynamic";
 
 const Home = () => {
   return (

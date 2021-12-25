@@ -5,7 +5,7 @@ import React from "react";
 
 const TopViews = () => {
   return (
-    <div className="mb-24 sm:mb-48">
+    <div className="mb-24 sm:mb-48 animate-fadeIn">
       <div className="mt-24">
         <SectionHeader heading="Top Views" value="2" />
       </div>

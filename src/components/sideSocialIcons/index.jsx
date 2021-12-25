@@ -6,7 +6,7 @@ const SideIcons = () => {
     <div>
       <div className="fixed w-12 right-10 top-48 hidden md:block">
         {SideIconsData.map(({ icon, link }) => (
-          <a href={link} className="">
+          <a href={link} className="" target="_blank">
             <img src={icon} alt={link} className="my-4" />
           </a>
         ))}

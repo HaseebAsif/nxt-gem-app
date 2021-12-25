@@ -45,12 +45,12 @@ export default function SEO({
   return (
     <Head>
       <link
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
         crossorigin="anonymous"
-      ></link>
-      ;<title>{title}</title>
+      />
+      <title>{title}</title>
       {metaData.map(({ name, content }, i) => (
         <meta key={i} name={name} content={content} />
       ))}

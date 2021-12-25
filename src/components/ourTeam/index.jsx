@@ -6,7 +6,7 @@ import OurTeamName from "./ourTeamName";
 
 const OurTeam = () => {
   return (
-    <div className="mt-16">
+    <div className="mt-16 animate-fadeIn">
       <SectionHeader heading="Our Team" value="4" />
       <div className="grid grid-cols-1 place-items-center mx-28 lg:grid-cols-3 sm:grid-cols-2">
         {OurTeamData.map(

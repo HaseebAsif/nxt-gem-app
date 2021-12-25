@@ -12,7 +12,9 @@ const TopStories = () => {
       className={`mb-24 sm:mb-48 ${styles.TopStoriesContainer}`}
     >
       <div className={`${styles.container_top_stories} mt-16`}>
-        <SectionHeader heading="Top Stories" value="3" />
+        <div className="animate-fadeIn">
+          <SectionHeader heading="Top Stories" value="3" />
+        </div>
         <div
           className={`flex flex-wrap items-center justify-center overflow-hidden ${styles.sibling_fade}`}
         >
