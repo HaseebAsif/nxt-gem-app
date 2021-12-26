@@ -11,7 +11,7 @@ import MovingHeading from "components/movingHeading";
 import TopViews from "components/topViews";
 import TopStories from "components/topStories";
 import OurTeam from "components/ourTeam";
-import OurPartners from "components/nxtPartners";
+import OurPartners from "components/ourPartners";
 import SideIcons from "components/sideSocialIcons";
 import dynamic from "next/dynamic";
 

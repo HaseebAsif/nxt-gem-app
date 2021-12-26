@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -7,27 +8,38 @@ const Footer = () => {
         <div className="mt-4 sm:mt-0">
           <div className="text-2xl font-bold">Submit Project</div>
           <div>
-            <div>Lorem, ipsum.</div>
-            <div>Lorem, ipsum.</div>
-            <div>Lorem, ipsum.</div>
+            <Link href="/">
+              <div className="cursor-pointer">About Us</div>
+            </Link>
+            <Link href="/">
+              <div className="cursor-pointer">Sign Up</div>
+            </Link>
+            <Link href="/">
+              <div className="cursor-pointer">Login</div>
+            </Link>
           </div>
         </div>
         <div className="mt-4 sm:mt-0">
           <div className="text-2xl font-bold">Contact</div>
           <div className="sm:w-11/12">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            nisi laudantium blanditiis omnis, quasi similique facilis adipisci
-            ullam ab dicta.Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Aliquam nisi laudantium blanditiis omnis, quasi similique
-            facilis adipisci ullam ab dicta.
+            If you have any thoughts or questions you&apos;d like to share with
+            us, send us a mail to{" "}
+            <a href="contact@nxgem.io" className="underline text-[#07a5c9]">
+              contact@nxgem.io
+            </a>{" "}
+            or get in touch with us through our social media channels.
           </div>
         </div>
         <div className="mt-4 sm:ml-5 sm:mt-0">
           <div className="text-2xl font-bold">Stay in touch</div>
           <div className="flex flex-col ">
-            <input type="text" className="rounded-md my-3 text-black p-1" />
-            <button className="bg-gradient-to-r from-blue-200 to-blue-400 rounded-md text-black p-1">
-              Hello World
+            <input
+              type="text"
+              className="rounded-md my-3 text-black p-1"
+              placeholder="E-Mail"
+            />
+            <button className="bg-gradient-to-r from-blue-200 to-blue-400 rounded-md text-black p-1 uppercase">
+              Subscribe to our newsletter
             </button>
           </div>
         </div>
@@ -42,15 +54,21 @@ const Footer = () => {
           />
         </div>
         <div className="flex h-fit mt-4 sm:mt-0">
-          <a href="/" className="border-r-2 pr-3 mr-3">
-            Terms & Condition
-          </a>
-          <a href="/" className="border-r-2 pr-3 mr-3">
-            Privacy Policy
-          </a>
-          <a href="/">Disclaimer</a>
+          <Link href="/">
+            <div className="border-r-2 pr-3 mr-3 cursor-pointer">
+              Terms & Condition
+            </div>
+          </Link>
+          <Link href="/">
+            <div className="border-r-2 pr-3 mr-3 cursor-pointer">
+              Privacy Policy
+            </div>
+          </Link>
+          <Link href="/">
+            <div className="cursor-pointer">Disclaimer</div>
+          </Link>
         </div>
-        <div className="mt-4 sm:mt-0">2021 privacy policy</div>
+        <div className="mt-4 sm:mt-0">&copy; 2021 All Rights Reserved</div>
       </div>
     </div>
   );

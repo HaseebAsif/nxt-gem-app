@@ -13,18 +13,22 @@ const OurTeam = () => {
           ({ id, name, imgSrc, post, socialMedia, imgHoverSrc }) => (
             <div key={id} className="mt-12">
               <div className="h-[220px]">
-                <img src={imgHoverSrc} alt="" className="max-w-[220px]" />
                 <img
                   src={imgSrc}
                   alt=""
-                  className="max-w-[220px] relative bottom-[220px] hover:hidden"
+                  className="max-w-[220px] drop-shadow-2xl"
+                />
+                <img
+                  src={imgHoverSrc}
+                  alt=""
+                  className="max-w-[220px] relative bottom-[220px] hover:hidden drop-shadow-xl"
                 />
               </div>
               <OurTeamName name={name} />
               <div className="text-white text-center text-lg mb-2">{post}</div>
               <div className="flex items-center justify-center">
                 {socialMedia.map(({ icon, link }) => (
-                  <a href={link} className="mx-1">
+                  <a href={link} className="mx-1" target="_blank">
                     <img src={icon} alt={link} className="w-[40px]" />
                   </a>
                 ))}

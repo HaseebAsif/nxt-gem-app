@@ -6,7 +6,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/TOP-10-PROJECTS.png"
-          className="w-11/12 md:w-1/3"
+          className="w-11/12 md:w-1/3 bottom-[100px] md:relative"
           alt=""
         />
       );
@@ -14,7 +14,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/TOP-VIEWS.png"
-          className="w-11/12 md:w-1/3"
+          className="w-11/12 md:w-1/3 mb-12"
           alt=""
         />
       );
@@ -22,7 +22,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/TOP-STORIES.png"
-          className="w-11/12 md:w-1/3"
+          className="w-11/12 md:w-1/3 mb-12"
           alt=""
         />
       );
@@ -47,9 +47,7 @@ const SectionHeader = ({ heading, value }) => {
   return (
     <div className="text-center">
       {value ? (
-        <div className="flex justify-center static bottom-[100px] md:relative">
-          {valueChecker()}
-        </div>
+        <div className="flex justify-center static">{valueChecker()}</div>
       ) : (
         <>
           <h1 className="uppercase text-4xl font-black blur-sm invert drop-shadow-xl md:text-6xl">
