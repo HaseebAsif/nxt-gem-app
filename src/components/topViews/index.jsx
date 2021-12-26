@@ -11,10 +11,19 @@ const TopViews = () => {
       </div>
       <div className="flex items-center justify-around flex-col lg:flex-row lg:mx-12 xl:mx-48">
         <SingleLargeVideoViews />
-        <div className="flex flex-row flex-wrap justify-center lg:flex-col">
-          <SingleSmallVideoViews />
-          <SingleSmallVideoViews />
-          <SingleSmallVideoViews />
+        <div>
+          <div className="flex justify-center items-center mt-5 lg:mt-0">
+            <img
+              src="/assets/Homepage-Assets/Sponsered.png"
+              className="object-contain"
+              alt=""
+            />
+          </div>
+          <div className="flex flex-row flex-wrap justify-center lg:flex-col">
+            <SingleSmallVideoViews />
+            <SingleSmallVideoViews />
+            <SingleSmallVideoViews />
+          </div>
         </div>
       </div>
     </div>
