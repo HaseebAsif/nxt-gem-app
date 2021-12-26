@@ -9,9 +9,9 @@ const Top10Projects = dynamic(() => import("components/top10Projects"), {
 });
 import MovingHeading from "components/movingHeading";
 import TopViews from "components/topViews";
-import TopStories from "components/topStories/index";
+import TopStories from "components/topStories";
 import OurTeam from "components/ourTeam";
-import OurPartners from "components/ourPartners/index";
+import OurPartners from "components/ourPartners";
 import SideIcons from "components/sideSocialIcons";
 import dynamic from "next/dynamic";
 
