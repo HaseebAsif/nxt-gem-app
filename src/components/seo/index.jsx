@@ -5,7 +5,7 @@ export default function SEO({
   description = "NXT GEM",
   author = "NXT GEM",
   meta,
-  title = "NXT GEM",
+  title = "NXTGEM | World's First to What's Next",
 }) {
   const metaData = [
     {

@@ -3,14 +3,17 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white p-[20px] sm:p-20">
+    <div className="bg-black text-white p-[20px] sm:p-20 sm:py-8">
       <div className="grid grid-cols-1 py-5 lg:grid-cols-3 md:grid-cols-2">
         <div className="mt-4 sm:mt-0">
           <div className="text-2xl font-bold">Submit Project</div>
           <div>
-            <Link href="/">
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/19PGfRHQ7wTA_Gg6eZWSHu9QelmU5wT2I/view"
+            >
               <div className="cursor-pointer">About Us</div>
-            </Link>
+            </a>
             <Link href="/">
               <div className="cursor-pointer">Sign Up</div>
             </Link>
@@ -36,9 +39,9 @@ const Footer = () => {
             <input
               type="text"
               className="rounded-md my-3 text-black p-1"
-              placeholder="E-Mail"
+              placeholder="Email Address"
             />
-            <button className="bg-gradient-to-r from-blue-200 to-blue-400 rounded-md text-black p-1 uppercase">
+            <button className="bg-gradient-to-r from-[#00cef4] to-[#0487a3] rounded-md text-black p-1 uppercase">
               Subscribe to our newsletter
             </button>
           </div>
@@ -56,7 +59,7 @@ const Footer = () => {
         <div className="flex h-fit mt-4 sm:mt-0">
           <Link href="/">
             <div className="border-r-2 pr-3 mr-3 cursor-pointer">
-              Terms & Condition
+              Terms & Conditions
             </div>
           </Link>
           <Link href="/">

@@ -14,7 +14,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/TOP-VIEWS.png"
-          className="w-11/12 md:w-1/3 2xl:w-1/5 mb-12"
+          className="w-11/12 md:w-1/3 2xl:w-1/5 mb-12 sm:mb-0"
           alt=""
         />
       );

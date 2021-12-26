@@ -3,12 +3,12 @@ import ReactPlayer from "react-player";
 
 import styles from "./singleLargeVideoViews.module.css";
 
-const SingleLargeVideoViews = () => {
+const SingleLargeVideoViews = ({ videoUrl }) => {
   return (
     <div
       className={`flex items-center justify-center mt-5 shadow-xl ${styles.single_large_video_views}`}
     >
-      <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />
+      <ReactPlayer url={videoUrl} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 .single_small_video_views div {
-  height: auto !important;
-  width: auto !important;
+  height: 120px !important;
+  width: 200px !important;
 }
 
 @media (max-width: 700px) {

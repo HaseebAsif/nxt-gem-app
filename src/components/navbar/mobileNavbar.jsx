@@ -48,7 +48,8 @@ const MobileNavbar = ({ isOpen }) => {
           Marketplace
         </a>
         <a
-          href="#"
+          href="https://drive.google.com/file/d/19PGfRHQ7wTA_Gg6eZWSHu9QelmU5wT2I/view"
+          target="_blank"
           className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         >
           About Us

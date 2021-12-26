@@ -9,7 +9,7 @@ const TopStories = () => {
   return (
     <div
       id="Projects"
-      className={`mb-24 sm:mb-48 ${styles.TopStoriesContainer}`}
+      className={`mb-24 sm:mb-10 ${styles.TopStoriesContainer}`}
     >
       <div className={`${styles.container_top_stories} mt-16`}>
         <div className="animate-fadeIn">

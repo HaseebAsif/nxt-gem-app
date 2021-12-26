@@ -3,7 +3,7 @@ import React from "react";
 
 const OurPartners = () => {
   return (
-    <div className="py-12 mt-24 animate-fadeIn sm:mt-48">
+    <div className="py-12 mt-24 animate-fadeIn sm:mt-0">
       <SectionHeader heading="Our Partners" value="5" />
       <div className="grid place-items-center h-[50vh]">
         <img

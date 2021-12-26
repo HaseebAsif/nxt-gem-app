@@ -1,7 +1,7 @@
 @media (min-width: 1300px) {
   .single_large_video_views div {
-    width: 840px !important;
-    height: 472.8px !important;
+    width: 640px !important;
+    height: 360px !important;
   }
 }
 @media (max-width: 650px) {

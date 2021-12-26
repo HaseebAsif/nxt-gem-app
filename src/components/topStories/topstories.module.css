@@ -14,9 +14,11 @@
 
 .singlePContainer img {
   width: 100%;
-  height: 16rem;
+  height: 12rem;
   border-radius: 6px 6px 0px 0px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
   clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  object-fit: cover;
 }
 
 .singlePContainerBody h1 {
@@ -74,7 +76,7 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
 }
 
 .wrapper button {
