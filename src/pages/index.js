@@ -4,7 +4,7 @@ import SEO from "../components/seo";
 
 //Components
 import Hero from "../components/hero";
-const Top10Projects = dynamic(() => import("components/Top10Projects"), {
+const Top10Projects = dynamic(() => import("components/top10Projects"), {
   ssr: false,
 });
 import MovingHeading from "components/movingHeading";
@@ -20,13 +20,13 @@ const Home = () => {
     <div className="bg-[url('/assets/background_app.png')] h-fit bg-no-repeat bg-cover">
       <SEO />
       <Hero />
-      <SideIcons/>
+      <SideIcons />
       <Top10Projects />
       <MovingHeading heading="ONE OF THE LARGEST PLAY-TO-EARN" />
       <TopViews />
       <TopStories />
       <OurTeam />
-      <OurPartners/>
+      <OurPartners />
     </div>
   );
 };
