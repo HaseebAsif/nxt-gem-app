@@ -10,7 +10,7 @@ const MovingHeading = ({ heading }) => {
         <div className={styles.SC_Slider}>
           <img
             src="/assets/Top-Stories-Assets/Top-Stories-1.jpg"
-            className="absolute w-1/4 h-full left-0 z-50 object-contain md:w-max"
+            className="absolute w-1/4 h-full left-0 z-50 object-contain skew-x-12 md:w-max"
           />
           <Slide bottom cascade>
             <div className={styles.SC_Slide}>
