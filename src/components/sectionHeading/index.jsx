@@ -38,7 +38,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_620/v1640600236/OUR-PARTNERS_kbqi2j.png"
-          className="w-[200px]  md:w-[300px] lg:w-[400px] 2xl:w-[600px]"
+          className="w-[250px]  md:w-[350px] lg:w-[450px] 2xl:w-[600px]"
           alt=""
         />
       );

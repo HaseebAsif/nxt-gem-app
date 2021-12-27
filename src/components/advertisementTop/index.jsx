@@ -8,7 +8,7 @@ const AdvertisementTop = () => {
         target="_blank"
         className="flex justify-center align-center py-4"
       >
-        <img src="/assets/Homepage-Assets/sample-add.png" alt="" />
+        <img src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_1000/v1640600233/sample-add_qj91qw.png" alt="" />
       </a>
     </div>
   );

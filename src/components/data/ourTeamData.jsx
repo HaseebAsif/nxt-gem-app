@@ -7,11 +7,11 @@ export const OurTeamData = [
     imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_551/v1640599451/Jo-Santos-CEO_mt6cak.png",
     socialMedia: [
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600818/TEAM-Facebook-Button_dgyvum.png",
         link: "https://www.facebook.com/nxtgem.jo/",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-LinkedIn-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-LinkedIn-Button_uj2gdj.png",
         link: "https://linkedin.com/in/jo-santos-67a2b4226/",
       },
       {
@@ -19,7 +19,7 @@ export const OurTeamData = [
         link: "https://t.me/nxtgem_jo",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Twitter-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-Twitter-Button_hfn0qx.png",
         link: "https://twitter.com/nxtgem_jo/",
       },
     ],
@@ -32,11 +32,11 @@ export const OurTeamData = [
     imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_519/v1640599452/Marc-CMO_zpdtcy.png",
     socialMedia: [
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600818/TEAM-Facebook-Button_dgyvum.png",
         link: "https://www.facebook.com/nxtgem.marc/",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-LinkedIn-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-LinkedIn-Button_uj2gdj.png",
         link: "https://www.linkedin.com/in/marctubelleja/",
       },
       {
@@ -44,7 +44,7 @@ export const OurTeamData = [
         link: "https://t.me/marctubelleja",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Twitter-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-Twitter-Button_hfn0qx.png",
         link: "https://twitter.com/nxtgem_marc/",
       },
     ],
@@ -57,11 +57,11 @@ export const OurTeamData = [
     imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_678/v1640599452/MC-COO_gn4ltw.png",
     socialMedia: [
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600818/TEAM-Facebook-Button_dgyvum.png",
         link: "https://www.facebook.com/nxtgem.mc/",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-LinkedIn-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-LinkedIn-Button_uj2gdj.png",
         link: "https://www.linkedin.com/in/meynard-cabana-a5847a29/",
       },
       {
@@ -69,7 +69,7 @@ export const OurTeamData = [
         link: "https://t.me/nxtgrem_mc",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Twitter-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-Twitter-Button_hfn0qx.png",
         link: "https://twitter.com/nxtgem_mc/",
       },
     ],
@@ -82,11 +82,11 @@ export const OurTeamData = [
     imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_646/v1640599451/Bryan-Derigay-CFO_q9lg92.png",
     socialMedia: [
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600818/TEAM-Facebook-Button_dgyvum.png",
         link: "https://www.facebook.com/nxtgem.bryan/",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-LinkedIn-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-LinkedIn-Button_uj2gdj.png",
         link: "https://www.linkedin.com/in/bryan-derigay-54a596225/",
       },
       {
@@ -94,7 +94,7 @@ export const OurTeamData = [
         link: "https://t.me/nxtgem_bryan",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Twitter-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-Twitter-Button_hfn0qx.png",
         link: "https://twitter.com/nxtgem_bryan/",
       },
     ],
@@ -107,11 +107,11 @@ export const OurTeamData = [
     imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_583/v1640599453/AJ-CTO_nspv6r.png",
     socialMedia: [
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600818/TEAM-Facebook-Button_dgyvum.png",
         link: "https://www.facebook.com/nxtgem.aj/",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-LinkedIn-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-LinkedIn-Button_uj2gdj.png",
         link: "https://www.linkedin.com/in/alvin-jay-cuanico-287945210/",
       },
       {
@@ -119,7 +119,7 @@ export const OurTeamData = [
         link: "https://t.me/nxtgem_aj",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Twitter-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-Twitter-Button_hfn0qx.png",
         link: "https://twitter.com/nxtgem_aj/",
       },
     ],
@@ -132,19 +132,19 @@ export const OurTeamData = [
     imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_646/v1640599452/Kier-CDO_gqqz1n.png",
     socialMedia: [
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600818/TEAM-Facebook-Button_dgyvum.png",
         link: "https://www.facebook.com/nxtgem.kier/",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-LinkedIn-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-LinkedIn-Button_uj2gdj.png",
         link: "https://www.linkedin.com/in/kiertalon/",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Telegram-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-Telegram-Button_dqem53.png",
         link: "https://t.me/nxtgem_kier",
       },
       {
-        icon: "/assets/Social-Media-Links-Assets/TEAM-Twitter-Button.png",
+        icon: "https://res.cloudinary.com/nxtgem-io/image/upload/v1640600819/TEAM-Twitter-Button_hfn0qx.png",
         link: "https://twitter.com/nxtgem_kier/",
       },
     ],
