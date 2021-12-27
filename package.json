@@ -1,9 +1,10 @@
 {
   "name": "nxt-gem-app",
   "private": true,
+  "homepage": "http://nxtgem.io/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },

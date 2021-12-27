@@ -4,7 +4,7 @@ import React from "react";
 const WebNavbar = () => {
   return (
     <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start overflow-hidden">
-      <div href="/" className="flex-shrink-0 flex items-center">
+      <div className="flex-shrink-0 flex items-center">
         <Link href="/">
           <img
             className="block lg:hidden h-8 w-auto cursor-pointer"
@@ -22,69 +22,65 @@ const WebNavbar = () => {
       </div>
       <div className="hidden md:block md:ml-6">
         <div className="flex space-x-4 items-center">
-          <a
-            href="#"
-            className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-            aria-current="page"
-          >
-            Home
-          </a>
+          <Link href="/">
+            <div
+              className="bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium"
+              aria-current="page"
+            >
+              Home
+            </div>
+          </Link>
 
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Project List
-          </a>
+          <Link href="/coming-soon">
+            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Project List
+            </div>
+          </Link>
 
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Resources
-          </a>
+          <Link href="/coming-soon">
+            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Resources
+            </div>
+          </Link>
 
+          <Link href="/coming-soon">
+            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Community
+            </div>
+          </Link>
+          <Link href="/coming-soon">
+            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Exchange
+            </div>
+          </Link>
+          <Link href="/coming-soon">
+            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Marketplace
+            </div>
+          </Link>
           <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Community
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Exchange
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Marketplace
-          </a>
-          <a
-            href="https://drive.google.com/file/d/19PGfRHQ7wTA_Gg6eZWSHu9QelmU5wT2I/view"
+            href="https://drive.google.com/file/d/17wtQyZ54vM4LaSFRN7x5MC2D-B2YWlxo/view?usp=sharing"
             target="_blank"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
-            About Us
+            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              About Us
+            </div>
           </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Submit Project
-          </a>
+          <Link href="/coming-soon">
+            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Submit Project
+            </div>
+          </Link>
 
-          <div className="bg-gradient-to-r p-[9px] from-[#0398b6] to-[transparent] -skew-x-12 hidden lg:block ">
+          <div className="bg-gradient-to-r p-[9px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden lg:block ">
             <input
               className=" bg-black px-5 py-3 text-white relative"
               type="search"
               name="search"
               placeholder="Search"
             />
-            <i className="fas fa-search text-white font-bold opacity-70 relative right-[35px] cursor-text"></i>
           </div>
+          <i className="fas fa-search text-white font-bold relative right-[65px] cursor-text"></i>
         </div>
       </div>
     </div>

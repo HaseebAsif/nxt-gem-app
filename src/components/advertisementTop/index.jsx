@@ -2,7 +2,7 @@ import React from "react";
 
 const AdvertisementTop = () => {
   return (
-    <div className="h-fill bg-[#0398b6]">
+    <div className="h-fill bg-[#0398b6] mt-[60px]">
       <a
         href="https://www.mimirquiz.com/"
         target="_blank"

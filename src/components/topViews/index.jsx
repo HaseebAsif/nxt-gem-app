@@ -5,13 +5,13 @@ import React from "react";
 
 const TopViews = () => {
   return (
-    <div className="mb-24 sm:mb-0 animate-fadeIn">
+    <div className="mb-24 sm:mb-32 animate-fadeIn">
       <div className="mt-8">
         <SectionHeader heading="Top Views" value="2" />
       </div>
-      <div className="flex items-center justify-around flex-col lg:flex-row lg:mx-12 xl:mx-48">
+      <div className="flex items-center justify-center flex-col lg:flex-row lg:mx-12 xl:mx-48">
         <SingleLargeVideoViews videoUrl="https://www.youtube.com/embed/bS3b-TdITf0" />
-        <div>
+        <div className="lg:ml-[80px]">
           <div className="flex justify-center items-center mt-5 lg:mt-0">
             <img
               src="/assets/Homepage-Assets/Sponsered.png"

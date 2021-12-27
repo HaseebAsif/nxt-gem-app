@@ -35,6 +35,22 @@
 .react-3d-carousel
   .slider-container
   .slider-content
+  .slider-single
+  .slider-single-content {
+  box-shadow: none !important;
+}
+
+.react-3d-carousel .slider-container .slider-left div, .react-3d-carousel .slider-container .slider-right div{
+  border: none !important;
+  background-color: rgb(77, 77, 77);
+  border-radius: 33px;
+  padding: 10px 15px !important;
+  color: #1295bd !important;
+}
+
+.react-3d-carousel
+  .slider-container
+  .slider-content
   .slider-single.active
   .slider-single-content
   img {

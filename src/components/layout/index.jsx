@@ -4,12 +4,10 @@ import React from "react";
 import Navbar from "../navbar";
 import Footer from "../footer";
 import BackgroundCursor from "components/backgroundCursor";
-import AdvertisementTop from "components/advertisementTop";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <AdvertisementTop />
       <Navbar />
       <BackgroundCursor />
       <main>{children}</main>

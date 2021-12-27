@@ -6,7 +6,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/TOP-10-PROJECTS.png"
-          className="w-11/12 md:w-1/3 2xl:w-1/5 bottom-[100px] md:relative"
+          className="w-[100px] sm:w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[500px] bottom-[100px] md:relative"
           alt=""
         />
       );
@@ -14,7 +14,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/TOP-VIEWS.png"
-          className="w-11/12 md:w-1/3 2xl:w-1/5 mb-12 sm:mb-0"
+          className="w-[100px] sm:w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[500px] mb-12 sm:mb-0"
           alt=""
         />
       );
@@ -22,7 +22,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/TOP-STORIES.png"
-          className="w-11/12 md:w-1/3 2xl:w-1/5 mb-12"
+          className="w-[100px] sm:w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[500px] mb-12"
           alt=""
         />
       );
@@ -30,7 +30,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/OUR-TEAM.png"
-          className="w-11/12 md:w-1/3 2xl:w-1/5"
+          className="w-[100px] sm:w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[500px]"
           alt=""
         />
       );
@@ -38,7 +38,7 @@ const SectionHeader = ({ heading, value }) => {
       return (
         <img
           src="/assets/Homepage-Assets/OUR-PARTNERS.png"
-          className="w-11/12 md:w-2/5 2xl:w-1/4"
+          className="w-[100px] sm:w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[600px]"
           alt=""
         />
       );

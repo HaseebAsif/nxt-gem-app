@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/19PGfRHQ7wTA_Gg6eZWSHu9QelmU5wT2I/view"
+              href="https://drive.google.com/file/d/17wtQyZ54vM4LaSFRN7x5MC2D-B2YWlxo/view?usp=sharing"
             >
               <div className="cursor-pointer">About Us</div>
             </a>
@@ -41,7 +41,7 @@ const Footer = () => {
               className="rounded-md my-3 text-black p-1"
               placeholder="Email Address"
             />
-            <button className="bg-gradient-to-r from-[#00cef4] to-[#0487a3] rounded-md text-black p-1 uppercase">
+            <button className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] rounded-md text-black p-1 uppercase">
               Subscribe to our newsletter
             </button>
           </div>

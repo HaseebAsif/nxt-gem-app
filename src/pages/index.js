@@ -13,11 +13,13 @@ import TopStories from "components/topStories";
 import OurTeam from "components/ourTeam";
 import OurPartners from "components/ourPartners";
 import SideIcons from "components/sideSocialIcons";
+import AdvertisementTop from "components/advertisementTop";
 import dynamic from "next/dynamic";
 
 const Home = () => {
   return (
     <div className="bg-[url('/assets/background_app.png')] h-fit bg-no-repeat bg-cover">
+      <AdvertisementTop />
       <SEO />
       <Hero />
       <SideIcons />

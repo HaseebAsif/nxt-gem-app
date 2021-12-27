@@ -8,7 +8,7 @@ const OurTeam = () => {
   return (
     <div className="animate-fadeIn">
       <SectionHeader heading="Our Team" value="4" />
-      <div className="grid grid-cols-1 place-items-center mx-28 lg:grid-cols-3 sm:grid-cols-2">
+      <div className="grid grid-cols-1 place-items-center mx-28 sm:mx-48 lg:grid-cols-3 sm:grid-cols-2">
         {OurTeamData.map(
           ({ id, name, imgSrc, post, socialMedia, imgHoverSrc }) => (
             <div key={id} className="mt-12">

@@ -1,7 +1,7 @@
-@media (min-width: 1300px) {
+@media (min-width: 1600px) {
   .single_large_video_views div {
-    width: 640px !important;
-    height: 360px !important;
+    width: 768px !important;
+    height: 432px !important;
   }
 }
 @media (max-width: 650px) {
@@ -9,4 +9,7 @@
     width: 95vw !important;
     height: 25vh !important;
   }
+}
+.single_large_video_views div {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
