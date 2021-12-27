@@ -8,7 +8,7 @@ const MovingHeading = ({ heading }) => {
     <>
       <div className={styles.SkillsContainer}>
         <div className={styles.SC_Slider}>
-          <a href="https://astraguild.io/" target="_blank">
+          <a href="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_289/v1640600232/movingHeadingImage_v5c8wd.png" target="_blank">
             <img
               src="/assets/Homepage-Assets/movingHeadingImage.png"
               className="absolute w-1/4 h-full left-0 bottom-0 z-50 object-contain md:w-max"

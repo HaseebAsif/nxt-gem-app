@@ -8,14 +8,14 @@ const WebNavbar = () => {
         <Link href="/">
           <img
             className="block lg:hidden h-8 w-auto cursor-pointer"
-            src="/assets/Homepage-Assets/nexgen-logo.png"
+            src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_700/v1640600235/nexgen-logo_ip58ck.png"
             alt="NEXGen"
           />
         </Link>
         <Link href="/">
           <img
             className="hidden lg:block h-8 w-auto cursor-pointer"
-            src="/assets/Homepage-Assets/nexgen-logo.png"
+            src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_700/v1640600235/nexgen-logo_ip58ck.png"
             alt="NEXGen"
           />
         </Link>

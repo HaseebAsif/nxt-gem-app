@@ -51,7 +51,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 my-5 text-right md:grid-cols-2 lg:grid-cols-3">
         <div>
           <img
-            src="/assets/Footer-Logo.png"
+            src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_509/v1640600879/Footer-Logo_tzrlfl.png"
             alt="Footer Logo"
             className="w-48"
           />

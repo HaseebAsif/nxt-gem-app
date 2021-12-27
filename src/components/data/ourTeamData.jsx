@@ -3,8 +3,8 @@ export const OurTeamData = [
     id: 1,
     name: "JO SANTOS",
     post: "Co-Founder & CEO",
-    imgSrc: "/assets/Founders-Pictures/CEO-Jo-Santos.png",
-    imgHoverSrc: "/assets/Founders-Pictures/SHADOWS/Jo-Santos-CEO.png",
+    imgSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_646/v1640599415/CEO-Jo-Santos_ullpvn.png",
+    imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_551/v1640599451/Jo-Santos-CEO_mt6cak.png",
     socialMedia: [
       {
         icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
@@ -28,8 +28,8 @@ export const OurTeamData = [
     id: 2,
     name: "Marc Tubelleja",
     post: "Co-Founder & CMO",
-    imgSrc: "/assets/Founders-Pictures/CMO-Marc.png",
-    imgHoverSrc: "/assets/Founders-Pictures/SHADOWS/Marc-CMO.png",
+    imgSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_635/v1640599414/CMO-Marc_maa2j2.png",
+    imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_519/v1640599452/Marc-CMO_zpdtcy.png",
     socialMedia: [
       {
         icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
@@ -53,8 +53,8 @@ export const OurTeamData = [
     id: 3,
     name: "MC",
     post: "Co-Founder & CDO",
-    imgSrc: "/assets/Founders-Pictures/COO-MC.png",
-    imgHoverSrc: "/assets/Founders-Pictures/SHADOWS/MC-COO.png",
+    imgSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_486/v1640599418/COO-MC_nznty9.png",
+    imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_678/v1640599452/MC-COO_gn4ltw.png",
     socialMedia: [
       {
         icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
@@ -78,8 +78,8 @@ export const OurTeamData = [
     id: 4,
     name: "Bryan Derigay",
     post: "Co-Founder & CFO",
-    imgSrc: "/assets/Founders-Pictures/CFO-Mark-Bryan-Derigay.png",
-    imgHoverSrc: "/assets/Founders-Pictures/SHADOWS/Bryan-Derigay-CFO.png",
+    imgSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_519/v1640599417/CFO-Mark-Bryan-Derigay_sh2v3k.png",
+    imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_646/v1640599451/Bryan-Derigay-CFO_q9lg92.png",
     socialMedia: [
       {
         icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
@@ -103,8 +103,8 @@ export const OurTeamData = [
     id: 5,
     name: "Aj Cuanico",
     post: "Co-Founder & CTO",
-    imgSrc: "/assets/Founders-Pictures/CTO-Alvin-Jay-Cuanico.png",
-    imgHoverSrc: "/assets/Founders-Pictures/SHADOWS/AJ-CTO.png",
+    imgSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_487/v1640599442/CTO-Alvin-Jay-Cuanico_o4mojf.png",
+    imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_583/v1640599453/AJ-CTO_nspv6r.png",
     socialMedia: [
       {
         icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
@@ -128,8 +128,8 @@ export const OurTeamData = [
     id: 6,
     name: "Kier Talon",
     post: "Co-Founder & CDO",
-    imgSrc: "/assets/Founders-Pictures/CDO-Kier-Talon.png",
-    imgHoverSrc: "/assets/Founders-Pictures/SHADOWS/Kier-CDO.png",
+    imgSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_578/v1640599414/CDO-Kier-Talon_gqcdrk.png",
+    imgHoverSrc: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_646/v1640599452/Kier-CDO_gqqz1n.png",
     socialMedia: [
       {
         icon: "/assets/Social-Media-Links-Assets/TEAM-Facebook-Button.png",
