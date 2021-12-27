@@ -1,31 +1,31 @@
 export const ComingSoonData = [
   {
-    icon: "/assets/Picture-Assets/1-Axie-Infinity.jpg",
+    icon: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_677/v1640600792/2-Luna-Rush_s784ka.jpg",
     name: "Koin Games",
     link: "/",
   },
   {
-    icon: "/assets/Picture-Assets/1-Axie-Infinity.jpg",
+    icon: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_677/v1640600792/2-Luna-Rush_s784ka.jpg",
     name: "Koin Games",
     link: "/",
   },
   {
-    icon: "/assets/Picture-Assets/1-Axie-Infinity.jpg",
+    icon: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_677/v1640600792/2-Luna-Rush_s784ka.jpg",
     name: "Koin Games",
     link: "/",
   },
   {
-    icon: "/assets/Picture-Assets/1-Axie-Infinity.jpg",
+    icon: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_677/v1640600792/2-Luna-Rush_s784ka.jpg",
     name: "Koin Games",
     link: "/",
   },
   {
-    icon: "/assets/Picture-Assets/1-Axie-Infinity.jpg",
+    icon: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_677/v1640600792/2-Luna-Rush_s784ka.jpg",
     name: "Koin Games",
     link: "/",
   },
   {
-    icon: "/assets/Picture-Assets/1-Axie-Infinity.jpg",
+    icon: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_677/v1640600792/2-Luna-Rush_s784ka.jpg",
     name: "Koin Games",
     link: "/",
   },

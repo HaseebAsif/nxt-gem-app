@@ -4,7 +4,7 @@ import { ComingSoonData } from "components/data/comingSoonData";
 
 const ComingSoon = () => {
   return (
-    <div className="bg-[url('/assets/Homepage-Assets/Third.jpg')] h-fit bg-no-repeat mt-[60px] bg-cover p-8 sm:p-24 lg:p-48">
+    <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] h-fit bg-no-repeat mt-[60px] bg-cover p-8 sm:p-24 lg:p-48">
       <SectionHeader heading="Coming Soon" />
       <div>
         <div className="flex items-center justify-center flex-col mb-8">
