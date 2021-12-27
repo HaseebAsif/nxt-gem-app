@@ -14,7 +14,7 @@ const TopViews = () => {
         <div className="lg:ml-[80px]">
           <div className="flex justify-center items-center mt-5 lg:mt-0">
             <img
-              src="/assets/Homepage-Assets/Sponsered.png"
+              src="https://res.cloudinary.com/nxtgem-io/image/upload/v1640600233/Sponsered_rbijdc.png"
               className="object-contain"
               alt=""
             />
