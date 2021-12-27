@@ -18,7 +18,7 @@ import dynamic from "next/dynamic";
 
 const Home = () => {
   return (
-    <div className="bg-[url('/assets/background_app.png')] h-fit bg-no-repeat bg-cover">
+    <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] h-fit bg-no-repeat bg-cover">
       <AdvertisementTop />
       <SEO />
       <Hero />
