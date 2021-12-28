@@ -30,36 +30,6 @@ const MovingHeading = ({ heading }) => {
                 {heading}
               </h1>
             </div>
-            <div className={styles.SC_Slide}>
-              <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
-              </h1>
-            </div>
-            <div className={styles.SC_Slide}>
-              <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
-              </h1>
-            </div>
-            <div className={styles.SC_Slide}>
-              <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
-              </h1>
-            </div>
-            <div className={styles.SC_Slide}>
-              <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
-              </h1>
-            </div>
-            <div className={styles.SC_Slide}>
-              <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
-              </h1>
-            </div>
-            <div className={styles.SC_Slide}>
-              <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
-              </h1>
-            </div>
           </Slide>
         </div>
       </div>
