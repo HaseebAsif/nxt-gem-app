@@ -22,7 +22,7 @@
   height: 10rem;
   display: flex;
   align-items: center;
-  animation: slideshow 60s linear infinite;
+  animation: slideshow 20s linear infinite;
 }
 
 .SC_Slide span {
@@ -31,10 +31,10 @@
 
 @keyframes slideshow {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-10%);
   }
 }
 
