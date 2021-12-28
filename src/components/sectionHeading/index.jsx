@@ -43,6 +43,16 @@ const SectionHeader = ({ heading, value }) => {
         />
       );
     }
+    else if (value === "6") {
+      return (
+        <img
+          src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_600/v1640673364/Coming_Soon_jv7hen.png"
+          className="w-[300px] md:w-[350px] lg:w-[450px] 2xl:w-[600px]"
+          alt=""
+        />
+      );
+    }
+    
   };
   return (
     <div className="text-center">

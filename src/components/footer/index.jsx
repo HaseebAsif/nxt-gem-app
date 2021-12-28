@@ -71,7 +71,9 @@ const Footer = () => {
             <div className="cursor-pointer">Disclaimer</div>
           </Link>
         </div>
-        <div className="mt-4 sm:mt-0">&copy; 2021 All Rights Reserved</div>
+        <div className="mt-4 flex justify-center sm:block sm:mt-0">
+          &copy; 2021 All Rights Reserved
+        </div>
       </div>
     </div>
   );
