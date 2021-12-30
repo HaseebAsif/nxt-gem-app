@@ -1,5 +1,5 @@
 import React from "react";
-import { SideIconsData } from "../data/sideiconsdata";
+import SideIconsData from "../data/sideiconsdata";
 
 const SideIcons = () => {
   return (

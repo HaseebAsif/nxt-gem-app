@@ -1,11 +1,16 @@
 import SectionHeader from "components/sectionHeading";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import { topStoriesData } from "../data/topstoriesdata";
 import SingleCard from "./singlecard";
 import styles from "./topstories.module.css";
 
 const TopStories = () => {
+  const [topStoriesData, settopStoriesData] = useState([]);
+  useEffect(() => {
+    fetch("/api/topstories")
+      .then((response) => response.json())
+      .then((data) => settopStoriesData(data));
+  }, []);
   return (
     <div
       id="Projects"

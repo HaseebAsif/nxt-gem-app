@@ -72,7 +72,7 @@ const WebNavbar = () => {
             </div>
           </Link>
 
-          <div className="bg-gradient-to-r p-[9px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden lg:block ">
+          <div className="bg-gradient-to-r p-[9px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block ">
             <input
               className=" bg-black px-5 py-3 text-white relative"
               type="search"
@@ -80,7 +80,7 @@ const WebNavbar = () => {
               placeholder="Search"
             />
           </div>
-          <i className="fas fa-search text-white font-bold relative right-[65px] cursor-text"></i>
+          <i className="fas fa-search text-white font-bold relative right-[65px] cursor-text hidden xl:block"></i>
         </div>
       </div>
     </div>

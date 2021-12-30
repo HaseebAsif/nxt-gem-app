@@ -57,7 +57,7 @@ const Footer = () => {
           />
         </div>
         <div className="flex h-fit mt-4 sm:mt-0">
-          <Link href="/">
+          <Link href="/termsandconditions">
             <div className="border-r-2 pr-3 mr-3 cursor-pointer">
               Terms & Conditions
             </div>
@@ -67,7 +67,7 @@ const Footer = () => {
               Privacy Policy
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/disclaimer">
             <div className="cursor-pointer">Disclaimer</div>
           </Link>
         </div>

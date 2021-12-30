@@ -1,10 +1,16 @@
 import SectionHeader from "components/sectionHeading";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import { OurTeamData } from "components/data/ourTeamData";
 import OurTeamName from "./ourTeamName";
 
 const OurTeam = () => {
+  const [OurTeamData, setOurTeamData] = useState([]);
+  useEffect(() => {
+    fetch("/api/ourteam")
+      .then((response) => response.json())
+      .then((data) => setOurTeamData(data));
+  }, []);
+
   return (
     <div className="animate-fadeIn">
       <SectionHeader heading="Our Team" value="4" />

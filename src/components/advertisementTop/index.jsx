@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const AdvertisementTop = () => {
+  const [AdvertisementData, setAdvertisementData] = useState({});
+  useEffect(() => {
+    fetch("/api/advertisements")
+      .then((response) => response.json())
+      .then((data) => setAdvertisementData(data[0]));
+  }, []);
+
   return (
     <div className="h-fill bg-[#0398b6] mt-[60px]">
-      <a
-        href="https://www.mimirquiz.com/"
-        target="_blank"
-        className="flex justify-center align-center py-4"
-      >
-        <img src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_1000/v1640600233/sample-add_qj91qw.png" alt="" />
-      </a>
+      <div className="flex justify-center align-center py-4">
+        <a href="https://www.mimirquiz.com/" target="_blank">
+          <img src={AdvertisementData.homePageTopAd} alt="" />
+        </a>
+      </div>
     </div>
   );
 };
