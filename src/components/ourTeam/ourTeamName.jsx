@@ -2,11 +2,8 @@ import React from "react";
 
 const OurTeamName = ({ name }) => {
   return (
-    <div className="relative top-[10px]">
-      <div className="text-2xl text-center blur-sm invert drop-shadow-xl">
-        {name}
-      </div>
-      <div className="text-2xl text-center text-white font-bold relative bottom-[28px]">
+    <div className="my-3">
+      <div className="text-2xl text-center text-[#073b4c] font-black ourteam__name">
         {name}
       </div>
     </div>
