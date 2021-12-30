@@ -60,6 +60,9 @@
   .SC_Slide span {
     padding: 0rem;
   }
+  .SC_Slider{
+    height: 5rem;
+  }
 
   .SC_Slider::before,
   .SC_Slider::after {

@@ -41,7 +41,7 @@ const Footer = () => {
               className="rounded-md my-3 text-black p-1"
               placeholder="Email Address"
             />
-            <button className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] rounded-md text-black p-1 uppercase">
+            <button className="bg-gradient-to-r from-[#373e47] to-[#60a5fa] rounded-md text-black p-1 uppercase">
               Subscribe to our newsletter
             </button>
           </div>
@@ -56,7 +56,7 @@ const Footer = () => {
             className="w-48"
           />
         </div>
-        <div className="flex h-fit mt-4 sm:mt-0">
+        <div className="flex justify-center sm:justify-end h-fit mt-4 sm:mt-0">
           <Link href="/termsandconditions">
             <div className="border-r-2 pr-3 mr-3 cursor-pointer">
               Terms & Conditions
