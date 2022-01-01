@@ -12,7 +12,7 @@ const AdvertisementTop = () => {
     <div className="h-fill bg-[#0398b6] mt-[60px]">
       <div className="flex justify-center align-center py-4">
         <a href="https://www.mimirquiz.com/" target="_blank">
-          <img src={AdvertisementData.homePageTopAd} alt="" />
+          {/* <img src={AdvertisementData.homePageTopAd} alt="" /> */}
         </a>
       </div>
     </div>

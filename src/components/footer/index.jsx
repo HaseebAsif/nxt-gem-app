@@ -41,13 +41,13 @@ const Footer = () => {
               className="rounded-md my-3 text-black p-1"
               placeholder="Email Address"
             />
-            <button className="bg-gradient-to-r from-[#373e47] to-[#60a5fa] rounded-md text-black p-1 uppercase">
+            <button className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] rounded-md text-black p-1 uppercase">
               Subscribe to our newsletter
             </button>
           </div>
         </div>
       </div>
-      <div className="h-[4px] bg-gradient-to-r from-black to-blue-400" />
+      <div className="h-[4px] bg-gradient-to-r from-[#373e47] to-[#60a5fa]" />
       <div className="grid grid-cols-1 my-5 text-right md:grid-cols-2 lg:grid-cols-3">
         <div>
           <img

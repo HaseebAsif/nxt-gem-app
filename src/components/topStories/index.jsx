@@ -1,5 +1,6 @@
 import SectionHeader from "components/sectionHeading";
 import React, { useEffect, useState } from "react";
+import imageUrlBuilder from "@sanity/image-url";
 
 import SingleCard from "./singlecard";
 import styles from "./topstories.module.css";
@@ -7,7 +8,7 @@ import styles from "./topstories.module.css";
 const TopStories = () => {
   const [topStoriesData, settopStoriesData] = useState([]);
   useEffect(() => {
-    fetch("/api/topstories")
+    fetch("/api/post")
       .then((response) => response.json())
       .then((data) => settopStoriesData(data));
   }, []);
@@ -23,14 +24,19 @@ const TopStories = () => {
         <div
           className={`flex flex-wrap items-center justify-center overflow-hidden ${styles.sibling_fade}`}
         >
-          {topStoriesData.map((prev, i) => {
-            const { title, img } = prev;
+          {topStoriesData.slice(0, 3).map((prev, i) => {
+            const { title, mainImage } = prev;
+            const imgBuilder = imageUrlBuilder({
+              projectId: "cqnczxva",
+              dataset: "production",
+            });
+            const image = imgBuilder.image(mainImage);
             return (
               <SingleCard
                 key={i}
                 index={i}
                 Title={title}
-                Image={img}
+                Image={image}
                 styles={styles}
               />
             );
