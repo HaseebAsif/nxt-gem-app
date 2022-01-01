@@ -1,6 +1,6 @@
 import SectionHeader from "components/sectionHeading";
 import React from "react";
-import { ComingSoonData } from "components/data/comingSoonData";
+// import { ComingSoonData } from "components/data/comingSoonData";
 
 const ComingSoon = () => {
   return (
