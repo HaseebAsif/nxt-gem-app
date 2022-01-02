@@ -8,7 +8,7 @@ import OurTeamName from "./ourTeamName";
 const OurTeam = () => {
   const [OurTeamData, setOurTeamData] = useState([]);
   useEffect(() => {
-    fetch("/data/ourTeam")
+    fetch("/api/ourTeam")
       .then((response) => response.json())
       .then((data) => setOurTeamData(data));
   }, []);

@@ -5,7 +5,7 @@ import imageUrlBuilder from "@sanity/image-url";
 const OurPartners = () => {
   const [PartnersData, setPartnersData] = useState([]);
   useEffect(() => {
-    fetch("/data/ourPartners")
+    fetch("/api/ourPartners")
       .then((response) => response.json())
       .then((data) => setPartnersData(data));
   }, []);

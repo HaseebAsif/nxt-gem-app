@@ -7,7 +7,7 @@ import SectionHeader from "components/sectionHeading";
 const Top10Projects = () => {
   const [TopTenProjectsData, setTopTenProjectsData] = useState([]);
   useEffect(() => {
-    fetch("/data/toptenprojects")
+    fetch("/api/toptenprojects")
       .then((response) => response.json())
       .then((data) =>
         setTopTenProjectsData(
@@ -16,7 +16,7 @@ const Top10Projects = () => {
           )
         )
       );
-  }, ["/data/toptenprojects"]);
+  }, ["/api/toptenprojects"]);
   console.log(TopTenProjectsData);
   let slides = TopTenProjectsData.map(({ imgAlt, mainImage }) => {
     const imgBuilder = imageUrlBuilder({
