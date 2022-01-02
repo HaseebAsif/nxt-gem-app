@@ -9,7 +9,7 @@ const AdvertisementTop = () => {
       projectId: "cqnczxva",
       dataset: "production",
     });
-    fetch("/api/topAdvertisement")
+    fetch("/data/topAdvertisement")
       .then((response) => response.json())
       .then((data) =>
         setAdvertisementImage(imgBuilder.image(data[0].mainImage))

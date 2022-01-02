@@ -8,7 +8,7 @@ import styles from "./topstories.module.css";
 const TopStories = () => {
   const [topStoriesData, settopStoriesData] = useState([]);
   useEffect(() => {
-    fetch("/api/post")
+    fetch("/data/post")
       .then((response) => response.json())
       .then((data) => settopStoriesData(data));
   }, []);

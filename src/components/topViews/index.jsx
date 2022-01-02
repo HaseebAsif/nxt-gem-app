@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const TopViews = () => {
   const [TopViewsData, setTopViewsData] = useState([]);
   useEffect(() => {
-    fetch("/api/topViews")
+    fetch("/data/topViews")
       .then((response) => response.json())
       .then((data) => setTopViewsData(data));
   }, []);
