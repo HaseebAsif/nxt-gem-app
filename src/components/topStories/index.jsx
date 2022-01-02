@@ -7,10 +7,13 @@ import styles from "./topstories.module.css";
 
 const TopStories = () => {
   const [topStoriesData, settopStoriesData] = useState([]);
-  useEffect(() => {
-    fetch("/api/post")
-      .then((response) => response.json())
-      .then((data) => settopStoriesData(data));
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "post" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+
+    settopStoriesData(result.result);
   }, []);
   console.log(topStoriesData);
   return (

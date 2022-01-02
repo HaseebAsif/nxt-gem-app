@@ -4,16 +4,17 @@ import imageUrlBuilder from "@sanity/image-url";
 
 const AdvertisementTop = () => {
   const [AdvertisementImage, setAdvertisementImage] = useState();
-  useEffect(() => {
+  useEffect(async () => {
     const imgBuilder = imageUrlBuilder({
       projectId: "cqnczxva",
       dataset: "production",
     });
-    fetch("/api/topAdvertisement")
-      .then((response) => response.json())
-      .then((data) =>
-        setAdvertisementImage(imgBuilder.image(data[0].mainImage))
-      );
+    const query = encodeURIComponent(`*[ _type == "topAdvertisement" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+    setAdvertisementImage(imgBuilder.image(result.result[0].mainImage));
+    console.log(imgBuilder.image(result.result[0].mainImage));
   }, []);
   return (
     <div className="h-fill bg-[#0398b6] mt-[60px]">

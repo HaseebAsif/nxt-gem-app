@@ -6,18 +6,18 @@ import SectionHeader from "components/sectionHeading";
 
 const Top10Projects = () => {
   const [TopTenProjectsData, setTopTenProjectsData] = useState([]);
-  useEffect(() => {
-    fetch("/api/toptenprojects")
-      .then((response) => response.json())
-      .then((data) =>
-        setTopTenProjectsData(
-          data.sort(
-            (a, b) => parseFloat(a.slug.current) - parseFloat(b.slug.current)
-          )
-        )
-      );
-  }, ["/api/toptenprojects"]);
-  console.log(TopTenProjectsData);
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "toptenprojects" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+
+    setTopTenProjectsData(
+      result.result.sort(
+        (a, b) => parseFloat(a.slug.current) - parseFloat(b.slug.current)
+      )
+    );
+  }, []);
   let slides = TopTenProjectsData.map(({ imgAlt, mainImage }) => {
     const imgBuilder = imageUrlBuilder({
       projectId: "cqnczxva",

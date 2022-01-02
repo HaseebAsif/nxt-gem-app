@@ -4,12 +4,13 @@ import SingleSmallVideoViews from "components/singleSmallVideoViews";
 import { useEffect, useState } from "react";
 const TopViews = () => {
   const [TopViewsData, setTopViewsData] = useState([]);
-  useEffect(() => {
-    fetch("/api/topViews")
-      .then((response) => response.json())
-      .then((data) => setTopViewsData(data));
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "topViews" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+    setTopViewsData(result.result);
   }, []);
-  console.log(TopViewsData);
   return (
     <div className="mb-24 sm:mb-32 animate-fadeIn">
       <div className="mt-8">

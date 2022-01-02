@@ -4,10 +4,12 @@ import imageUrlBuilder from "@sanity/image-url";
 
 const OurPartners = () => {
   const [PartnersData, setPartnersData] = useState([]);
-  useEffect(() => {
-    fetch("/api/ourPartners")
-      .then((response) => response.json())
-      .then((data) => setPartnersData(data));
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "ourPartners" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+    setPartnersData(result.result);
   }, []);
   return (
     <div className="py-12 mt-24 animate-fadeIn sm:mt-0">

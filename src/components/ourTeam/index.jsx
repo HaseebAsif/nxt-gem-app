@@ -7,10 +7,13 @@ import OurTeamName from "./ourTeamName";
 
 const OurTeam = () => {
   const [OurTeamData, setOurTeamData] = useState([]);
-  useEffect(() => {
-    fetch("/api/ourTeam")
-      .then((response) => response.json())
-      .then((data) => setOurTeamData(data));
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "ourTeam" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+    setOurTeamData(result.result);
+    console.log(result.result);
   }, []);
 
   return (
