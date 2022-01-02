@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import Tilt from "react-tilt";
 
 import Fade from "react-reveal/Fade";
+import { useRouter } from "next/router";
 
-const SingleCard = ({ Title, Image, index, styles }) => {
+const SingleCard = ({ Title, Image, index, styles, body, currentSlug }) => {
+  const router = useRouter();
   return (
     <>
       <div className={`mx-4 mb-5 ${styles.SingleProjectQ}`}>
@@ -22,7 +24,7 @@ const SingleCard = ({ Title, Image, index, styles }) => {
                   <h1 className="text-white text-lg line-clamp-2"> {Title} </h1>
                 </div>
                 <div className={styles.wrapper}>
-                  <button>
+                  <button onClick={() => router.push(`/blog/${currentSlug}`)}>
                     <span>Read More</span>
                   </button>
                 </div>

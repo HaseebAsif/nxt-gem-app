@@ -12,6 +12,7 @@ const TopStories = () => {
       .then((response) => response.json())
       .then((data) => settopStoriesData(data));
   }, []);
+  console.log(topStoriesData);
   return (
     <div
       id="Projects"
@@ -25,7 +26,7 @@ const TopStories = () => {
           className={`flex flex-wrap items-center justify-center overflow-hidden ${styles.sibling_fade}`}
         >
           {topStoriesData.slice(0, 3).map((prev, i) => {
-            const { title, mainImage } = prev;
+            const { title, mainImage, body, slug } = prev;
             const imgBuilder = imageUrlBuilder({
               projectId: "cqnczxva",
               dataset: "production",
@@ -38,6 +39,8 @@ const TopStories = () => {
                 Title={title}
                 Image={image}
                 styles={styles}
+                body={body}
+                currentSlug={slug.current}
               />
             );
           })}

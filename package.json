@@ -4,7 +4,7 @@
   "homepage": "http://nxtgem.io/",
   "scripts": {
     "dev": "next",
-    "build": "npm run build:sanity && pwd && npm run build:web",
+    "build": "npm run build:sanity && pwd && npm run build:web && next export",
     "build:web": "next build",
     "start:web": "next start",
     "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "3d-react-carousal": "^4.0.2",
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/image-url": "^1.0.1",
     "bootstrap": "^5.1.3",
     "mongodb": "^4.2.2",

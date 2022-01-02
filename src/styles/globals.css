@@ -29,5 +29,10 @@
   left: 0;
 }
 .ourteam__name {
-  -webkit-text-stroke: .5px white;
+  -webkit-text-stroke: 0.5px white;
+}
+
+.body__singlepost h2 {
+  font-size: larger;
+  font-weight: 600;
 }
