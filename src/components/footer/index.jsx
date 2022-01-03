@@ -27,8 +27,8 @@ const Footer = () => {
           <div className="sm:w-11/12">
             If you have any thoughts or questions you&apos;d like to share with
             us, send us a mail to{" "}
-            <a href="contact@nxgem.io" className="underline text-[#07a5c9]">
-              contact@nxgem.io
+            <a href="contact@nxtgem.io" className="underline text-[#07a5c9]">
+              contact@nxtgem.io
             </a>{" "}
             or get in touch with us through our social media channels.
           </div>
