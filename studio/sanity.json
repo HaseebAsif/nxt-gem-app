@@ -1,16 +1,14 @@
 {
   "root": true,
-  "api": {
-    "projectId": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US",
-    "dataset": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US"
-  },
   "project": {
-    "name": "NxtGem",
-    "basePath": "/studio"
+    "name": "NxtGem"
+  },
+  "api": {
+    "projectId": "cqnczxva",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
-    "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool"
