@@ -1,3 +1,4 @@
+import SubscribeNewsLetter from "components/subscribeNewsLetter";
 import Link from "next/link";
 import React from "react";
 
@@ -36,14 +37,7 @@ const Footer = () => {
         <div className="mt-4 sm:ml-5 sm:mt-0">
           <div className="text-2xl font-bold">Stay in touch</div>
           <div className="flex flex-col ">
-            <input
-              type="text"
-              className="rounded-md my-3 text-black p-1"
-              placeholder="Email Address"
-            />
-            <button className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] rounded-md text-black p-1 uppercase">
-              Subscribe to our newsletter
-            </button>
+            <SubscribeNewsLetter />
           </div>
         </div>
       </div>
