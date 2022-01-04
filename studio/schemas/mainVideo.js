@@ -1,11 +1,11 @@
 export default {
-  name: "toptenprojects",
-  title: "Top Ten Projects",
+  name: "mainVideo",
+  title: "Main Video",
   type: "document",
   fields: [
     {
       name: "imgAlt",
-      title: "Name / number",
+      title: "Name",
       type: "string",
     },
     {
@@ -13,19 +13,20 @@ export default {
       title: "Slug",
       type: "slug",
       options: {
-        source: "name",
+        source: "imgAlt",
         maxLength: 96,
       },
     },
     {
       name: "link",
       title: "Link",
+      description: "If not any leave blank",
       type: "string",
     },
     {
-      name: "mainImage",
-      title: "Main image",
-      type: "image",
+      name: "video",
+      title: "Video",
+      type: "mux.video",
       options: {
         hotspot: true,
       },
@@ -35,7 +36,6 @@ export default {
   preview: {
     select: {
       title: "imgAlt",
-      media: "mainImage",
     },
   },
 };

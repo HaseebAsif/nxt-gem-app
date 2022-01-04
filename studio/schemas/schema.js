@@ -16,6 +16,8 @@ import ourTeam from "./ourTeam";
 import toptenprojects from "./toptenprojects";
 import topViews from "./topViews";
 import advertisment from "./advertisment";
+import movingHeading from "./movingHeading";
+import mainVideo from "./mainVideo";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,6 +34,8 @@ export default createSchema({
     topViews,
     advertisment,
     post,
+    movingHeading,
+    mainVideo,
     category,
     blockContent,
     comment,

@@ -1,11 +1,11 @@
 export default {
-  name: "toptenprojects",
-  title: "Top Ten Projects",
+  name: "movingHeading",
+  title: "Moving Heading",
   type: "document",
   fields: [
     {
-      name: "imgAlt",
-      title: "Name / number",
+      name: "heading",
+      title: "Heading",
       type: "string",
     },
     {
@@ -13,7 +13,7 @@ export default {
       title: "Slug",
       type: "slug",
       options: {
-        source: "name",
+        source: "heading",
         maxLength: 96,
       },
     },
@@ -34,7 +34,7 @@ export default {
 
   preview: {
     select: {
-      title: "imgAlt",
+      title: "heading",
       media: "mainImage",
     },
   },

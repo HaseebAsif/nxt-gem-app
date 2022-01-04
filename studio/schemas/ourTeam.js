@@ -18,6 +18,11 @@ export default {
       },
     },
     {
+      name: "order",
+      title: "Order",
+      type: "string",
+    },
+    {
       name: "post",
       title: "Designation",
       type: "string",
