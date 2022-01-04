@@ -1,7 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const WebNavbar = () => {
+  const [value, setValue] = useState(1);
+  const active =
+    "bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium";
+  const notActive =
+    "cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium";
   return (
     <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start overflow-hidden">
       <div className="flex-shrink-0 flex items-center">
@@ -24,7 +29,8 @@ const WebNavbar = () => {
         <div className="flex space-x-4 items-center">
           <Link href="/">
             <div
-              className="bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium"
+              className={value === 1 ? active : notActive}
+              onClick={() => setValue(1)}
               aria-current="page"
             >
               Home
