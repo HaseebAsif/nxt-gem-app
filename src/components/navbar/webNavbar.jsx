@@ -72,9 +72,9 @@ const WebNavbar = () => {
             </div>
           </Link>
 
-          <div className="bg-gradient-to-r p-[9px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block ">
+          <div className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block ">
             <input
-              className=" bg-black px-5 py-3 text-white relative"
+              className=" bg-black px-5 py-[0.55rem] text-white relative"
               type="search"
               name="search"
               placeholder="Search"
