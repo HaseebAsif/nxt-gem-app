@@ -29,7 +29,7 @@ const MovingHeading = () => {
             {image !== undefined && (
               <img
                 src={image}
-                className="absolute w-1/4 h-full left-0 bottom-0 z-50 object-contain md:w-max"
+                className="absolute w-1/4 h-full left-0 cursor-pointer bottom-0 z-50 object-contain md:w-max"
               />
             )}
           </a>
