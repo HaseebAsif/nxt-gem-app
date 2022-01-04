@@ -1,48 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slide from "react-reveal/Slide";
+import imageUrlBuilder from "@sanity/image-url";
 
 import styles from "./movingHeading.module.css";
 
-const MovingHeading = ({ heading }) => {
+const MovingHeading = () => {
+  const [MovingHeading, setMovingHeading] = useState({});
+  const [image, setImage] = useState();
+
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "movingHeading" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+    setMovingHeading(result.result[0]);
+    const imgBuilder = imageUrlBuilder({
+      projectId: "cqnczxva",
+      dataset: "production",
+    });
+    const mainImage = await result.result[0].mainImage;
+    setImage(imgBuilder.image(mainImage));
+  }, []);
   return (
     <>
       <div className={styles.SkillsContainer}>
         <div className={styles.SC_Slider}>
-          <a href="https://astraguild.io/" target="_blank">
-            <img
-              src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_248/v1640600232/movingHeadingImage_v5c8wd.png"
-              className="absolute w-1/4 h-full left-0 bottom-0 z-50 object-contain md:w-max"
-            />
+          <a href={MovingHeading.link} target="_blank">
+            {image !== undefined && (
+              <img
+                src={image}
+                className="absolute w-1/4 h-full left-0 bottom-0 z-50 object-contain md:w-max"
+              />
+            )}
           </a>
           <Slide bottom cascade>
             <div className={styles.SC_Slide}>
               <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
+                {MovingHeading.heading}
               </h1>
             </div>
             <div className={styles.SC_Slide}>
               <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
+                {MovingHeading.heading}
               </h1>
             </div>
             <div className={styles.SC_Slide}>
               <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
+                {MovingHeading.heading}
               </h1>
             </div>
             <div className={styles.SC_Slide}>
               <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
+                {MovingHeading.heading}
               </h1>
             </div>
             <div className={styles.SC_Slide}>
               <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
+                {MovingHeading.heading}
               </h1>
             </div>
             <div className={styles.SC_Slide}>
               <h1 className="tracking-widest text-xl w-max px-4 md:text-4xl text-white">
-                {heading}
+                {MovingHeading.heading}
               </h1>
             </div>
           </Slide>

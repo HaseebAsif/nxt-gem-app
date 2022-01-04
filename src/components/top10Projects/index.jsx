@@ -24,7 +24,7 @@ const Top10Projects = () => {
     const image = imgBuilder.image(mainImage);
     return (
       <a href={link} target="_blank">
-        <img src={image} alt={imgAlt} />;
+        <img src={image} alt={imgAlt} />
       </a>
     );
   });

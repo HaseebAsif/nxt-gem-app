@@ -24,7 +24,7 @@ const Home = () => {
       <Hero />
       <SideIcons />
       <Top10Projects />
-      <MovingHeading heading="AGV: ONE OF THE LARGEST PLAY-TO-EARN GUILDS. A DAO WITH PEOPLE WITH TIME AND PEOPLE WITH FUNDS WORK TOGETHER." />
+      <MovingHeading />
       <TopViews />
       <TopStories />
       <OurTeam />
