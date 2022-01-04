@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: "imgAlt",
-      title: "Name / number",
+      title: "Name",
       type: "string",
     },
     {
@@ -13,9 +13,14 @@ export default {
       title: "Slug",
       type: "slug",
       options: {
-        source: "name",
+        source: "imgAlt",
         maxLength: 96,
       },
+    },
+    {
+      name: "order",
+      title: "Order",
+      type: "string",
     },
     {
       name: "link",

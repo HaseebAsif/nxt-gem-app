@@ -14,7 +14,6 @@ const AdvertisementTop = () => {
 
     const result = await fetch(url).then((res) => res.json());
     setAdvertisementImage(imgBuilder.image(result.result[0].mainImage));
-    console.log(imgBuilder.image(result.result[0].mainImage));
   }, []);
   return (
     <div className="h-fill bg-[#0398b6] mt-[60px]">

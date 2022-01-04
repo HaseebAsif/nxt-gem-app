@@ -15,7 +15,6 @@ const TopStories = () => {
 
     settopStoriesData(result.result);
   }, []);
-  console.log(topStoriesData);
   return (
     <div
       id="Projects"

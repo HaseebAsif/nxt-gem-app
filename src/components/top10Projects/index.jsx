@@ -13,18 +13,20 @@ const Top10Projects = () => {
     const result = await fetch(url).then((res) => res.json());
 
     setTopTenProjectsData(
-      result.result.sort(
-        (a, b) => parseFloat(a.slug.current) - parseFloat(b.slug.current)
-      )
+      result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
     );
   }, []);
-  let slides = TopTenProjectsData.map(({ imgAlt, mainImage }) => {
+  let slides = TopTenProjectsData.map(({ imgAlt, mainImage, link }) => {
     const imgBuilder = imageUrlBuilder({
       projectId: "cqnczxva",
       dataset: "production",
     });
     const image = imgBuilder.image(mainImage);
-    return <img src={image} alt={imgAlt} />;
+    return (
+      <a href={link} target="_blank">
+        <img src={image} alt={imgAlt} />;
+      </a>
+    );
   });
 
   return (

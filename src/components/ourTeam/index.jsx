@@ -12,8 +12,9 @@ const OurTeam = () => {
     const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
 
     const result = await fetch(url).then((res) => res.json());
-    setOurTeamData(result.result);
-    console.log(result.result);
+    setOurTeamData(
+      result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
+    );
   }, []);
 
   return (
