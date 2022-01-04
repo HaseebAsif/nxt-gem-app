@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   });
   return (
     <>
-      {!isLoading ? (
+      {isLoading ? (
         <Layout>
           <Component {...pageProps} />
         </Layout>
