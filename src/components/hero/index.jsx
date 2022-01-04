@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [MainVideo, setMainVideo] = useState();
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "mainVideo" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+    setMainVideo(result.result[0].linkVideo);
+  }, []);
+  console.log(MainVideo);
   return (
     <div>
-      <video autoplay="true" loop muted className="w-screen min-w-screen">
-        <source
-          src="https://res.cloudinary.com/nxtgem-io/video/upload/c_scale,w_1117/v1640600903/hero-video_ltjqmq.mp4"
-          type="video/mp4"
-        />
-      </video>
+      {MainVideo && (
+        <video autoplay="true" loop muted className="w-screen min-w-screen">
+          <source src={MainVideo} type="video/mp4" />
+        </video>
+      )}
     </div>
   );
 };

@@ -18,18 +18,9 @@ export default {
       },
     },
     {
-      name: "link",
-      title: "Link",
-      description: "If not any leave blank",
+      name: "linkVideo",
+      title: "Link of Video",
       type: "string",
-    },
-    {
-      name: "video",
-      title: "Video",
-      type: "mux.video",
-      options: {
-        hotspot: true,
-      },
     },
   ],
 
