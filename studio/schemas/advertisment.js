@@ -18,6 +18,11 @@ export default {
       },
     },
     {
+      name: "link",
+      title: "Link",
+      type: "string",
+    },
+    {
       name: "mainImage",
       title: "Image",
       type: "image",
