@@ -6,14 +6,16 @@ import SingleCard from "./singlecard";
 import styles from "./topstories.module.css";
 
 const TopStories = () => {
-  const [topStoriesData, settopStoriesData] = useState([]);
+  const [topStoriesData, setTopStoriesData] = useState([]);
   useEffect(async () => {
     const query = encodeURIComponent(`*[ _type == "post" ]`);
     const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
 
     const result = await fetch(url).then((res) => res.json());
 
-    settopStoriesData(result.result);
+    setTopStoriesData(
+      result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
+    );
   }, []);
   return (
     <div
