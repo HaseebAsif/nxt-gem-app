@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 
 const SectionHeader = ({ heading, value }) => {
   const valueChecker = () => {
@@ -42,8 +43,7 @@ const SectionHeader = ({ heading, value }) => {
           alt=""
         />
       );
-    }
-    else if (value === "6") {
+    } else if (value === "6") {
       return (
         <img
           src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_600/v1640673364/Coming_Soon_jv7hen.png"
@@ -52,23 +52,24 @@ const SectionHeader = ({ heading, value }) => {
         />
       );
     }
-    
   };
   return (
-    <div className="text-center">
-      {value ? (
-        <div className="flex justify-center static">{valueChecker()}</div>
-      ) : (
-        <>
-          <h1 className="uppercase text-4xl font-black blur-sm invert drop-shadow-xl md:text-6xl">
-            {heading}
-          </h1>
-          <h1 className="text-4xl uppercase font-extrabold text-gray-800 relative bottom-10 md:bottom-14 md:text-6xl">
-            {heading}
-          </h1>
-        </>
-      )}
-    </div>
+    <Fade left>
+      <div className="text-center">
+        {value ? (
+          <div className="flex justify-center static">{valueChecker()}</div>
+        ) : (
+          <>
+            <h1 className="uppercase text-4xl font-black blur-sm invert drop-shadow-xl md:text-6xl">
+              {heading}
+            </h1>
+            <h1 className="text-4xl uppercase font-extrabold text-gray-800 relative bottom-10 md:bottom-14 md:text-6xl">
+              {heading}
+            </h1>
+          </>
+        )}
+      </div>
+    </Fade>
   );
 };
 

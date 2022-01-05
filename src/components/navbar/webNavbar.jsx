@@ -43,29 +43,44 @@ const WebNavbar = () => {
           </Link>
 
           <Link href="/coming-soon">
-            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            <div
+              className={value === 2 ? active : notActive}
+              onClick={() => setValue(2)}
+            >
               Project List
             </div>
           </Link>
 
           <Link href="/coming-soon">
-            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            <div
+              className={value === 3 ? active : notActive}
+              onClick={() => setValue(3)}
+            >
               Resources
             </div>
           </Link>
 
           <Link href="/coming-soon">
-            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            <div
+              className={value === 4 ? active : notActive}
+              onClick={() => setValue(4)}
+            >
               Community
             </div>
           </Link>
           <Link href="/coming-soon">
-            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            <div
+              className={value === 5 ? active : notActive}
+              onClick={() => setValue(5)}
+            >
               Exchange
             </div>
           </Link>
           <Link href="/coming-soon">
-            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            <div
+              className={value === 6 ? active : notActive}
+              onClick={() => setValue(6)}
+            >
               Marketplace
             </div>
           </Link>
@@ -73,12 +88,18 @@ const WebNavbar = () => {
             href="https://drive.google.com/file/d/17wtQyZ54vM4LaSFRN7x5MC2D-B2YWlxo/view?usp=sharing"
             target="_blank"
           >
-            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            <div
+              className={value === 7 ? active : notActive}
+              onClick={() => setValue(7)}
+            >
               About Us
             </div>
           </a>
           <Link href="/coming-soon">
-            <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            <div
+              className={value === 8 ? active : notActive}
+              onClick={() => setValue(8)}
+            >
               Submit Project
             </div>
           </Link>
