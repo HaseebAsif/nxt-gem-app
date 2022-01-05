@@ -1,0 +1,41 @@
+.scrolltotop_div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.scrollTop {
+  border-radius: 50%;
+  display: flex;
+  position: fixed;
+  width: auto;
+  font-size: 40px;
+  bottom: 20px;
+  align-items: center;
+  height: 40px;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+  color: rgb(255, 255, 255);
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@media screen and (max-width: 768px) {
+.scrollTop {
+    font-size: 2rem;
+}
+}

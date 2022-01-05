@@ -3,14 +3,16 @@ import React from "react";
 //Components
 import Navbar from "../navbar";
 import Footer from "../footer";
-import BackgroundCursor from "components/backgroundCursor";
+import ScrollToTop from "components/scrollToTop";
 
 const Layout = ({ children }) => {
   return (
     <div>
       <Navbar />
-      <BackgroundCursor />
-      <main>{children}</main>
+      <main>
+        {children}
+        <ScrollToTop />
+      </main>
       <Footer />
     </div>
   );
