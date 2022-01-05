@@ -22,6 +22,12 @@ export default {
       title: "Youtube Link",
       type: "string",
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "string",
+      description: "Main video number will be 1",
+    },
   ],
 
   preview: {

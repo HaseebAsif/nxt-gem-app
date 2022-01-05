@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className="bg-black z-50"
+        className="bg-black z-[99999]"
         style={{ ...navbarStyles, top: visible ? "0px" : "-80px" }}
       >
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
