@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
+import searchStyles from "./navbar.search.module.css";
+
 const WebNavbar = () => {
   const [value, setValue] = useState(1);
   const active =
@@ -8,24 +10,27 @@ const WebNavbar = () => {
   const notActive =
     "cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium";
   return (
-    <div className="flex-1 flex items-center justify-center md:items-stretch md:justify-start overflow-hidden">
+    <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start overflow-hidden">
       <div className="flex-shrink-0 flex items-center">
         <Link href="/">
           <img
             className="block lg:hidden h-8 w-auto cursor-pointer"
             src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_700/v1640600235/nexgen-logo_ip58ck.png"
-            alt="NEXGen"
+            alt="NXTGEM"
           />
         </Link>
         <Link href="/">
           <img
             className="hidden lg:block h-8 w-auto cursor-pointer"
             src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_700/v1640600235/nexgen-logo_ip58ck.png"
-            alt="NEXGen"
+            alt="NXTGEM"
           />
         </Link>
+        <label className={searchStyles.search} for="inpt_search">
+          <input id="inpt_search" type="text" />
+        </label>
       </div>
-      <div className="hidden md:block md:ml-6">
+      <div className="hidden lg:block lg:ml-6">
         <div className="flex space-x-4 items-center">
           <Link href="/">
             <div

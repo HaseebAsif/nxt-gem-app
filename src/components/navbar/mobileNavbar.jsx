@@ -4,7 +4,7 @@ import React from "react";
 const MobileNavbar = ({ isOpen }) => {
   return (
     <div
-      className={`${isOpen ? "block" : "hidden"} md:hidden`}
+      className={`${isOpen ? "block" : "hidden"} lg:hidden`}
       id="mobile-menu"
     >
       <div className="px-2 pt-2 pb-3 space-y-1">
@@ -57,6 +57,17 @@ const MobileNavbar = ({ isOpen }) => {
             Submit Project
           </div>
         </Link>
+        <div className="flex items-center justify-center mt-12">
+          {/* <div className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 w-fit sm:hidden">
+            <input
+              className=" bg-black px-5 py-[0.55rem] text-white relative"
+              type="search"
+              name="search"
+              placeholder="Search"
+            />
+          </div>
+          <i className="fas fa-search text-white font-bold relative right-[45px] cursor-text sm:hidden"></i> */}
+        </div>
       </div>
     </div>
   );
