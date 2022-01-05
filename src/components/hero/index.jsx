@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <div>
       {MainVideo && (
-        <video autoplay loop muted className="w-screen min-w-screen">
+        <video autoPlay loop muted className="w-screen min-w-screen">
           <source src={MainVideo} type="video/mp4" />
         </video>
       )}
