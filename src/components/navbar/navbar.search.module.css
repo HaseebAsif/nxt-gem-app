@@ -36,13 +36,14 @@
   padding-left: 10px;
   height: 30px;
   color: #ffffff;
+  top: 20px;
 }
 .search.active:after,
 .search:hover:after {
   height: 0px;
 }
 .search input {
-    max-width: 150px;
+  max-width: 150px;
   width: 30vw;
   border: none;
   box-sizing: border-box;
