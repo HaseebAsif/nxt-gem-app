@@ -9,7 +9,6 @@ const Hero = () => {
     const result = await fetch(url).then((res) => res.json());
     setMainVideo(result.result[0].linkVideo);
   }, []);
-  console.log(MainVideo);
   return (
     <div>
       {MainVideo && (

@@ -1,8 +1,10 @@
+import SEO from "components/seo";
 import React from "react";
 
 const Disclaimer = () => {
   return (
     <div className="py-20 px-40">
+      <SEO />
       <h2
         dir="ltr"
         style={{

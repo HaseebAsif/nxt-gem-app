@@ -1,8 +1,10 @@
+import SEO from "components/seo";
 import React from "react";
 
 const Termsandconditions = () => {
   return (
     <div className="py-20 px-40">
+      <SEO />
       <div>
         <p
           dir="ltr"
