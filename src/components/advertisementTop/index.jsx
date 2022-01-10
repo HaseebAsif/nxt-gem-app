@@ -21,7 +21,11 @@ const AdvertisementTop = () => {
     <div className="h-full bg-[#0398b6] mt-[60px]">
       <div className="flex justify-center align-center py-4">
         <a href={AdvertisementTopLink} target="_blank">
-          <img src={AdvertisementImage} alt="" className="md:w-[50vw]" />
+          <img
+            src={AdvertisementImage}
+            alt=""
+            className="md:w-[50vw] max-h-[90px] object-scale-down"
+          />
         </a>
       </div>
     </div>
