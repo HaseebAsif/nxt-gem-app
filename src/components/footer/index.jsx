@@ -66,7 +66,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="mt-4 flex justify-center md:block md:mt-0">
-          &copy; 2021 All Rights Reserved
+          &copy; 2022 All Rights Reserved
         </div>
       </div>
     </div>
