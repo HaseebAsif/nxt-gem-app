@@ -56,7 +56,7 @@ const Footer = () => {
               Terms & Conditions
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/privacy-policy">
             <div className="border-r-2 pr-3 mr-3 cursor-pointer">
               Privacy Policy
             </div>

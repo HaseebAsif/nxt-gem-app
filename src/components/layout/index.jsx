@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Navbar />
-      <main>
+      <main className="min-h-screen">
         {children}
         <ScrollToTop />
       </main>
