@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function MyApp({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     setTimeout(() => setIsLoading(true), 3000);
   });
