@@ -1,4 +1,4 @@
-import SubscribeNewsLetter from "components/subscribeNewsLetter";
+import NewsletterSubscribe from "components/newsletter/NewsletterSubscribe";
 import Link from "next/link";
 import React from "react";
 
@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="mt-4 sm:ml-5 sm:mt-0">
           <div className="text-2xl font-bold">Stay in touch</div>
           <div className="flex flex-col ">
-            <SubscribeNewsLetter />
+            <NewsletterSubscribe />
           </div>
         </div>
       </div>

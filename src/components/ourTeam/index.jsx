@@ -47,12 +47,12 @@ const OurTeam = () => {
                     <img
                       src={imageSrc}
                       alt=""
-                      className="max-w-[180px] drop-shadow-2xl"
+                      className="max-w-[180px] drop-shadow-2xl m-auto"
                     />
                     <img
                       src={imgHoverSrc}
                       alt=""
-                      className="max-w-[180px] relative bottom-[180px] hover:hidden drop-shadow-xl"
+                      className="max-w-[180px] relative bottom-[180px] hover:hidden drop-shadow-xl m-auto"
                     />
                   </div>
                   <OurTeamName name={name} />
