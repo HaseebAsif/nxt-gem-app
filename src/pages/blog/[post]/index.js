@@ -1,34 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import imageUrlBuilder from "@sanity/image-url";
-import SanityBlockContent from "@sanity/block-content-to-react";
 
 import ImageSlider from "components/slider";
 
-const images = [
-  "https://source.unsplash.com/WLUHO9A_xik/1600x900",
-  "https://source.unsplash.com/WLUHO9A_xik/1600x900",
-  "https://source.unsplash.com/wQLAGv4_OYs/1600x900",
-  "https://source.unsplash.com/WLUHO9A_xik/1600x900",
-  "https://source.unsplash.com/WLUHO9A_xik/1600x900",
-  "https://source.unsplash.com/WLUHO9A_xik/1600x900",
-];
 const SinglePost = ({ image, body, title }) => {
+  const images = [
+    {
+      src: "/bg-1.jpg",
+      alt: "HelloWorld /bg-1.jpg",
+    },
+    {
+      src: "/bg-2.jpg",
+      alt: "HelloWorld /bg-2.jpg",
+    },
+    {
+      src: "/bg-3.jpg",
+      alt: "HelloWorld /bg-3.jpg",
+    },
+    {
+      src: "/bg-4.jpg",
+      alt: "HelloWorld /bg-4.jpg",
+    },
+    {
+      src: "/bg-5.jpg",
+      alt: "HelloWorld /bg-5.jpg",
+    },
+    {
+      src: "/bg-6.jpg",
+      alt: "HelloWorld /bg-6.jpg",
+    },
+  ];
+  const imgBuilder = imageUrlBuilder({
+    projectId: "cqnczxva",
+    dataset: "production",
+  });
+  const imageSrc = imgBuilder.image(image);
   return (
     <>
       <div>
-        <ImageSlider images={images}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              color: "#fff",
-            }}
-          >
-            <h1>React.js Image Slider</h1>
-            <p>Nulla vitae elit libero, a pharetra augue.</p>
-          </div>
-        </ImageSlider>
+        <ImageSlider
+          images={images}
+          postImage={imageSrc}
+          postBody={body}
+          postTitle={title}
+        />
       </div>
     </>
   );

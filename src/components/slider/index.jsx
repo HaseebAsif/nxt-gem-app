@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SanityBlockContent from "@sanity/block-content-to-react";
 import styled from "styled-components";
 
 const IndicatorWrapper = styled.div`
@@ -54,20 +55,12 @@ const Slide = styled.div`
   background-size: cover;
 `;
 
-const ChildrenWrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
 const Gradient = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
 `;
 const Arrow = styled.div`
   position: absolute;
@@ -89,12 +82,30 @@ const Arrow = styled.div`
 
 const ImageSlider = ({
   images = [],
-  autoPlay = false,
-  autoPlayTime = 3000,
+  autoPlay = true,
+  autoPlayTime = 10000,
   children,
+  postBody,
+  postTitle,
+  postImage,
   ...props
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [headingArray, setHeadingArray] = useState([]);
+  const [paragraphsArray, setParagraphsArray] = useState([]);
+
+  useEffect(() => {
+    setData();
+  }, []);
+
+  const setData = () => {
+    try {
+      setHeadingArray(postBody.filter((item) => item.style === "h2"));
+      setParagraphsArray(postBody.filter((item) => item.style === "normal"));
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   function nextSlide(slideIndex = currentSlide + 1) {
     const newSlideIndex = slideIndex >= images.length ? 0 : slideIndex;
@@ -103,7 +114,6 @@ const ImageSlider = ({
   }
   function prevSlide(slideIndex = currentSlide - 1) {
     const newSlideIndex = slideIndex >= images.length ? 0 : slideIndex;
-
     setCurrentSlide(newSlideIndex);
   }
 
@@ -115,16 +125,56 @@ const ImageSlider = ({
     return () => clearTimeout(timer);
   }, [currentSlide]);
 
+  function checkKey(e) {
+    if (e.keyCode == "38") {
+      nextSlide();
+    } else if (e.keyCode == "40") {
+      prevSlide();
+    } else if (e.keyCode == "37") {
+      prevSlide();
+    } else if (e.keyCode == "39") {
+      nextSlide();
+    }
+  }
+
   return (
-    <Wrapper {...props}>
-      {images.map((imageUrl, index) => (
+    <Wrapper {...props} onKeyDown={(e) => checkKey(e)} tabIndex="0">
+      {images.slice(0, 1).map((imageUrl, index) => (
         <Slide
           key={index}
           style={{
-            backgroundImage: `url(${imageUrl})`,
+            backgroundImage: `url(${imageUrl.src})`,
             marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
           }}
-        />
+        >
+          <div className="flex items-center flex-col justify-center h-full text-white text-lg">
+            <div>
+              <h1 className="text-2xl px-2 sm:px-0 text-center sm:text-4xl 2xl:text-5xl pb-6 font-bold underline underline-offset-8">
+                {postTitle}
+              </h1>
+            </div>
+            <div>
+              <img
+                src={postImage}
+                alt={postTitle}
+                className="w-[60vw] h-[60vh] object-cover rounded-[33px] shadow-2xl"
+              />
+            </div>
+          </div>
+        </Slide>
+      ))}
+      {images.slice(1, images.length).map((imageUrl, index) => (
+        <Slide
+          key={index}
+          style={{
+            backgroundImage: `url(${imageUrl.src})`,
+          }}
+        >
+          <div className="flex items-center justify-center h-full text-white text-lg">
+            {/* <SanityBlockContent blocks={postBody} /> */}
+            {imageUrl.alt}
+          </div>
+        </Slide>
       ))}
       <Arrow left onClick={() => prevSlide()}>
         <i className="fas fa-angle-left"></i>
@@ -139,7 +189,6 @@ const ImageSlider = ({
         amountSlides={images.length}
         nextSlide={nextSlide}
       />
-      <ChildrenWrapper>{children}</ChildrenWrapper>
     </Wrapper>
   );
 };
