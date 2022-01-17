@@ -4,32 +4,58 @@ import imageUrlBuilder from "@sanity/image-url";
 import ImageSlider from "components/slider";
 
 const SinglePost = ({ image, body, title }) => {
+  const [headingIndex, setHeadingIndex] = useState([]);
+
+  useEffect(() => {
+    filteredData();
+  }, [body]);
+
+  const filteredData = () => {
+    try {
+      for (let index = 0; index < body.length; index++) {
+        const element = body[index];
+        if (element.style === "h2") {
+          setHeadingIndex((prev) => [...prev, index]);
+        }
+      }
+    } catch (error) {}
+  };
+
+  console.log(body);
+
+
   const images = [
     {
       src: "/bg-1.jpg",
-      alt: "HelloWorld /bg-1.jpg",
     },
     {
       src: "/bg-2.jpg",
-      alt: "HelloWorld /bg-2.jpg",
+      end: headingIndex[1]
     },
     {
       src: "/bg-3.jpg",
-      alt: "HelloWorld /bg-3.jpg",
+      start: headingIndex[0],
+      end: headingIndex[1],
+
     },
     {
       src: "/bg-4.jpg",
-      alt: "HelloWorld /bg-4.jpg",
+      start: headingIndex[1],
+      end: headingIndex[2],
+
     },
     {
       src: "/bg-5.jpg",
-      alt: "HelloWorld /bg-5.jpg",
+      start: headingIndex[2],
+      end: headingIndex[3],
+
     },
     {
       src: "/bg-6.jpg",
-      alt: "HelloWorld /bg-6.jpg",
+      start: headingIndex[3],
     },
   ];
+
   const imgBuilder = imageUrlBuilder({
     projectId: "cqnczxva",
     dataset: "production",
@@ -47,7 +73,7 @@ const SinglePost = ({ image, body, title }) => {
       </div>
     </>
   );
-};
+};;
 SinglePost.getInitialProps = async (pageContext) => {
   const pageSlug = pageContext.query.post;
 

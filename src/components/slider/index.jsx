@@ -92,21 +92,6 @@ const ImageSlider = ({
   ...props
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [headingArray, setHeadingArray] = useState([]);
-  const [paragraphsArray, setParagraphsArray] = useState([]);
-
-  useEffect(() => {
-    setData();
-  }, []);
-
-  const setData = () => {
-    try {
-      setHeadingArray(postBody.filter((item) => item.style === "h2"));
-      setParagraphsArray(postBody.filter((item) => item.style === "normal"));
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   function nextSlide(slideIndex = currentSlide + 1) {
     const newSlideIndex = slideIndex >= images.length ? 0 : slideIndex;
@@ -136,9 +121,7 @@ const ImageSlider = ({
     } else if (e.keyCode == "39") {
       nextSlide();
     }
-
   }
-console.log(postBody);
   return (
     <Wrapper {...props} onKeyDown={(e) => checkKey(e)} tabIndex="0">
       {images.slice(0, 1).map((imageUrl, index) => (
@@ -165,7 +148,7 @@ console.log(postBody);
           </div>
         </Slide>
       ))}
-      {images.slice(1, images.length).map((imageUrl, index) => (
+      {images.slice(1, images.length - 1).map((imageUrl, index) => (
         <Slide
           key={index}
           style={{
@@ -173,8 +156,21 @@ console.log(postBody);
           }}
         >
           <div className="flex items-center justify-center h-full text-white text-lg">
-            {/* <SanityBlockContent blocks={postBody} /> */}
-            {imageUrl.alt}
+            <SanityBlockContent
+              blocks={postBody.slice(imageUrl.start, imageUrl.end)}
+            />
+          </div>
+        </Slide>
+      ))}
+      {images.slice(images.length - 1, images.length).map((imageUrl, index) => (
+        <Slide
+          key={index}
+          style={{
+            backgroundImage: `url(${imageUrl.src})`,
+          }}
+        >
+          <div className="flex items-center justify-center h-full text-white text-lg">
+            Hello World
           </div>
         </Slide>
       ))}
