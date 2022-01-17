@@ -1,0 +1,9 @@
+.slider__data{
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.slider__data > div p{
+    color: white;
+    font-style: italic;
+}

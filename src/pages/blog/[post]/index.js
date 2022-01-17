@@ -30,25 +30,22 @@ const SinglePost = ({ image, body, title }) => {
     },
     {
       src: "/bg-2.jpg",
-      end: headingIndex[1]
+      end: headingIndex[0],
     },
     {
       src: "/bg-3.jpg",
       start: headingIndex[0],
       end: headingIndex[1],
-
     },
     {
       src: "/bg-4.jpg",
       start: headingIndex[1],
       end: headingIndex[2],
-
     },
     {
       src: "/bg-5.jpg",
       start: headingIndex[2],
       end: headingIndex[3],
-
     },
     {
       src: "/bg-6.jpg",

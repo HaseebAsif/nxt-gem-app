@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import styled from "styled-components";
 
+import styles from "./slider.module.css";
+
 const IndicatorWrapper = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -155,7 +157,9 @@ const ImageSlider = ({
             backgroundImage: `url(${imageUrl.src})`,
           }}
         >
-          <div className="flex items-center justify-center h-full text-white text-lg">
+          <div
+            className={`${styles.slider__data} flex items-center justify-center h-full text-white text-lg`}
+          >
             <SanityBlockContent
               blocks={postBody.slice(imageUrl.start, imageUrl.end)}
             />
@@ -169,9 +173,9 @@ const ImageSlider = ({
             backgroundImage: `url(${imageUrl.src})`,
           }}
         >
-          <div className="flex items-center justify-center h-full text-white text-lg">
-            Hello World
-          </div>
+          <div
+            className={`${styles.slider__data} flex items-center justify-center h-full text-white text-lg`}
+          ></div>
         </Slide>
       ))}
       <Arrow left onClick={() => prevSlide()}>
