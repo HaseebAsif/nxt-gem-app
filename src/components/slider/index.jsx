@@ -131,6 +131,7 @@ const ImageSlider = ({
           key={index}
           style={{
             backgroundImage: `url(${imageUrl.src})`,
+
             marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
           }}
         >
@@ -155,6 +156,8 @@ const ImageSlider = ({
           key={index}
           style={{
             backgroundImage: `url(${imageUrl.src})`,
+            backgroundBlendMode: "color-burn",
+            backgroundColor: "gray",
           }}
         >
           <div
