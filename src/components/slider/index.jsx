@@ -7,12 +7,13 @@ const IndicatorWrapper = styled.div`
   flex-wrap: nowrap;
   position: absolute;
   bottom: 15px;
-  right: 15px;
+  width: 100vw;
+  justify-content: center;
 `;
 
 const Dot = styled.div`
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 3px;
   border-radius: 6px;
   background-color: white;
   opacity: ${(props) => (props.isActive ? 1 : 0.5)};
@@ -83,7 +84,7 @@ const Arrow = styled.div`
 const ImageSlider = ({
   images = [],
   autoPlay = true,
-  autoPlayTime = 10000,
+  autoPlayTime = 100000000,
   children,
   postBody,
   postTitle,
@@ -135,8 +136,9 @@ const ImageSlider = ({
     } else if (e.keyCode == "39") {
       nextSlide();
     }
-  }
 
+  }
+console.log(postBody);
   return (
     <Wrapper {...props} onKeyDown={(e) => checkKey(e)} tabIndex="0">
       {images.slice(0, 1).map((imageUrl, index) => (
