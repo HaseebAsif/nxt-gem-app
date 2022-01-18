@@ -125,12 +125,12 @@ const ImageSlider = ({
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function nextSlide(slideIndex = currentSlide + 1) {
-    const newSlideIndex = slideIndex >= images.length ? 0 : slideIndex;
+    const newSlideIndex = slideIndex >= images.length - 1 ? 0 : slideIndex;
 
     setCurrentSlide(newSlideIndex);
   }
   function prevSlide(slideIndex = currentSlide - 1) {
-    const newSlideIndex = slideIndex >= images.length ? 0 : slideIndex;
+    const newSlideIndex = slideIndex >= images.length - 1 ? 0 : slideIndex;
     setCurrentSlide(newSlideIndex);
   }
 
@@ -160,8 +160,7 @@ const ImageSlider = ({
           key={index}
           style={{
             backgroundImage: `url(${imageUrl.src})`,
-            backgroundBlendMode: "color-burn",
-            backgroundColor: "gray",
+
             marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
           }}
         >
@@ -188,8 +187,6 @@ const ImageSlider = ({
           key={index}
           style={{
             backgroundImage: `url(${imageUrl.src})`,
-            backgroundBlendMode: "color-burn",
-            backgroundColor: "gray",
           }}
         >
           <Zoom>
@@ -205,20 +202,19 @@ const ImageSlider = ({
           </Zoom>
         </Slide>
       ))}
-      {images.slice(images.length - 1, images.length).map((imageUrl, index) => (
+      {/* {images.slice(images.length - 1, images.length).map((imageUrl, index) => (
         <Slide
           key={index}
           style={{
             backgroundImage: `url(${imageUrl.src})`,
-            backgroundBlendMode: "color-burn",
-            backgroundColor: "gray",
+        
           }}
         >
           <div
             className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
           ></div>
         </Slide>
-      ))}
+      ))} */}
 
       {currentSlide !== 0 && (
         <Arrow left onClick={() => prevSlide()}>
@@ -231,7 +227,7 @@ const ImageSlider = ({
 
       <Indicator
         currentSlide={currentSlide}
-        amountSlides={images.length}
+        amountSlides={images.length - 1}
         nextSlide={nextSlide}
       />
     </Wrapper>

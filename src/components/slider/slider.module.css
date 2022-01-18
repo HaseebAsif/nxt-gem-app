@@ -33,15 +33,15 @@
 @keyframes animateBorderOne {
   0% {
     outline: 0 3px dashed #e0e4cc;
-    box-shadow: 0 0 0 3px #00163e;
+    box-shadow: 0 0 0 3px #028ca8;
   }
   50% {
-    outline-color: #00163e;
+    outline-color: #028ca8;
     box-shadow: 0 0 0 3px #e0e4cc;
   }
   100% {
     outline: 0 3px dashed #e0e4cc;
-    box-shadow: 0 0 0 3px #00163e;
+    box-shadow: 0 0 0 3px #028ca8;
   }
 }
 
