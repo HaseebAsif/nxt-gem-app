@@ -21,6 +21,9 @@ const Dot = styled.div`
   opacity: ${(props) => (props.isActive ? 1 : 0.5)};
   margin: 5px;
   transition: 750ms all ease-in-out;
+  @media (max-width: 768px) {
+    visibility: hidden;
+  }
 `;
 
 const Indicator = ({ currentSlide, amountSlides, nextSlide }) => {
@@ -45,6 +48,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden;
+  /* &:first-child {
+    height: 100vh;
+    overflow: hidden;
+  } */
 `;
 
 const Slide = styled.div`
@@ -54,8 +61,7 @@ const Slide = styled.div`
   background-size: cover;
   transition: 750ms all ease-in-out;
   background-repeat: no-repeat;
-  height: fit-content;
-  margin-top: 60px;
+  height: auto;
 `;
 
 const Arrow = styled.div`
@@ -124,32 +130,34 @@ const ImageSlider = ({
   }
   return (
     <Wrapper {...props} onKeyDown={(e) => checkKey(e)} tabIndex="0">
-      {images.slice(0, 1).map((imageUrl, index) => (
-        <Slide
-          key={index}
-          style={{
-            backgroundImage: `url(${imageUrl.src})`,
-            backgroundBlendMode: "color-burn",
-            backgroundColor: "gray",
-            marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
-          }}
-        >
-          <div className="flex items-center flex-col justify-center min-h-screen h-full text-white text-lg">
-            <div>
-              <h1 className="text-2xl px-2 sm:px-0 text-center sm:text-4xl 2xl:text-5xl pb-6 font-bold underline underline-offset-8">
-                {postTitle}
-              </h1>
+      <>
+        {images.slice(0, 1).map((imageUrl, index) => (
+          <Slide
+            key={index}
+            style={{
+              backgroundImage: `url(${imageUrl.src})`,
+              backgroundBlendMode: "color-burn",
+              backgroundColor: "gray",
+              marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
+            }}
+          >
+            <div className="flex items-center flex-col justify-center min-h-screen h-fit text-white text-lg">
+              <div>
+                <h1 className="text-2xl px-2 sm:px-0 text-center sm:text-4xl 2xl:text-5xl pb-6 font-bold underline underline-offset-8">
+                  {postTitle}
+                </h1>
+              </div>
+              <div>
+                <img
+                  src={postImage}
+                  alt={postTitle}
+                  className="w-[60vw] h-[60vh] object-cover rounded-[33px] shadow-2xl"
+                />
+              </div>
             </div>
-            <div>
-              <img
-                src={postImage}
-                alt={postTitle}
-                className="w-[60vw] h-[60vh] object-cover rounded-[33px] shadow-2xl"
-              />
-            </div>
-          </div>
-        </Slide>
-      ))}
+          </Slide>
+        ))}
+      </>
       {images.slice(1, images.length - 1).map((imageUrl, index) => (
         <Slide
           key={index}
