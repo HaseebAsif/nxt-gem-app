@@ -40,31 +40,24 @@ const Indicator = ({ currentSlide, amountSlides, nextSlide }) => {
 };
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: hidden;
-  position: relative;
 `;
 
 const Slide = styled.div`
-  height: 100%;
   width: 100%;
   flex-shrink: 0;
   background-position: center;
   background-size: cover;
   transition: 750ms all ease-in-out;
   background-repeat: no-repeat;
-  background-size: cover;
+  height: fit-content;
+  margin-top: 60px;
 `;
 
-const Gradient = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
 const Arrow = styled.div`
   position: absolute;
   z-index: 99999999999999;
@@ -81,6 +74,11 @@ const Arrow = styled.div`
   justify-content: center;
   font-size: 27px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+  }
 `;
 
 const ImageSlider = ({
@@ -131,11 +129,12 @@ const ImageSlider = ({
           key={index}
           style={{
             backgroundImage: `url(${imageUrl.src})`,
-
+            backgroundBlendMode: "color-burn",
+            backgroundColor: "gray",
             marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
           }}
         >
-          <div className="flex items-center flex-col justify-center h-full text-white text-lg">
+          <div className="flex items-center flex-col justify-center min-h-screen h-full text-white text-lg">
             <div>
               <h1 className="text-2xl px-2 sm:px-0 text-center sm:text-4xl 2xl:text-5xl pb-6 font-bold underline underline-offset-8">
                 {postTitle}
@@ -160,8 +159,11 @@ const ImageSlider = ({
             backgroundColor: "gray",
           }}
         >
+          {console.log(index)}
           <div
-            className={`${styles.slider__data} flex items-center justify-center h-full text-white text-lg`}
+            className={`${styles.slider__data} ${
+              index === 0 && styles.slider__data__first
+            } flex items-center justify-center min-h-screen h-full text-white text-lg`}
           >
             <SanityBlockContent
               blocks={postBody.slice(imageUrl.start, imageUrl.end)}
@@ -174,10 +176,12 @@ const ImageSlider = ({
           key={index}
           style={{
             backgroundImage: `url(${imageUrl.src})`,
+            backgroundBlendMode: "color-burn",
+            backgroundColor: "gray",
           }}
         >
           <div
-            className={`${styles.slider__data} flex items-center justify-center h-full text-white text-lg`}
+            className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
           ></div>
         </Slide>
       ))}
@@ -188,7 +192,6 @@ const ImageSlider = ({
         <i className="fas fa-angle-right"></i>
       </Arrow>
 
-      <Gradient />
       <Indicator
         currentSlide={currentSlide}
         amountSlides={images.length}
