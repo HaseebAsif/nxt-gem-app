@@ -3,7 +3,8 @@
   margin: 0 auto;
 }
 
-.slider__data > div {
+.slider__data > div,
+.slider__data > p {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +23,8 @@
   }
 }
 
-.slider__data__first > div {
+.slider__data__first > div,
+.slider__data__first > p {
   padding-top: 0;
   padding: 20px 40px;
   animation: 10s animateBorderOne ease infinite;
