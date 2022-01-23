@@ -46,7 +46,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .slider__data__first > div {
+  .slider__data__first > div,
+  .slider__data__first > p {
     animation: none;
     padding: 20px 0px;
   }
