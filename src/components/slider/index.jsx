@@ -5,6 +5,7 @@ import styled from "styled-components";
 import styles from "./slider.module.css";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
+import { useSwipeable } from "react-swipeable";
 
 const IndicatorWrapper = styled.div`
   display: flex;
@@ -123,6 +124,12 @@ const ImageSlider = ({
   ...props
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
 
   function nextSlide(slideIndex = currentSlide + 1) {
     const newSlideIndex = slideIndex >= images.length - 1 ? 0 : slideIndex;
@@ -153,8 +160,14 @@ const ImageSlider = ({
       nextSlide();
     }
   }
+
   return (
-    <Wrapper {...props} onKeyDown={(e) => checkKey(e)} tabIndex="0">
+    <Wrapper
+      {...props}
+      onKeyDown={(e) => checkKey(e)}
+      tabIndex="0"
+      {...handlers}
+    >
       {images.slice(0, 1).map((imageUrl, index) => (
         <Slide
           key={index}
