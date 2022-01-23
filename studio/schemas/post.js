@@ -29,6 +29,11 @@ export default {
       type: "string",
     },
     {
+      name: "youtubeLink",
+      title: "Youtube Link",
+      type: "string",
+    },
+    {
       name: "mainImage",
       title: "Main image",
       type: "image",

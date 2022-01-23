@@ -62,8 +62,9 @@ const ComingSoon = () => {
                 dataset: "production",
               });
               const image = imgBuilder.image(mainImage);
+              console.log(comingSoonAdvertisments);
               return (
-                <a href={link} target="_blank">
+                <a href={link} target="_blank" className="cursor-pointer">
                   <div
                     style={{ backgroundImage: `url(${image})` }}
                     className="h-[200px] mt-5 flex items-center justify-center sm:mr-6 sm:mt-0 bg-cover"
@@ -78,7 +79,11 @@ const ComingSoon = () => {
             });
             const image = imgBuilder.image(mainImage);
             return (
-              <a href={link} target="_blank" className="sm:col-span-3">
+              <a
+                href={link}
+                target="_blank"
+                className="sm:col-span-3 cursor-pointer"
+              >
                 <div
                   style={{ backgroundImage: `url(${image})` }}
                   className="h-[200px] mt-5 flex items-center justify-center  bg-cover"

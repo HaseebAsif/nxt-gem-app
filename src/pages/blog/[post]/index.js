@@ -3,7 +3,7 @@ import imageUrlBuilder from "@sanity/image-url";
 
 import ImageSlider from "components/slider";
 
-const SinglePost = ({ image, body, title }) => {
+const SinglePost = ({ image, body, title, youtubeLink }) => {
   const [headingIndex, setHeadingIndex] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,6 @@ const SinglePost = ({ image, body, title }) => {
   };
 
   console.log(body);
-
 
   const images = [
     {
@@ -66,11 +65,12 @@ const SinglePost = ({ image, body, title }) => {
           postImage={imageSrc}
           postBody={body}
           postTitle={title}
+          postYoutubeLink={youtubeLink}
         />
       </div>
     </>
   );
-};;
+};
 SinglePost.getInitialProps = async (pageContext) => {
   const pageSlug = pageContext.query.post;
 
@@ -97,6 +97,7 @@ SinglePost.getInitialProps = async (pageContext) => {
       title: post.title,
       body: post.body,
       image: post.mainImage,
+      youtubeLink: post.youtubeLink,
     };
   }
 };
