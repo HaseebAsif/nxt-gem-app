@@ -20,9 +20,6 @@
   align-items: center;
   justify-content: center;
 }
-.slick-slider {
-  padding-inline: 10vw;
-}
 
 .nextArrow {
   position: absolute;
@@ -30,6 +27,9 @@
   right: 250px;
   z-index: 100;
   font-size: 2.5rem;
+}
+.slick-slider {
+  padding-inline: 10vw;
 }
 
 .react-3d-carousel
@@ -84,6 +84,10 @@
 
   .react-3d-carousel .slider-container .slider-right div {
     left: 0% !important;
+  }
+
+  .slick-slider {
+    padding-inline: 0;
   }
 }
 @media (max-width: 500px) {
