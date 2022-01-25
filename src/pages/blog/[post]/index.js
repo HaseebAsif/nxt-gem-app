@@ -8,7 +8,7 @@ const SinglePost = ({ image, body, title, youtubeLink }) => {
 
   useEffect(() => {
     filteredData();
-  }, [body]);
+  }, []);
 
   const filteredData = () => {
     try {
@@ -20,8 +20,6 @@ const SinglePost = ({ image, body, title, youtubeLink }) => {
       }
     } catch (error) {}
   };
-
-  console.log(body);
 
   const images = [
     {
@@ -49,6 +47,42 @@ const SinglePost = ({ image, body, title, youtubeLink }) => {
     {
       src: "/bg-6.jpg",
       start: headingIndex[3],
+      end: headingIndex[4],
+    },
+    {
+      src: "/bg-6.jpg",
+      start: headingIndex[4],
+      end: headingIndex[5],
+    },
+    {
+      src: "/bg-1.jpg",
+      start: headingIndex[5],
+      end: headingIndex[6],
+    },
+    {
+      src: "/bg-2.jpg",
+      start: headingIndex[6],
+      end: headingIndex[7],
+    },
+    {
+      src: "/bg-3.jpg",
+      start: headingIndex[7],
+      end: headingIndex[8],
+    },
+    {
+      src: "/bg-4.jpg",
+      start: headingIndex[8],
+      end: headingIndex[9],
+    },
+    {
+      src: "/bg-5.jpg",
+      start: headingIndex[9],
+      end: headingIndex[10],
+    },
+    {
+      src: "/bg-6.jpg",
+      start: headingIndex[10],
+      end: headingIndex[11],
     },
   ];
 
@@ -61,7 +95,7 @@ const SinglePost = ({ image, body, title, youtubeLink }) => {
     <>
       <div>
         <ImageSlider
-          images={images}
+          images={images.slice(0, headingIndex.length + 3)}
           postImage={imageSrc}
           postBody={body}
           postTitle={title}

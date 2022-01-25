@@ -162,7 +162,6 @@ const ImageSlider = ({
       nextSlide();
     }
   }
-
   return (
     <Wrapper
       {...props}
