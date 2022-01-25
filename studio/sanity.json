@@ -13,9 +13,11 @@
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
+    "dashboard-widget-document-list",
     "@sanity/desk-tool",
     "@sanity/dashboard",
-    "google-analytics"
+    "google-analytics",
+    "dashboard-widget-document-chart"
   ],
   "env": {
     "development": {
