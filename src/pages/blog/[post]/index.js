@@ -23,64 +23,64 @@ const SinglePost = ({ image, body, title, youtubeLink }) => {
 
   const images = [
     {
-      src: "/bg-1.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_990/v1643114972/bg-1_zkq3mi.jpg",
     },
     {
-      src: "/bg-2.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_990/v1643114972/bg-2_tyhf2i.jpg",
       end: headingIndex[0],
     },
     {
-      src: "/bg-3.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_990/v1643114975/bg-3_ffg2fy.jpg",
       start: headingIndex[0],
       end: headingIndex[1],
     },
     {
-      src: "/bg-4.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_728/v1643114976/bg-4_iy5gs5.jpg",
       start: headingIndex[1],
       end: headingIndex[2],
     },
     {
-      src: "/bg-5.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_728/v1643114976/bg-4_iy5gs5.jpg",
       start: headingIndex[2],
       end: headingIndex[3],
     },
     {
-      src: "/bg-6.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_1120/v1643114974/bg-6_ven2t5.jpg",
       start: headingIndex[3],
       end: headingIndex[4],
     },
     {
-      src: "/bg-6.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_1120/v1643114974/bg-6_ven2t5.jpg",
       start: headingIndex[4],
       end: headingIndex[5],
     },
     {
-      src: "/bg-1.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_924/v1643114972/bg-1_zkq3mi.jpg",
       start: headingIndex[5],
       end: headingIndex[6],
     },
     {
-      src: "/bg-2.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_990/v1643114972/bg-2_tyhf2i.jpg",
       start: headingIndex[6],
       end: headingIndex[7],
     },
     {
-      src: "/bg-3.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_990/v1643114975/bg-3_ffg2fy.jpg",
       start: headingIndex[7],
       end: headingIndex[8],
     },
     {
-      src: "/bg-4.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_990/v1643114976/bg-4_iy5gs5.jpg",
       start: headingIndex[8],
       end: headingIndex[9],
     },
     {
-      src: "/bg-5.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_990/v1643114976/bg-4_iy5gs5.jpg",
       start: headingIndex[9],
       end: headingIndex[10],
     },
     {
-      src: "/bg-6.jpg",
+      src: "https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_990/v1643114974/bg-6_ven2t5.jpg",
       start: headingIndex[10],
       end: headingIndex[11],
     },
