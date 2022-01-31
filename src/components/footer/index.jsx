@@ -51,19 +51,23 @@ const Footer = () => {
           />
         </div>
         <div className="flex justify-center sm:justify-end h-fit mt-4 sm:mt-0">
-          <Link href="/termsandconditions">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="/termsandconditions"
+          >
             <div className="border-r-2 pr-3 mr-3 cursor-pointer">
               Terms & Conditions
             </div>
-          </Link>
-          <Link href="/privacy-policy">
+          </a>
+          <a rel="noopener noreferrer" target="_blank" href="/privacy-policy">
             <div className="border-r-2 pr-3 mr-3 cursor-pointer">
               Privacy Policy
             </div>
-          </Link>
-          <Link href="/disclaimer">
+          </a>
+          <a rel="noopener noreferrer" target="_blank" href="/disclaimer">
             <div className="cursor-pointer">Disclaimer</div>
-          </Link>
+          </a>
         </div>
         <div className="mt-4 flex justify-center md:block md:mt-0">
           &copy; 2022 All Rights Reserved

@@ -72,14 +72,14 @@
   }
 }
 
-/*==================== BUTTON ANIMATION START ====================*/
+/*==================== a ANIMATION START ====================*/
 .wrapper {
   display: flex;
   justify-content: center;
   margin: 1rem 0rem;
 }
 
-.wrapper button {
+.wrapper a {
   display: block;
   width: 10rem;
   height: 3rem;
@@ -96,12 +96,12 @@
   border-radius: 3px;
 }
 
-.wrapper button span {
+.wrapper a span {
   position: relative;
   z-index: 1;
 }
 
-.wrapper button:after {
+.wrapper a:after {
   position: absolute;
   content: "";
   top: 0;
@@ -112,15 +112,15 @@
   transition: all 0.35s;
 }
 
-.wrapper button:hover {
+.wrapper a:hover {
   color: var(--black);
   text-decoration: none;
 }
 
-.wrapper button:hover:after {
+.wrapper a:hover:after {
   height: 100%;
 }
-/*==================== BUTTON ANIMATION END ====================*/
+/*==================== a ANIMATION END ====================*/
 
 /* ============ PROJECT BLUR ON HOVER START ============= */
 

@@ -24,9 +24,13 @@ const SingleCard = ({ Title, Image, index, styles, body, currentSlug }) => {
                   <h1 className="text-white text-lg line-clamp-2"> {Title} </h1>
                 </div>
                 <div className={styles.wrapper}>
-                  <button onClick={() => router.push(`/blog/${currentSlug}`)}>
+                  <a
+                    href={`/blog/${currentSlug}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <span>Read More</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
