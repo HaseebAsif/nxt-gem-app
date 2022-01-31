@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
       />
       <div className="w-4/5 md:w-3/5 m-auto">
         <p className="pb-6 text-md opacity-80">
-          At <b> NXTGEM </b>, accessible from http://nxtgem.io, one of our main
+          At <b> NXTGEM </b>, accessible from https://nxtgem.io, one of our main
           priorities is the privacy of our visitors. This Privacy Policy
           document contains types of information that is collected and recorded
           by NXTGEM and how we use it.
@@ -73,7 +73,9 @@ const PrivacyPolicy = () => {
             marketing and promotional purposes
           </li>
           <li className="pb-6 ml-16 text-md opacity-80">Send you emails</li>
-          <li className="pb-6 ml-16 text-md opacity-80">Find and prevent fraud</li>
+          <li className="pb-6 ml-16 text-md opacity-80">
+            Find and prevent fraud
+          </li>
         </ul>
         <h2 className="text-xl font-bold pb-6">Log Files</h2>
         <p className="pb-6 text-md opacity-80">

@@ -6,6 +6,23 @@ const Footer = () => {
   return (
     <div className="bg-black text-white p-[20px] sm:p-20 sm:py-8">
       <div className="grid grid-cols-1 py-5 lg:grid-cols-3 md:grid-cols-2">
+        <div className="mt-4 sm:ml-5 sm:mt-0">
+          <div className="text-2xl font-bold">Stay in touch</div>
+          <div className="flex flex-col md:w-11/12">
+            <NewsletterSubscribe />
+          </div>
+        </div>
+        <div className="mt-4 sm:mt-0">
+          <div className="text-2xl font-bold">Contact</div>
+          <div className="sm:w-11/12">
+            If you have any thoughts or questions you&apos;d like to share with
+            us, send us a mail to{" "}
+            <a href="contact@nxtgem.io" className="underline text-[#07a5c9]">
+              contact@nxtgem.io
+            </a>{" "}
+            or get in touch with us through our social media channels.
+          </div>
+        </div>
         <div className="mt-4 sm:mt-0">
           <div className="text-2xl font-bold">Submit Project</div>
           <div>
@@ -21,23 +38,6 @@ const Footer = () => {
             <Link href="/">
               <div className="cursor-pointer">Login</div>
             </Link>
-          </div>
-        </div>
-        <div className="mt-4 sm:mt-0">
-          <div className="text-2xl font-bold">Contact</div>
-          <div className="sm:w-11/12">
-            If you have any thoughts or questions you&apos;d like to share with
-            us, send us a mail to{" "}
-            <a href="contact@nxtgem.io" className="underline text-[#07a5c9]">
-              contact@nxtgem.io
-            </a>{" "}
-            or get in touch with us through our social media channels.
-          </div>
-        </div>
-        <div className="mt-4 sm:ml-5 sm:mt-0">
-          <div className="text-2xl font-bold">Stay in touch</div>
-          <div className="flex flex-col ">
-            <NewsletterSubscribe />
           </div>
         </div>
       </div>
