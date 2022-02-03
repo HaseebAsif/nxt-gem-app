@@ -1,0 +1,29 @@
+.blogTitlePage {
+  padding: 3px 15px 3px 10px;
+  text-decoration: none;
+  transform: skewX(-48deg);
+  -ms-transform: skewX(-48deg);
+  -webkit-transform: skewX(-48deg);
+  color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+.blogTitlePage::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: #023844;
+  -webkit-transform: skewX(48deg);
+  left: -5px;
+  top: 0;
+}
+.blogText {
+  transform: skewX(48deg);
+  -ms-transform: skewX(48deg);
+  -webkit-transform: skewX(48deg);
+}
+.blogText h2 {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #1bd6fa;
+}

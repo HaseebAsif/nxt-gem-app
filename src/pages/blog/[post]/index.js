@@ -95,7 +95,7 @@ const SinglePost = ({ image, body, title, youtubeLink }) => {
     <>
       <div>
         <ImageSlider
-          images={images.slice(0, headingIndex.length + 3)}
+          images={images.slice(0, headingIndex.length + 4)}
           postImage={imageSrc}
           postBody={body}
           postTitle={title}

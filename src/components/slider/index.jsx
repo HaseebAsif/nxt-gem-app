@@ -7,6 +7,7 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import { useSwipeable } from "react-swipeable";
 import SingleLargeVideoViews from "components/singleLargeVideoViews";
+import BlogTitleDesign from "components/blogTitleDesign";
 
 const IndicatorWrapper = styled.div`
   display: flex;
@@ -196,7 +197,7 @@ const ImageSlider = ({
           </Fade>
         </Slide>
       ))}
-      {images.slice(1, images.length - 1).map((imageUrl, index) => (
+      {images.slice(1, images.length - 2).map((imageUrl, index) => (
         <Slide
           key={index}
           style={{
@@ -204,10 +205,11 @@ const ImageSlider = ({
           }}
         >
           <Zoom>
+            <BlogTitleDesign />
             <div
               className={`${styles.slider__data} ${
                 index === 0 && styles.slider__data__first
-              } flex items-center justify-center min-h-screen h-full text-white text-lg`}
+              } flex items-baseline justify-center min-h-screen h-full text-white text-lg`}
             >
               <SanityBlockContent
                 blocks={postBody.slice(imageUrl.start, imageUrl.end)}
@@ -216,6 +218,29 @@ const ImageSlider = ({
           </Zoom>
         </Slide>
       ))}
+      {images
+        .slice(images.length - 2, images.length - 1)
+        .map((imageUrl, index) => (
+          <Slide
+            key={index}
+            style={{
+              backgroundImage: `url(${imageUrl.src})`,
+            }}
+          >
+            <div
+              className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
+            >
+              <SingleLargeVideoViews
+                videoUrl={
+                  postYoutubeLink
+                    ? postYoutubeLink
+                    : "https://www.youtube.com/watch?v=bS3b-TdITf0"
+                }
+                autoPlay={false}
+              />
+            </div>
+          </Slide>
+        ))}
       {images.slice(images.length - 1, images.length).map((imageUrl, index) => (
         <Slide
           key={index}
@@ -226,6 +251,7 @@ const ImageSlider = ({
           <div
             className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
           >
+            Hello
             <SingleLargeVideoViews
               videoUrl={
                 postYoutubeLink
