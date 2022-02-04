@@ -1,48 +1,77 @@
 export default {
-  name: 'author',
-  title: 'Author',
-  type: 'document',
+  name: "author",
+  title: "Author",
+  type: "document",
   fields: [
     {
-      name: 'name',
-      title: 'Name',
-      type: 'string'
+      name: "name",
+      title: "Name",
+      type: "string",
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "linkedin",
+      title: "Linkedin",
+      type: "string",
+    },
+    {
+      name: "facebook",
+      title: "Facebook",
+      type: "string",
+    },
+    {
+      name: "telegram",
+      title: "Telegram",
+      type: "string",
+    },
+    {
+      name: "twitter",
+      title: "Twitter",
+      type: "string",
+    },
+    {
+      name: "relatedArticle1",
+      title: "Related Article 1",
+      type: "string",
+      description: "Slug link of post",
+    },
+    {
+      name: "relatedArticle2",
+      title: "Related Article 2",
+      type: "string",
+      description: "Slug link of post",
+    },
+    {
+      name: "relatedArticle3",
+      title: "Related Article 3",
+      type: "string",
+      description: "Slug link of post",
+    },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
       options: {
-        source: 'name',
-        maxLength: 96
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
-    },
-    {
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
+      name: "bio",
+      title: "Bio",
+      type: "array",
       of: [
         {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: []
-        }
-      ]
-    }
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
+          lists: [],
+        },
+      ],
+    },
   ],
   preview: {
     select: {
-      title: 'name',
-      media: 'image'
-    }
-  }
-}
+      title: "name",
+      media: "image",
+    },
+  },
+};
