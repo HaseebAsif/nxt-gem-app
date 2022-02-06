@@ -1,17 +1,28 @@
 export default {
-  name: 'category',
-  title: 'Category',
-  type: 'document',
+  name: "slide",
+  title: "Slides",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
+      name: "header",
+      title: "Header",
+      type: "string",
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text'
-    }
-  ]
-}
+      name: "body",
+      title: "Body",
+      type: "blockContent",
+      options: {
+        maxLength: 600,
+      },
+    },
+    {
+      name: "backgroundImage",
+      title: "Background Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+  ],
+};

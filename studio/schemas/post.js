@@ -42,10 +42,10 @@ export default {
       },
     },
     {
-      name: "categories",
-      title: "Categories",
+      name: "slides",
+      title: "Slides",
       type: "array",
-      of: [{ type: "reference", to: { type: "category" } }],
+      of: [{ type: "reference", to: { type: "slide" } }],
     },
     {
       name: "publishedAt",
