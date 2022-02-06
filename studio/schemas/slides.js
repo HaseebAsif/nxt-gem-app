@@ -1,5 +1,5 @@
 export default {
-  name: "slide",
+  name: "slides",
   title: "Slides",
   type: "document",
   fields: [
@@ -7,6 +7,14 @@ export default {
       name: "header",
       title: "Header",
       type: "string",
+      description: "Leave Empty for no heading",
+    },
+    {
+      name: "order",
+      title: "Order",
+      type: "string",
+      description:
+        "Order of 1st background image will be a, author will be 998 last and related articles will be 999",
     },
     {
       name: "body",

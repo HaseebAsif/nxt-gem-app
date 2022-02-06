@@ -8,6 +8,7 @@ import Zoom from "react-reveal/Zoom";
 import { useSwipeable } from "react-swipeable";
 import SingleLargeVideoViews from "components/singleLargeVideoViews";
 import BlogTitleDesign from "components/blogTitleDesign";
+import imageUrlBuilder from "@sanity/image-url";
 
 const IndicatorWrapper = styled.div`
   display: flex;
@@ -163,6 +164,14 @@ const ImageSlider = ({
       nextSlide();
     }
   }
+  function imageUrlBuilding(image) {
+    const imgBuilder = imageUrlBuilder({
+      projectId: "cqnczxva",
+      dataset: "production",
+    });
+    const imageSrc = imgBuilder.image(image);
+    return imageSrc;
+  }
   return (
     <Wrapper
       {...props}
@@ -170,11 +179,11 @@ const ImageSlider = ({
       tabIndex="0"
       {...handlers}
     >
-      {images.slice(0, 1).map((imageUrl, index) => (
+      {images.slice(0, 1).map(({ backgroundImage }, index) => (
         <Slide
           key={index}
           style={{
-            backgroundImage: `url(${imageUrl.src})`,
+            backgroundImage: `url(${imageUrlBuilding(backgroundImage)})`,
 
             marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
           }}
@@ -197,72 +206,60 @@ const ImageSlider = ({
           </Fade>
         </Slide>
       ))}
-      {images.slice(1, images.length - 2).map((imageUrl, index) => (
-        <Slide
-          key={index}
-          style={{
-            backgroundImage: `url(${imageUrl.src})`,
-          }}
-        >
-          <Zoom>
-            <BlogTitleDesign />
-            <div
-              className={`${styles.slider__data} ${
-                index === 0 && styles.slider__data__first
-              } flex items-baseline justify-center min-h-screen h-full text-white text-lg`}
-            >
-              <SanityBlockContent
-                blocks={postBody.slice(imageUrl.start, imageUrl.end)}
-              />
-            </div>
-          </Zoom>
-        </Slide>
-      ))}
       {images
-        .slice(images.length - 2, images.length - 1)
-        .map((imageUrl, index) => (
+        .slice(1, images.length - 2)
+        .map(({ backgroundImage, body, header }, index) => (
           <Slide
             key={index}
             style={{
-              backgroundImage: `url(${imageUrl.src})`,
+              backgroundImage: `url(${imageUrlBuilding(backgroundImage)})`,
+            }}
+          >
+            <Zoom>
+              <BlogTitleDesign />
+              <div
+                className={`${styles.slider__data} ${
+                  index === 0 && styles.slider__data__first
+                } flex flex-col items-center justify-baseline min-h-screen h-full text-white text-lg`}
+              >
+                <h1>{header}</h1>
+                <SanityBlockContent blocks={body} />
+              </div>
+            </Zoom>
+          </Slide>
+        ))}
+      {images
+        .slice(images.length - 2, images.length - 1)
+        .map(({ backgroundImage, body }, index) => (
+          <Slide
+            key={index}
+            style={{
+              backgroundImage: `url(${imageUrlBuilding(backgroundImage)})`,
             }}
           >
             <div
               className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
             >
-              <SingleLargeVideoViews
-                videoUrl={
-                  postYoutubeLink
-                    ? postYoutubeLink
-                    : "https://www.youtube.com/watch?v=bS3b-TdITf0"
-                }
-                autoPlay={false}
-              />
+              Author
             </div>
           </Slide>
         ))}
-      {images.slice(images.length - 1, images.length).map((imageUrl, index) => (
-        <Slide
-          key={index}
-          style={{
-            backgroundImage: `url(${imageUrl.src})`,
-          }}
-        >
-          <div
-            className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
+      {images
+        .slice(images.length - 1, images.length)
+        .map(({ backgroundImage, body }, index) => (
+          <Slide
+            key={index}
+            style={{
+              backgroundImage: `url(${imageUrlBuilding(backgroundImage)})`,
+            }}
           >
-            Hello
-            <SingleLargeVideoViews
-              videoUrl={
-                postYoutubeLink
-                  ? postYoutubeLink
-                  : "https://www.youtube.com/watch?v=bS3b-TdITf0"
-              }
-              autoPlay={false}
-            />
-          </div>
-        </Slide>
-      ))}
+            <div
+              className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
+            >
+              Related Articles
+            </div>
+          </Slide>
+        ))}
 
       {currentSlide !== 0 && (
         <Arrow left onClick={() => prevSlide()}>

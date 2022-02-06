@@ -29,11 +29,6 @@ export default {
       type: "string",
     },
     {
-      name: "youtubeLink",
-      title: "Youtube Link",
-      type: "string",
-    },
-    {
       name: "mainImage",
       title: "Main image",
       type: "image",
@@ -45,17 +40,12 @@ export default {
       name: "slides",
       title: "Slides",
       type: "array",
-      of: [{ type: "reference", to: { type: "slide" } }],
+      of: [{ type: "reference", to: { type: "slides" } }],
     },
     {
       name: "publishedAt",
       title: "Published at",
       type: "datetime",
-    },
-    {
-      name: "body",
-      title: "Body",
-      type: "blockContent",
     },
   ],
 
