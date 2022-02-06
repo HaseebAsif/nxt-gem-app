@@ -5,6 +5,7 @@ import searchStyles from "./navbar.search.module.css";
 
 const WebNavbar = () => {
   const [value, setValue] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("");
   const active =
     "bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium";
   const notActive =
@@ -106,10 +107,13 @@ const WebNavbar = () => {
 
           <div className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block ">
             <input
-              className=" bg-black px-5 py-[0.55rem] text-white relative"
+              className="bg-black px-5 py-[0.55rem] text-white relative"
               type="search"
               name="search"
               placeholder="Search"
+              onChange={(event) => {
+                setSearchTerm(event.target.value);
+              }}
             />
           </div>
           <i className="fas fa-search text-white font-bold relative right-[65px] cursor-text hidden xl:block"></i>

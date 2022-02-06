@@ -8,6 +8,7 @@ import Zoom from "react-reveal/Zoom";
 import { useSwipeable } from "react-swipeable";
 import SingleLargeVideoViews from "components/singleLargeVideoViews";
 import BlogTitleDesign from "components/blogTitleDesign";
+import AuthorDetailSlide from "components/authorDetailsCard";
 
 const IndicatorWrapper = styled.div`
   display: flex;
@@ -228,16 +229,9 @@ const ImageSlider = ({
             }}
           >
             <div
-              className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
+              className={`${styles.slider__data} flex py-16 justify-center min-h-screen h-full text-white text-lg`}
             >
-              <SingleLargeVideoViews
-                videoUrl={
-                  postYoutubeLink
-                    ? postYoutubeLink
-                    : "https://www.youtube.com/watch?v=bS3b-TdITf0"
-                }
-                autoPlay={false}
-              />
+              <AuthorDetailSlide />
             </div>
           </Slide>
         ))}
@@ -251,7 +245,6 @@ const ImageSlider = ({
           <div
             className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
           >
-            Hello
             <SingleLargeVideoViews
               videoUrl={
                 postYoutubeLink

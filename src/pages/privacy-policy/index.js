@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
     <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] h-fit bg-no-repeat bg-cover py-20 text-white ">
       <img
         className="m-auto"
-        src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_750/v1642164736/Privacy_Policy_For_NXTGEM_ozxk1g.png"
+        src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_670/v1644132082/Privacy_Policy_dvvii7.png"
         alt=""
       />
       <div className="w-4/5 md:w-3/5 m-auto">
