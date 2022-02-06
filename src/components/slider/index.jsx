@@ -65,7 +65,7 @@ const Slide = styled.div`
   background-size: cover;
   transition: 750ms all ease-in-out;
   background-repeat: no-repeat;
-  height: auto;
+  height: 100vh;
 `;
 
 const Arrow = styled.div`
