@@ -9,6 +9,7 @@ import { useSwipeable } from "react-swipeable";
 import SingleLargeVideoViews from "components/singleLargeVideoViews";
 import BlogTitleDesign from "components/blogTitleDesign";
 import imageUrlBuilder from "@sanity/image-url";
+import AuthorDetailSlide from "components/authorDetailsCard";
 
 const IndicatorWrapper = styled.div`
   display: flex;
@@ -238,9 +239,9 @@ const ImageSlider = ({
             }}
           >
             <div
-              className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
+              className={`${styles.slider__data} flex py-16 justify-center min-h-screen h-full text-white text-lg`}
             >
-              Author
+              <AuthorDetailSlide />
             </div>
           </Slide>
         ))}
