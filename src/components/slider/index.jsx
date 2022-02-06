@@ -10,6 +10,8 @@ import SingleLargeVideoViews from "components/singleLargeVideoViews";
 import BlogTitleDesign from "components/blogTitleDesign";
 import imageUrlBuilder from "@sanity/image-url";
 import AuthorDetailSlide from "components/authorDetailsCard";
+import RelatedArticleCard from "components/authorDetailsCard/relatedArticleCard";
+import MoreNXTGemStories from "components/moreNXTGEMStories";
 
 const IndicatorWrapper = styled.div`
   display: flex;
@@ -257,7 +259,12 @@ const ImageSlider = ({
             <div
               className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
             >
-              Related Articles
+              <div className="flex items-center text-2xl py-4">
+                MORE NXTGEM STORIES
+                <MoreNXTGemStories />
+                <MoreNXTGemStories />
+                <MoreNXTGemStories />
+              </div>
             </div>
           </Slide>
         ))}
