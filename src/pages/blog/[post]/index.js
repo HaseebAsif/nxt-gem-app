@@ -40,11 +40,11 @@ const SinglePost = ({ image, body, title, youtubeLink, post }) => {
     dataset: "production",
   });
   const imageSrc = imgBuilder.image(image);
-  console.log(images);
   return (
     <>
       <div>
         <ImageSlider
+          author={post.author}
           images={images}
           postImage={imageSrc}
           postBody={images.body}

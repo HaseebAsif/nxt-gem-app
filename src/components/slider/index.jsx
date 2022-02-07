@@ -65,7 +65,7 @@ const Slide = styled.div`
   background-size: cover;
   transition: 750ms all ease-in-out;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: auto;
 `;
 
 const Arrow = styled.div`
@@ -124,6 +124,7 @@ const ImageSlider = ({
   children,
   postBody,
   postTitle,
+  author,
   postImage,
   postYoutubeLink,
   ...props
@@ -241,7 +242,7 @@ const ImageSlider = ({
             <div
               className={`${styles.slider__data} flex py-16 justify-center min-h-screen h-full text-white text-lg`}
             >
-              <AuthorDetailSlide />
+              <AuthorDetailSlide author={author} />
             </div>
           </Slide>
         ))}
