@@ -223,7 +223,7 @@ const ImageSlider = ({
               <div
                 className={`${styles.slider__data} ${
                   index === 0 && styles.slider__data__first
-                } flex flex-col items-center justify-baseline min-h-screen h-full text-white text-lg`}
+                } flex flex-col items-center justify-baseline text-white text-md lg:text-lg border-4 border-[#023844] mt-2 lg:mt-10 m-auto p-2 lg:p-8`}
               >
                 <h1>{header}</h1>
                 <SanityBlockContent blocks={body} />
@@ -241,7 +241,7 @@ const ImageSlider = ({
             }}
           >
             <div
-              className={`${styles.slider__data} flex py-16 justify-center min-h-screen h-full text-white text-lg`}
+              className={`${styles.slider__data} flex py-0 xl:py-16 justify-center min-h-screen h-full text-white text-lg m-auto`}
             >
               <AuthorDetailSlide />
             </div>
@@ -257,7 +257,7 @@ const ImageSlider = ({
             }}
           >
             <div
-              className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg`}
+              className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg m-auto`}
             >
               <div className="flex items-center text-2xl py-4">
                 MORE NXTGEM STORIES

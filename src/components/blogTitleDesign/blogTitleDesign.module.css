@@ -27,3 +27,10 @@
   font-weight: bold;
   color: #1bd6fa;
 }
+
+@media screen and (max-width: 768px) {
+  .blogText h2 {
+  font-size: medium;
+   
+  }
+}

@@ -1,6 +1,5 @@
 .slider__data {
   width: 80vw;
-  margin: 0 auto;
 }
 
 .slider__data > div,
@@ -8,8 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: fit-content;
-  width: 85%;
+ 
   padding-top: 30px;
 }
 @media screen and (max-width: 768px) {
@@ -27,23 +25,9 @@
 .slider__data__first > p {
   padding-top: 0;
   padding: 20px 40px;
-  animation: 10s animateBorderOne ease infinite;
 }
 
-@keyframes animateBorderOne {
-  0% {
-    outline: 0 3px dashed #e0e4cc;
-    box-shadow: 0 0 0 3px #028ca8;
-  }
-  50% {
-    outline-color: #028ca8;
-    box-shadow: 0 0 0 3px #e0e4cc;
-  }
-  100% {
-    outline: 0 3px dashed #e0e4cc;
-    box-shadow: 0 0 0 3px #028ca8;
-  }
-}
+
 
 @media screen and (max-width: 768px) {
   .slider__data__first > div,
@@ -54,6 +38,9 @@
   .slider__data > div p,
   .slider__data > div ol {
     font-size: smaller;
+  }
+  .slider__data {
+    width: 90vw;
   }
 }
 
