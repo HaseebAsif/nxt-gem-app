@@ -229,7 +229,7 @@ const ImageSlider = ({
                 <div
                   className={`${styles.slider__data} ${
                     index === 0 && styles.slider__data__first
-                  } flex flex-col items-center justify-baseline text-white text-md lg:text-lg border-4 border-[#023844] mt-2 lg:mt-10 p-2 lg:p-8`}
+                  } flex flex-col items-center justify-baseline text-white text-md lg:text-lg border-4 shadow-border border-[#023844] mt-2 lg:mt-10 p-2 lg:p-8`}
                 >
                   <h2 className="text-3xl self-start">{header}</h2>
                   <SanityBlockContent blocks={body} />

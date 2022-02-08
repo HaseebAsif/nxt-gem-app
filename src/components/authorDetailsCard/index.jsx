@@ -104,10 +104,10 @@ const AuthorDetailSlide = ({ author, AuthorData, setAuthorData }) => {
           <div className="py-2">
             <RelatedArticleCard />
           </div>
-          <div className="py-2 hidden sm:block">
+          <div className="py-2 hidden lg:block">
             <RelatedArticleCard />
           </div>
-          <div className="py-2 hidden sm:block">
+          <div className="py-2 hidden lg:block">
             <RelatedArticleCard />
           </div>
         </div>
