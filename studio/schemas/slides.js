@@ -14,7 +14,7 @@ export default {
       title: "Order",
       type: "string",
       description:
-        "Order of 1st background image will be a, author will be 998 last and related articles will be 999",
+        "Order of 1st background image will be a, youtube video will be 997 author will be 998 last and related articles will be 999",
     },
     {
       name: "body",

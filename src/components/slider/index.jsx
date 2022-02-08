@@ -222,7 +222,7 @@ const ImageSlider = ({
         </Slide>
       ))}
       {images
-        .slice(1, images.length - 2)
+        .slice(1, images.length - 3)
         .map(({ backgroundImage, body, header }, index) => (
           <Slide
             key={index}
@@ -247,6 +247,29 @@ const ImageSlider = ({
                 </div>
               </div>
             </Zoom>
+          </Slide>
+        ))}
+      {images
+        .slice(images.length - 3, images.length - 2)
+        .map(({ backgroundImage, body }, index) => (
+          <Slide
+            key={index}
+            style={{
+              backgroundImage: `url(${imageUrlBuilding(backgroundImage)})`,
+            }}
+          >
+            <div
+              className={`flex items-center justify-center min-h-screen h-full text-white text-lg`}
+            >
+              <SingleLargeVideoViews
+                videoUrl={
+                  postYoutubeLink
+                    ? postYoutubeLink
+                    : "https://www.youtube.com/watch?v=bS3b-TdITf0"
+                }
+                autoPlay={false}
+              />
+            </div>
           </Slide>
         ))}
       {images

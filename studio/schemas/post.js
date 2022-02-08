@@ -29,6 +29,29 @@ export default {
       type: "string",
     },
     {
+      name: "relatedArticle1",
+      title: "Related Article 1",
+      type: "string",
+      description: "Slug link of post",
+    },
+    {
+      name: "relatedArticle2",
+      title: "Related Article 2",
+      type: "string",
+      description: "Slug link of post",
+    },
+    {
+      name: "relatedArticle3",
+      title: "Related Article 3",
+      type: "string",
+      description: "Slug link of post",
+    },
+    {
+      name: "youtubeLink",
+      title: "Youtube Link",
+      type: "string",
+    },
+    {
       name: "mainImage",
       title: "Main image",
       type: "image",
@@ -46,24 +69,6 @@ export default {
       name: "publishedAt",
       title: "Published at",
       type: "datetime",
-    },
-    {
-      name: "relatedArticle1",
-      title: "Related Article 1",
-      type: "string",
-      description: "Slug link of post",
-    },
-    {
-      name: "relatedArticle2",
-      title: "Related Article 2",
-      type: "string",
-      description: "Slug link of post",
-    },
-    {
-      name: "relatedArticle3",
-      title: "Related Article 3",
-      type: "string",
-      description: "Slug link of post",
     },
   ],
 
