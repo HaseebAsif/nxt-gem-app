@@ -226,7 +226,7 @@ const ImageSlider = ({
                   index === 0 && styles.slider__data__first
                 } flex flex-col items-center justify-baseline text-white text-md lg:text-lg border-4 border-[#023844] mt-2 lg:mt-10 m-auto p-2 lg:p-8`}
               >
-                <h1>{header}</h1>
+                <h2 className="text-3xl self-start">{header}</h2>
                 <SanityBlockContent blocks={body} />
               </div>
             </Zoom>
