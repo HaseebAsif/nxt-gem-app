@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./blogTitleDesign.module.css";
 
 const BlogTitleDesign = ({ title, date, author }) => {
-  console.log(author);
   return (
     <div className="overflow-hidden">
       <div

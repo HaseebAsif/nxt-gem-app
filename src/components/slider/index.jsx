@@ -136,6 +136,7 @@ const ImageSlider = ({
   ...props
 }) => {
   const [AuthorData, setAuthorData] = useState({});
+  const [allPost, setAllPost] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const handlers = useSwipeable({
     onSwipedLeft: () => nextSlide(),
@@ -153,6 +154,16 @@ const ImageSlider = ({
     const newSlideIndex = slideIndex >= images.length ? 0 : slideIndex;
     setCurrentSlide(newSlideIndex);
   }
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "post" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+
+    setAllPost(
+      result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
+    );
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -254,6 +265,7 @@ const ImageSlider = ({
                 author={author}
                 AuthorData={AuthorData}
                 setAuthorData={setAuthorData}
+                allPost={allPost}
               />
             </div>
           </Slide>
@@ -272,9 +284,18 @@ const ImageSlider = ({
             >
               <div className="flex items-center text-2xl py-4">
                 MORE NXTGEM STORIES
-                <MoreNXTGemStories />
-                <MoreNXTGemStories />
-                <MoreNXTGemStories />
+                <MoreNXTGemStories
+                  allPost={allPost}
+                  articleSlug={post.relatedArticle1}
+                />
+                <MoreNXTGemStories
+                  allPost={allPost}
+                  articleSlug={post.relatedArticle2}
+                />
+                <MoreNXTGemStories
+                  allPost={allPost}
+                  articleSlug={post.relatedArticle3}
+                />
               </div>
             </div>
           </Slide>

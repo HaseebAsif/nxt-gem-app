@@ -3,7 +3,7 @@ import SanityBlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import RelatedArticleCard from "./relatedArticleCard";
 
-const AuthorDetailSlide = ({ author, AuthorData, setAuthorData }) => {
+const AuthorDetailSlide = ({ author, AuthorData, setAuthorData, allPost }) => {
   const [AuthorDetails, setAuthorDetails] = useState([]);
   useEffect(async () => {
     const query = encodeURIComponent(`*[ _type == "author" ]`);
@@ -36,8 +36,6 @@ const AuthorDetailSlide = ({ author, AuthorData, setAuthorData }) => {
     const imageSrc = imgBuilder.image(image && image);
     return imageSrc;
   }
-  console.log(AuthorData);
-
   return (
     <div>
       <div className="grid grid-cols-1 xl:grid-cols-2 border-4 border-[#023844] p-2 xl:p-10">
@@ -102,13 +100,22 @@ const AuthorDetailSlide = ({ author, AuthorData, setAuthorData }) => {
             OTHER ARTICLES FROM THE AUTHOR
           </h3>
           <div className="py-2">
-            <RelatedArticleCard />
+            <RelatedArticleCard
+              allPost={allPost}
+              articleSlug={AuthorData.relatedArticle1}
+            />
           </div>
           <div className="py-2 hidden sm:block">
-            <RelatedArticleCard />
+            <RelatedArticleCard
+              allPost={allPost}
+              articleSlug={AuthorData.relatedArticle2}
+            />
           </div>
           <div className="py-2 hidden sm:block">
-            <RelatedArticleCard />
+            <RelatedArticleCard
+              allPost={allPost}
+              articleSlug={AuthorData.relatedArticle3}
+            />
           </div>
         </div>
       </div>

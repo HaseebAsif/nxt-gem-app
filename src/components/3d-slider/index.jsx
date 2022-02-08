@@ -17,7 +17,6 @@ export function Carousel(props) {
   });
   useEffect(() => {
     const locSlides = [];
-    //console.log(props.slides);
     props.slides.forEach((slide) => {
       const slideobject = {
         class: "slider-single proactivede",
@@ -37,7 +36,6 @@ export function Carousel(props) {
     setSlides(locSlides);
     setSlideTotal(locSlides.length - 1);
     setSlideCurrent(-1);
-    //console.log(slideCurrent);
     if (slideCurrent === -1) {
       setTimeout(() => {
         slideRight();

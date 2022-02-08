@@ -26,7 +26,6 @@ const ComingSoon = () => {
       result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
     );
   }, []);
-  console.log(comingSoonAdvertisments);
   return (
     <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] h-fit bg-no-repeat bg-cover p-8 sm:p-24 lg:p-48 lg:pt-32">
       <SectionHeader heading="Coming Soon" value="6" />
@@ -62,7 +61,6 @@ const ComingSoon = () => {
                 dataset: "production",
               });
               const image = imgBuilder.image(mainImage);
-              console.log(comingSoonAdvertisments);
               return (
                 <a href={link} target="_blank" className="cursor-pointer">
                   <div

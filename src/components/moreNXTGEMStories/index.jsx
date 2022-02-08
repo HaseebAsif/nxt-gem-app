@@ -1,6 +1,6 @@
 import React from "react";
 
-const MoreNXTGemStories = () => {
+const MoreNXTGemStories = ({ allPost, articleSlug }) => {
   return (
     <div>
       <div class="container container max-w-2xl m-auto sm:mt-auto flex flex-wrap flex-col md:flex-row items-center justify-start bg-[#023844]">

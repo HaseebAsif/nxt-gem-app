@@ -47,6 +47,24 @@ export default {
       title: "Published at",
       type: "datetime",
     },
+    {
+      name: "relatedArticle1",
+      title: "Related Article 1",
+      type: "string",
+      description: "Slug link of post",
+    },
+    {
+      name: "relatedArticle2",
+      title: "Related Article 2",
+      type: "string",
+      description: "Slug link of post",
+    },
+    {
+      name: "relatedArticle3",
+      title: "Related Article 3",
+      type: "string",
+      description: "Slug link of post",
+    },
   ],
 
   preview: {
