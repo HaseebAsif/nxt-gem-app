@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        border: "0px 0px 7px -1px #000",
+      },
       animation: {
         fadeIn: "fadeIn 3s ease-in-out",
       },
