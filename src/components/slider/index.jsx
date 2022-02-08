@@ -20,6 +20,9 @@ const IndicatorWrapper = styled.div`
   bottom: 15px;
   width: 98vw;
   justify-content: center;
+  @media (max-width: 768px) {
+    bottom: 20px;
+  }
 `;
 
 const Dot = styled.div`
@@ -30,9 +33,6 @@ const Dot = styled.div`
   opacity: ${(props) => (props.isActive ? 1 : 0.5)};
   margin: 5px;
   transition: 750ms all ease-in-out;
-  @media (max-width: 768px) {
-    visibility: hidden;
-  }
 `;
 
 const Indicator = ({ currentSlide, amountSlides, nextSlide }) => {
@@ -68,6 +68,9 @@ const Slide = styled.div`
   transition: 750ms all ease-in-out;
   background-repeat: no-repeat;
   height: auto;
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
 `;
 
 const Arrow = styled.div`
@@ -128,9 +131,11 @@ const ImageSlider = ({
   postTitle,
   author,
   postImage,
+  post,
   postYoutubeLink,
   ...props
 }) => {
+  const [AuthorData, setAuthorData] = useState({});
   const [currentSlide, setCurrentSlide] = useState(0);
   const handlers = useSwipeable({
     onSwipedLeft: () => nextSlide(),
@@ -195,11 +200,6 @@ const ImageSlider = ({
           <Fade left>
             <div className="flex items-center flex-col justify-center min-h-screen h-fit text-white text-lg">
               <div>
-                <h1 className="text-2xl px-2 sm:px-0 text-center sm:text-4xl 2xl:text-5xl pb-6 font-bold underline underline-offset-8">
-                  {postTitle}
-                </h1>
-              </div>
-              <div>
                 <img
                   src={postImage}
                   alt={postTitle}
@@ -220,14 +220,20 @@ const ImageSlider = ({
             }}
           >
             <Zoom>
-              <BlogTitleDesign />
-              <div
-                className={`${styles.slider__data} ${
-                  index === 0 && styles.slider__data__first
-                } flex flex-col items-center justify-baseline text-white text-md lg:text-lg border-4 border-[#023844] mt-2 lg:mt-10 m-auto p-2 lg:p-8`}
-              >
-                <h2 className="text-3xl self-start">{header}</h2>
-                <SanityBlockContent blocks={body} />
+              <BlogTitleDesign
+                title={postTitle}
+                date={post.publishedAt}
+                author={AuthorData}
+              />
+              <div className="lg:h-[60%] flex items-center justify-center">
+                <div
+                  className={`${styles.slider__data} ${
+                    index === 0 && styles.slider__data__first
+                  } flex flex-col items-center justify-baseline text-white text-md lg:text-lg border-4 border-[#023844] mt-2 lg:mt-10 p-2 lg:p-8`}
+                >
+                  <h2 className="text-3xl self-start">{header}</h2>
+                  <SanityBlockContent blocks={body} />
+                </div>
               </div>
             </Zoom>
           </Slide>
@@ -244,7 +250,11 @@ const ImageSlider = ({
             <div
               className={`${styles.slider__data} flex py-0 xl:py-16 justify-center min-h-screen h-full text-white text-lg m-auto`}
             >
-              <AuthorDetailSlide author={author} />
+              <AuthorDetailSlide
+                author={author}
+                AuthorData={AuthorData}
+                setAuthorData={setAuthorData}
+              />
             </div>
           </Slide>
         ))}

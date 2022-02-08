@@ -15,7 +15,6 @@
 
   .slider__data > div {
     width: 100%;
-    padding-top: 90px;
   }
 }
 
@@ -24,8 +23,6 @@
   padding-top: 0;
   padding: 20px 40px;
 }
-
-
 
 @media screen and (max-width: 768px) {
   .slider__data__first > div,

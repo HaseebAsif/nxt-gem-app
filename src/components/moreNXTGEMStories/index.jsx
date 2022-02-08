@@ -3,7 +3,7 @@ import React from "react";
 const MoreNXTGemStories = () => {
   return (
     <div>
-      <div class="container container max-w-2xl m-auto mt-4 sm:mt-auto flex flex-wrap flex-col md:flex-row items-center justify-start bg-[#023844]">
+      <div class="container container max-w-2xl m-auto sm:mt-auto flex flex-wrap flex-col md:flex-row items-center justify-start bg-[#023844]">
         <div class="w-full">
           <div class="flex flex-col xl:flex-row rounded overflow-hidden h-auto xl:h-44 shadow shadow-lg">
             <img
@@ -15,7 +15,9 @@ const MoreNXTGemStories = () => {
                 <h3 class="text-[#1bd6fa] font-bold text-xl mb-2 leading-tight">
                   Can life make you a bitter developer?
                 </h3>
-                <p class="text-[white] text-sm mb-2 leading-tight">Read more</p>
+                <span class="text-[white] text-sm sm:text-lg mb-2 leading-tight">
+                  Read more
+                </span>
               </div>
             </div>
           </div>

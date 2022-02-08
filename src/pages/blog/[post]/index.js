@@ -45,6 +45,7 @@ const SinglePost = ({ image, body, title, youtubeLink, post }) => {
       <div>
         <ImageSlider
           author={post.author}
+          post={post}
           images={images}
           postImage={imageSrc}
           postBody={images.body}
