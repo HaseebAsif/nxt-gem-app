@@ -79,7 +79,7 @@
   margin: 1rem 0rem;
 }
 
-.wrapper a {
+.wrapper div {
   display: block;
   width: 10rem;
   height: 3rem;
@@ -96,12 +96,12 @@
   border-radius: 3px;
 }
 
-.wrapper a span {
+.wrapper div span {
   position: relative;
   z-index: 1;
 }
 
-.wrapper a:after {
+.wrapper div:after {
   position: absolute;
   content: "";
   top: 0;
@@ -112,12 +112,12 @@
   transition: all 0.35s;
 }
 
-.wrapper a:hover {
+.wrapper div:hover {
   color: var(--black);
   text-decoration: none;
 }
 
-.wrapper a:hover:after {
+.wrapper div:hover:after {
   height: 100%;
 }
 /*==================== a ANIMATION END ====================*/

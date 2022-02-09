@@ -5,6 +5,7 @@ import Tilt from "react-tilt";
 
 import Fade from "react-reveal/Fade";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const SingleCard = ({ Title, Image, index, styles, body, currentSlug }) => {
   const router = useRouter();
@@ -24,13 +25,13 @@ const SingleCard = ({ Title, Image, index, styles, body, currentSlug }) => {
                   <h1 className="text-white text-lg line-clamp-2"> {Title} </h1>
                 </div>
                 <div className={styles.wrapper}>
-                  <a
-                    href={`/blog/${currentSlug}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>Read More</span>
-                  </a>
+                  <div>
+                    <Link href={`/blog/${currentSlug}`}>
+                      <div>
+                        <span>Read More</span>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
