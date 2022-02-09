@@ -21,13 +21,13 @@ const IndicatorWrapper = styled.div`
   width: 98vw;
   justify-content: center;
   @media (max-width: 768px) {
-    bottom: 20px;
+    bottom: -130px;
   }
 `;
 
 const Dot = styled.div`
   width: 20px;
-  height: 3px;
+  height: 5px;
   border-radius: 6px;
   background-color: white;
   opacity: ${(props) => (props.isActive ? 1 : 0.5)};
@@ -69,7 +69,7 @@ const Slide = styled.div`
   background-repeat: no-repeat;
   height: auto;
   @media (max-width: 768px) {
-    height: 100vh;
+    height: 120vh;
   }
 `;
 
@@ -282,7 +282,7 @@ const ImageSlider = ({
             }}
           >
             <div
-              className={`${styles.slider__data} flex py-0 xl:py-16 justify-center min-h-screen h-full text-white text-lg m-auto`}
+              className={`${styles.slider__data} flex py-0 py-24 xl:py-16 justify-center min-h-screen h-full text-white text-lg m-auto`}
             >
               <AuthorDetailSlide
                 author={author}
@@ -303,10 +303,10 @@ const ImageSlider = ({
             }}
           >
             <div
-              className={`${styles.slider__data} flex items-center justify-center min-h-screen h-full text-white text-lg m-auto`}
+              className={`${styles.slider__data} py-24 flex items-center justify-center min-h-screen h-full text-white text-lg m-auto`}
             >
-              <div className="flex items-center text-2xl py-4">
-                MORE NXTGEM STORIES
+              <div className="flex items-center py-4">
+                <span className="text-2xl">MORE NXTGEM STORIES</span>
                 <MoreNXTGemStories
                   allPost={allPost}
                   articleSlug={post.relatedArticle1}

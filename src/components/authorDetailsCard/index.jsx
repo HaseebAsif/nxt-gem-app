@@ -105,7 +105,7 @@ const AuthorDetailSlide = ({ author, AuthorData, setAuthorData, allPost }) => {
               articleSlug={AuthorData.relatedArticle1}
             />
           </div>
-          <div className="py-2 hidden sm:block">
+          <div className="py-2">
             <RelatedArticleCard
               allPost={allPost}
               articleSlug={AuthorData.relatedArticle2}
