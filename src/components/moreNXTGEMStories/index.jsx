@@ -28,7 +28,7 @@ const MoreNXTGemStories = ({ allPost, articleSlug }) => {
   }
   return (
     <div>
-      <div class="container container max-w-2xl m-auto sm:mt-auto flex flex-wrap flex-col md:flex-row items-center justify-start bg-[#023844]">
+      <div class="container container max-w-md lg:max-w-2xl m-auto sm:mt-auto flex flex-wrap flex-col md:flex-row items-center justify-start bg-[#023844]">
         <div class="w-full">
           <div class="flex flex-col xl:flex-row rounded overflow-hidden h-auto xl:h-44 shadow shadow-lg">
             {moreStories.mainImage && (
@@ -39,7 +39,7 @@ const MoreNXTGemStories = ({ allPost, articleSlug }) => {
             )}
             <div class="rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div>
-                <h3 class="text-[#1bd6fa] font-bold text-xl mb-2 leading-tight">
+                <h3 class="text-[#1bd6fa] font-bold text-md mb-2 leading-tight">
                   {moreStories.title}
                 </h3>
                 <span class="text-[white] text-sm sm:text-lg mb-2 leading-tight">
