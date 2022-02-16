@@ -38,7 +38,7 @@ const AuthorDetailSlide = ({ author, AuthorData, setAuthorData, allPost }) => {
   }
   return (
     <div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 border-4 border-[#023844] p-2 xl:p-10">
+      <div className="grid grid-cols-1 xl:grid-cols-2 border-4 border-[#023844] p-2 xl:py-10 xl:px-2">
         <div className=" px-0 xl:px-4">
           <div className="flex items-center justify-evenly flex-wrap py-6 px-2">
             <div>
