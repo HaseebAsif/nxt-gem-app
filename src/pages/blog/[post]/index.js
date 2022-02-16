@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import imageUrlBuilder from "@sanity/image-url";
 
 import ImageSlider from "components/slider";
+import SideIcons from "components/sideSocialIcons";
 
 const SinglePost = ({ image, body, title, youtubeLink, post }) => {
   const [PostSlides, setPostSlides] = useState([]);
@@ -52,6 +53,7 @@ const SinglePost = ({ image, body, title, youtubeLink, post }) => {
           postTitle={title}
           postYoutubeLink={youtubeLink}
         />
+        <SideIcons />
       </div>
     </>
   );
