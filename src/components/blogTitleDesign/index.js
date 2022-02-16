@@ -2,6 +2,12 @@ import React from "react";
 import styles from "./blogTitleDesign.module.css";
 
 const BlogTitleDesign = ({ title, date, author }) => {
+  const dateOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const datePosted = new Date(date).toLocaleString("en-us", dateOptions);
   return (
     <div className="overflow-hidden">
       <div
@@ -13,7 +19,7 @@ const BlogTitleDesign = ({ title, date, author }) => {
             <div className="w-fit">
               <h3 className="text-sm lg:text-lg w-fit">
                 <span className="text-gray-400">Date Published:</span>{" "}
-                {date.slice(0, 10)}
+                {datePosted}
               </h3>
               <h3 className="text-sm lg:text-lg w-fit">
                 <span className="text-gray-400"> Author:</span> {author.name}
