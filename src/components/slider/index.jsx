@@ -121,7 +121,7 @@ const ImageSlider = ({
               <div>
                 <div>
                   <div
-                    className={`flex absolute top-[20vh] left-[14.7vw] rounded-bl-full bg-[#0000008f] ${styles.like_share_view}`}
+                    className={`flex absolute top-[20vh] left-[14vw] rounded-bl-full bg-[#0000008f] ${styles.like_share_view}`}
                   >
                     <div
                       className={`flex items-center justify-center mx-1 sm:mx-3 ${styles.like_share_view_text}`}
