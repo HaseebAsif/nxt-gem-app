@@ -1,8 +1,10 @@
+import SanityBlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import React, { useEffect, useState } from "react";
 
-const MoreNXTGemStories = ({ allPost, articleSlug }) => {
+const MoreNXTGemStories = ({ allPost, articleSlug, slides }) => {
   const [moreStories, setMoreStories] = useState({});
+  const [moreStoriesText, setMoreStoriesText] = useState([]);
 
   useEffect(() => {
     filteredData();
@@ -18,6 +20,24 @@ const MoreNXTGemStories = ({ allPost, articleSlug }) => {
       }
     } catch (error) {}
   };
+
+  useEffect(() => {
+    filteredSlides();
+  }, [moreStories, slides]);
+  const filteredSlides = () => {
+    try {
+      for (let index = 0; index < moreStories.slides.length; index++) {
+        const element = moreStories.slides[index];
+        for (let index = 0; index < slides.length; index++) {
+          const elementSlide = slides[index];
+          if (element._ref === elementSlide._id) {
+            setMoreStoriesText((prev) => [...prev, slides[index]]);
+          }
+        }
+      }
+    } catch (error) {}
+  };
+
   function imageUrlBuilding(image) {
     const imgBuilder = imageUrlBuilder({
       projectId: "cqnczxva",
@@ -28,21 +48,28 @@ const MoreNXTGemStories = ({ allPost, articleSlug }) => {
   }
   return (
     <div>
-      <div class="container container max-w-md lg:max-w-2xl m-auto sm:mt-auto flex flex-wrap flex-col md:flex-row items-center justify-start bg-[#023844]">
-        <div class="w-full">
-          <div class="flex flex-col xl:flex-row rounded overflow-hidden h-auto xl:h-44 shadow shadow-lg">
+      <div className="container container max-w-md lg:max-w-2xl m-auto sm:mt-auto flex flex-wrap flex-col md:flex-row items-center justify-start bg-[#023844]">
+        <div className="w-full">
+          <div className="flex flex-col sm:flex-row rounded h-auto sm:h-44 shadow shadow-lg">
             {moreStories.mainImage && (
               <img
-                class="block h-24 md:h-36 w-full xl:w-52 object-cover flex-none bg-cover py-2 px-4"
+                className="block h-24 md:h-36 w-full sm:w-52 object-cover flex-none bg-cover py-2 px-4"
                 src={imageUrlBuilding(moreStories.mainImage)}
               />
             )}
-            <div class="rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div className="rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div>
-                <h3 class="text-[#1bd6fa] font-bold text-md mb-2 leading-tight">
+                <h3 className="text-[#1bd6fa] font-bold text-md mb-2 leading-tight">
                   {moreStories.title}
                 </h3>
-                <span class="text-[white] text-sm sm:text-lg mb-2 leading-tight">
+                <span className="text-[white] text-sm sm:text-md mb-2 more-nxt-gem-blog-text leading-tight">
+                  {allPost && moreStoriesText && (
+                    <SanityBlockContent
+                      blocks={moreStoriesText[1]?.body.slice(0, 1)}
+                    />
+                  )}
+                </span>
+                <span className="text-[white] text-sm sm:text-lg mb-2 leading-tight underline">
                   {allPost && moreStories.slug && (
                     <a href={`/blog/${moreStories.slug.current}`}>Read More</a>
                   )}

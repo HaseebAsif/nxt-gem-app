@@ -40,6 +40,7 @@ const ImageSlider = ({
   postImage,
   post,
   postYoutubeLink,
+  allSlides,
   ...props
 }) => {
   const [AuthorData, setAuthorData] = useState({});
@@ -221,14 +222,17 @@ const ImageSlider = ({
                 <MoreNXTGemStories
                   allPost={allPost}
                   articleSlug={post.relatedArticle1}
+                  slides={allSlides}
                 />
                 <MoreNXTGemStories
                   allPost={allPost}
                   articleSlug={post.relatedArticle2}
+                  slides={allSlides}
                 />
                 <MoreNXTGemStories
                   allPost={allPost}
                   articleSlug={post.relatedArticle3}
+                  slides={allSlides}
                 />
               </div>
             </div>

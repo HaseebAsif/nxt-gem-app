@@ -52,6 +52,7 @@ const SinglePost = ({ image, body, title, youtubeLink, post }) => {
           postBody={images.body}
           postTitle={title}
           postYoutubeLink={youtubeLink}
+          allSlides={PostSlides}
         />
         <SideIcons />
       </div>
