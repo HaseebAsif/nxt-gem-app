@@ -8,6 +8,25 @@
   flex-direction: column;
   justify-content: center;
 }
+.like_share_view {
+  padding: 16px 4vw;
+  text-decoration: none;
+  transform: skewX(-48deg);
+  -ms-transform: skewX(-48deg);
+  -webkit-transform: skewX(-48deg);
+  color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+.like_share_view::before {
+  content: "";
+  background: #023844;
+  -webkit-transform: skewX(48deg);
+}
+.like_share_view_text {
+  transform: skewX(48deg);
+  -ms-transform: skewX(48deg);
+  -webkit-transform: skewX(48deg);
+}
 @media screen and (max-width: 768px) {
   .slider__data {
     height: fit-content;

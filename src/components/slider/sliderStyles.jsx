@@ -38,9 +38,6 @@ export const Slide = styled.div`
   transition: 750ms all ease-in-out;
   background-repeat: no-repeat;
   height: auto;
-  @media (max-width: 768px) {
-    height: 120vh;
-  }
 `;
 
 export const Arrow = styled.div`

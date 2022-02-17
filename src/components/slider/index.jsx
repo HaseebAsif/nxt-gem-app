@@ -119,6 +119,41 @@ const ImageSlider = ({
           <Fade left>
             <div className="flex items-center flex-col justify-center min-h-screen h-fit text-white text-lg">
               <div>
+                <div>
+                  <div
+                    className={`flex absolute top-[20vh] left-[14.7vw] rounded-bl-full bg-[#0000008f] ${styles.like_share_view}`}
+                  >
+                    <div
+                      className={`flex items-center justify-center mx-1 sm:mx-3 ${styles.like_share_view_text}`}
+                    >
+                      <img
+                        src="/Views.png"
+                        className="w-6 sm:w-7 mr-1 sm:mr-2"
+                        alt=""
+                      />
+                      15789
+                    </div>
+                    <div
+                      className={`flex items-center justify-center mx-1 sm:mx-3 ${styles.like_share_view_text}`}
+                    >
+                      <img
+                        src="/Likes.png"
+                        className="w-5 sm:w-6 mx-1 sm:mx-2"
+                        alt=""
+                      />
+                      1213
+                    </div>
+                    <div
+                      className={`flex items-center justify-center mx-1 sm:mx-3 ${styles.like_share_view_text}`}
+                    >
+                      <img
+                        src="/Share.png"
+                        className="w-4 sm:w-5 ml-2"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
                 <img
                   src={postImage}
                   alt={postTitle}
