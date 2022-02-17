@@ -25,7 +25,17 @@ const BlogTitleDesign = ({ title, date, author }) => {
                 <span className="text-gray-400"> Author:</span> {author.name}
               </h3>
             </div>
-            {/* <div>Icon here</div> */}
+            <div className="flex">
+              <div className="flex items-center justify-center">
+                <img src="/Views.png" className="w-9 mr-2" alt="" /> Icon here
+              </div>
+              <div className="flex items-center justify-center">
+                <img src="/Likes.png" className="w-7 mx-2" alt="" /> Icon here
+              </div>
+              <div className="flex items-center justify-center">
+                <img src="/Share.png" className="w-6 ml-2" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
