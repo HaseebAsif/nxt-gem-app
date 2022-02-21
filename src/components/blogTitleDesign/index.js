@@ -25,7 +25,7 @@ const BlogTitleDesign = ({ title, date, author }) => {
                 <span className="text-gray-400"> Author:</span> {author.name}
               </h3>
             </div>
-            <div className="flex items-center justify-center w-[inherit] sm:w-auto">
+            {/* <div className="flex items-center justify-center w-[inherit] sm:w-auto">
               <div className="flex items-center justify-center mx-1 sm:mx-3">
                 <img
                   src="/Views.png"
@@ -45,7 +45,7 @@ const BlogTitleDesign = ({ title, date, author }) => {
               <div className="flex items-center justify-center mx-1 sm:mx-3">
                 <img src="/Share.png" className="w-4 sm:w-5 ml-2" alt="" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

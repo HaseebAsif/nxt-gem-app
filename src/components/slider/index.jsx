@@ -120,7 +120,7 @@ const ImageSlider = ({
             <div className="flex items-center flex-col justify-center min-h-screen h-fit text-white text-lg">
               <div>
                 <div>
-                  <div
+                  {/* <div
                     className={`flex absolute top-[20vh] left-[14vw] rounded-bl-full bg-[#0000008f] ${styles.like_share_view}`}
                   >
                     <div
@@ -152,7 +152,7 @@ const ImageSlider = ({
                         alt=""
                       />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <img
                   src={postImage}

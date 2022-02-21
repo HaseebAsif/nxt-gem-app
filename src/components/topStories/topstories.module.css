@@ -94,6 +94,7 @@
   position: relative;
   transition: all 0.35s;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .wrapper div span {
