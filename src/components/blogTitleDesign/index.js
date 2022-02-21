@@ -28,7 +28,7 @@ const BlogTitleDesign = ({ title, date, author }) => {
             {/* <div className="flex items-center justify-center w-[inherit] sm:w-auto">
               <div className="flex items-center justify-center mx-1 sm:mx-3">
                 <img
-                  src="/Views.png"
+                  src="https://res.cloudinary.com/nxtgem-io/image/upload/v1645442559/Views_pxubt0.png"
                   className="w-6 sm:w-7 mr-1 sm:mr-2"
                   alt=""
                 />
@@ -36,14 +36,14 @@ const BlogTitleDesign = ({ title, date, author }) => {
               </div>
               <div className="flex items-center justify-center mx-1 sm:mx-3">
                 <img
-                  src="/Likes.png"
+                  src="https://res.cloudinary.com/nxtgem-io/image/upload/v1645442559/Likes_c9k3fp.png"
                   className="w-5 sm:w-6 mx-1 sm:mx-2"
                   alt=""
                 />
                 1213
               </div>
               <div className="flex items-center justify-center mx-1 sm:mx-3">
-                <img src="/Share.png" className="w-4 sm:w-5 ml-2" alt="" />
+                <img src="https://res.cloudinary.com/nxtgem-io/image/upload/v1645442559/Share_n02vyx.png" className="w-4 sm:w-5 ml-2" alt="" />
               </div>
             </div> */}
           </div>

@@ -5,7 +5,7 @@ const Loader = () => {
     <div className="flex items-center justify-center h-screen w-screen bg-black">
       <img
         className="bg-contain bg-black bg-no-repeat md:bg-cover"
-        src="/loader.gif"
+        src="https://res.cloudinary.com/nxtgem-io/image/upload/v1645442560/loader_oy5gnb.gif"
       />
     </div>
   );
