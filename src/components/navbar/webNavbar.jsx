@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 import searchStyles from "./navbar.search.module.css";
+import DropDown from "./navBarDropdown";
 
 const WebNavbar = () => {
   const [value, setValue] = useState(1);
@@ -11,7 +12,7 @@ const WebNavbar = () => {
   const notActive =
     "cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium";
   return (
-    <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start overflow-hidden">
+    <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start">
       <div className="flex-shrink-0 flex items-center">
         <Link href="/">
           <img
@@ -52,15 +53,12 @@ const WebNavbar = () => {
             </div>
           </Link>
 
-          <Link href="/coming-soon">
-            <div
-              className={value === 3 ? active : notActive}
-              onClick={() => setValue(3)}
-            >
-              Resources
-            </div>
-          </Link>
-
+          <DropDown
+            value={value}
+            setValue={setValue}
+            active={active}
+            notActive={notActive}
+          />
           <Link href="/coming-soon">
             <div
               className={value === 4 ? active : notActive}

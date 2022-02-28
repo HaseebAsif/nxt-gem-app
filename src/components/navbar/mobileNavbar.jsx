@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import DropDown from "./navBarDropdown";
 
 const MobileNavbar = ({ isOpen }) => {
   return (
@@ -23,11 +24,7 @@ const MobileNavbar = ({ isOpen }) => {
           </div>
         </Link>
 
-        <Link href="/coming-soon">
-          <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-            Resources
-          </div>
-        </Link>
+        <DropDown />
 
         <Link href="/coming-soon">
           <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
