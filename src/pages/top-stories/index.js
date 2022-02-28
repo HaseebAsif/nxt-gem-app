@@ -11,11 +11,12 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: "block",
-        top: "102.3%",
+        top: "75vh",
         right: "1%",
         fontWeight: "bolder",
         zIndex: "1",
         color: "white",
+        backgroundColor: "black",
       }}
       onClick={onClick}
     />
@@ -30,7 +31,7 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        top: "102.3%",
+        top: "75vh",
         left: "1%",
         fontWeight: "bolder",
         zIndex: "1",
@@ -63,7 +64,7 @@ const TopStories = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] h-fit bg-no-repeat bg-cover p-8 sm:p-24 lg:p-26">
+    <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
       <h2 className="text-[#1bd6fa] text-4xl font-bold">
         TOP <span className="text-white">STORIES</span>
       </h2>

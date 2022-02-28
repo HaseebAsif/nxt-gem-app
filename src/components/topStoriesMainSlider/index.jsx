@@ -3,7 +3,10 @@ import React from "react";
 const TopStoriesMainSlider = ({ image }) => {
   return (
     <div className="h-[74vh] bg-red-800">
-      <img className="object-cover h-[74vh] w-screen" src={image} />
+      <div
+        className="object-cover h-full bg-no-repeat bg-cover"
+        style={{ backgroundImage: `url(${image})` }}
+      />
     </div>
   );
 };
