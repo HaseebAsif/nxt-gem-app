@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 const DropDown = ({ value, setValue, active, notActive }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -29,15 +30,16 @@ const DropDown = ({ value, setValue, active, notActive }) => {
           tabindex="0"
         >
           <div className="py-1" role="none">
-            <a
-              href="#"
-              className="text-white block px-4 py-2 text-sm"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-0"
-            >
-              Top Stories
-            </a>
+            <Link href="/top-stories">
+              <div
+                className="text-white block px-4 py-2 text-sm cursor-pointer"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-0"
+              >
+                Top Stories
+              </div>
+            </Link>
             <a
               href="#"
               className="text-white block px-4 py-2 text-sm"

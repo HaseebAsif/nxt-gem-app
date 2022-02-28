@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SanityBlockContent from "@sanity/block-content-to-react";
 
-import styles from "./slider.module.css";
+import styles from "./blogSlider.module.css";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import { useSwipeable } from "react-swipeable";
@@ -10,7 +10,13 @@ import BlogTitleDesign from "components/blogTitleDesign";
 import imageUrlBuilder from "@sanity/image-url";
 import AuthorDetailSlide from "components/authorDetailsCard";
 import MoreNXTGemStories from "components/moreNXTGEMStories";
-import { IndicatorWrapper, Slide, Dot, Wrapper, Arrow } from "./sliderStyles";
+import {
+  IndicatorWrapper,
+  Slide,
+  Dot,
+  Wrapper,
+  Arrow,
+} from "./blogSliderStyles";
 
 const Indicator = ({ currentSlide, amountSlides, nextSlide }) => {
   return (
@@ -28,8 +34,7 @@ const Indicator = ({ currentSlide, amountSlides, nextSlide }) => {
   );
 };
 
-
-const ImageSlider = ({
+const BlogSlider = ({
   images = [],
   autoPlay = true,
   autoPlayTime = 100000000,
@@ -292,4 +297,4 @@ const ImageSlider = ({
   );
 };
 
-export default ImageSlider;
+export default BlogSlider;

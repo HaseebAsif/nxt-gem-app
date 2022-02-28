@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import imageUrlBuilder from "@sanity/image-url";
 
-import ImageSlider from "components/slider";
+import BlogSlider from "components/blogSlider";
 import SideIcons from "components/sideSocialIcons";
 
 const SinglePost = ({ image, body, title, youtubeLink, post }) => {
@@ -44,7 +44,7 @@ const SinglePost = ({ image, body, title, youtubeLink, post }) => {
   return (
     <>
       <div>
-        <ImageSlider
+        <BlogSlider
           author={post.author}
           post={post}
           images={images}
