@@ -2,7 +2,7 @@ import SectionHeader from "components/sectionHeading";
 import React, { useEffect, useState } from "react";
 import imageUrlBuilder from "@sanity/image-url";
 
-import SingleCard from "./singlecard";
+import SingleCard from "../UI/topStoriesSingleCard/singlecard";
 import styles from "./topstories.module.css";
 
 const TopStories = () => {

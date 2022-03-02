@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
-import RelatedArticleCard from "./relatedArticleCard";
+import RelatedArticleCard from "../UI/relatedArticleCard/relatedArticleCard";
 
 const AuthorDetailSlide = ({ author, AuthorData, setAuthorData, allPost }) => {
   const [AuthorDetails, setAuthorDetails] = useState([]);

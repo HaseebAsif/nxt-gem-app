@@ -2,6 +2,7 @@ import TopStoriesMainSlider from "components/topStoriesMainSlider";
 import React, { useState, useEffect } from "react";
 import imageUrlBuilder from "@sanity/image-url";
 import Slider from "react-slick";
+import TopStoriesPageSmallCard from "components/UI/topStoriesPageSmallCard";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -54,6 +55,15 @@ const TopStories = () => {
       result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
     );
   }, []);
+  const imgBuilder = (imageValue) => {
+    const imgBuilder = imageUrlBuilder({
+      projectId: "cqnczxva",
+      dataset: "production",
+    });
+    const image = imgBuilder.image(imageValue);
+    return image;
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -64,22 +74,43 @@ const TopStories = () => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
+    <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
       <h2 className="text-[#1bd6fa] text-4xl font-bold">
         TOP <span className="text-white">STORIES</span>
       </h2>
       <Slider {...settings}>
         {topStoriesData.map((prev, i) => {
           const { title, mainImage, body, slug } = prev;
-          const imgBuilder = imageUrlBuilder({
-            projectId: "cqnczxva",
-            dataset: "production",
-          });
-          const image = imgBuilder.image(mainImage);
-          console.log(prev);
-          return <TopStoriesMainSlider image={image} />;
+
+          return (
+            <TopStoriesMainSlider
+              key={i}
+              index={i}
+              Title={title}
+              Image={imgBuilder(mainImage)}
+              body={body}
+              currentSlug={slug.current}
+            />
+          );
         })}
       </Slider>
+      <div className="flex flex-col pt-10 xl:flex-row">
+        {topStoriesData.map((prev, i) => {
+          const { title, mainImage, body, slug } = prev;
+
+          console.log(prev);
+          return (
+            <TopStoriesPageSmallCard
+              key={i}
+              index={i}
+              Title={title}
+              Image={imgBuilder(mainImage)}
+              body={body}
+              currentSlug={slug.current}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
