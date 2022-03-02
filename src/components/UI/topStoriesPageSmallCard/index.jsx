@@ -5,7 +5,7 @@ const TopStoriesPageSmallCard = ({ Title, Image, body }) => {
     <div>
       <div class="container container m-auto flex flex-wrap md:flex-row items-center justify-start bg-[#023844]">
         <div class="w-full">
-          <div class="flex flex-col xl:flex-row rounded overflow-hidden h-auto xl:h-40  shadow shadow-lg">
+          <div class="flex flex-row rounded overflow-hidden h-auto xl:h-40  shadow shadow-lg">
             <img
               class="block h-28 w-32 xl:w-40 xl:h-auto object-cover  flex-none bg-c over p-4"
               src={Image}

@@ -70,6 +70,14 @@ export default {
       title: "Published at",
       type: "datetime",
     },
+    {
+      name: "body",
+      title: "Body",
+      type: "blockContent",
+      options: {
+        maxLength: 600,
+      },
+    },
   ],
 
   preview: {

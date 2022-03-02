@@ -98,7 +98,7 @@ const TopStories = () => {
         {topStoriesData.map((prev, i) => {
           const { title, mainImage, body, slug } = prev;
 
-          console.log(prev);
+          console.log(body);
           return (
             <TopStoriesPageSmallCard
               key={i}
