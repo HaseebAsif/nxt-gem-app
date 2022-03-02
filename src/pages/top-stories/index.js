@@ -8,7 +8,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
+      className={`topStories_page_arrow ${className}`}
       style={{
         ...style,
         display: "block",
@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
         right: "1%",
         fontWeight: "bolder",
         zIndex: "1",
-        color: "white",
+        color: "#1bd6fa",
         backgroundColor: "black",
       }}
       onClick={onClick}
@@ -28,7 +28,8 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
+    className={`topStories_page_arrow ${className}`}
+
       style={{
         ...style,
         display: "block",
@@ -36,7 +37,7 @@ function SamplePrevArrow(props) {
         left: "1%",
         fontWeight: "bolder",
         zIndex: "1",
-        color: "white",
+        color: "#1bd6fa",
       }}
       onClick={onClick}
     />
@@ -75,7 +76,7 @@ const TopStories = () => {
   };
   return (
     <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
-      <h2 className="text-[#1bd6fa] text-4xl font-bold">
+      <h2 className="text-[#1bd6fa] text-4xl font-bold py-2">
         TOP <span className="text-white">STORIES</span>
       </h2>
       <Slider {...settings}>
@@ -110,6 +111,85 @@ const TopStories = () => {
             />
           );
         })}
+      </div>
+      <div className="flex flex-wrap">
+        <div className="pt-4 pr-8">
+          <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
+            NEW <span className="text-white">STORIES</span>
+          </h2>
+          {topStoriesData.map((prev, i) => {
+            const { title, mainImage, body, slug } = prev;
+
+            console.log(body);
+            return (
+              <TopStoriesPageSmallCard
+                key={i}
+                index={i}
+                Title={title}
+                Image={imgBuilder(mainImage)}
+                body={body}
+                currentSlug={slug.current}
+              />
+            );
+          })}
+        </div>
+        <div className="pt-4">
+          <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
+            MOST <span className="text-white">POPULAR</span>
+          </h2>
+          {topStoriesData.map((prev, i) => {
+            const { title, mainImage, body, slug } = prev;
+
+            console.log(body);
+            return (
+              <TopStoriesPageSmallCard
+                key={i}
+                index={i}
+                Title={title}
+                Image={imgBuilder(mainImage)}
+                body={body}
+                currentSlug={slug.current}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className="pt-4 ">
+        <h2 className="text-[#1bd6fa] text-3xl font-bold py-2">
+          FEATURED <span className="text-white">DYOR SOURCES</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 bg-[#023844] text-white ">
+          <div className="p-4 border-solid border-[#1bd6fa] border-[1px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            veniam officiis expedita harum. Fuga nihil voluptatum, cum corrupti
+            alias expedita!
+          </div>
+          <div className="p-4 border-solid border-[#1bd6fa] border-[1px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            veniam officiis expedita harum. Fuga nihil voluptatum, cum corrupti
+            alias expedita!
+          </div>
+          <div className="p-4 border-solid border-[#1bd6fa] border-[1px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            veniam officiis expedita harum. Fuga nihil voluptatum, cum corrupti
+            alias expedita!
+          </div>
+          <div className="p-4 border-solid border-[#1bd6fa] border-[1px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            veniam officiis expedita harum. Fuga nihil voluptatum, cum corrupti
+            alias expedita!
+          </div>
+          <div className="p-4 border-solid border-[#1bd6fa] border-[1px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            veniam officiis expedita harum. Fuga nihil voluptatum, cum corrupti
+            alias expedita!
+          </div>
+          <div className="p-4 border-solid border-[#1bd6fa] border-[1px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            veniam officiis expedita harum. Fuga nihil voluptatum, cum corrupti
+            alias expedita!
+          </div>
+        </div>
       </div>
     </div>
   );
