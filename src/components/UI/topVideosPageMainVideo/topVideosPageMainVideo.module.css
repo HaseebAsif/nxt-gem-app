@@ -1,0 +1,10 @@
+.TopVideosPageMainVideo > div {
+    height: 75vh !important;
+    width: 100% !important;
+  }
+  @media screen and (max-width: 768px) {
+    .TopVideosPageMainVideo > div {
+        height: 25vh !important;
+        width: 100% !important;
+      }
+    }

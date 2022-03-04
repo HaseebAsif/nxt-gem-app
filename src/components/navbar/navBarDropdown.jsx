@@ -36,19 +36,28 @@ const DropDown = ({ value, setValue, active, notActive }) => {
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-0"
+                onClick={() => {
+                  setShowOptions(!showOptions);
+                  setValue(3);
+                }}
               >
                 Top Stories
               </div>
             </Link>
-            <a
-              href="#"
-              className="text-white block px-4 py-2 text-sm"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-1"
-            >
-              Top Videos
-            </a>
+            <Link href="/top-videos">
+              <div
+                className="text-white block px-4 py-2 text-sm cursor-pointer"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-0"
+                onClick={() => {
+                  setShowOptions(!showOptions);
+                  setValue(3);
+                }}
+              >
+                Top Videos
+              </div>
+            </Link>
           </div>
         </div>
       )}

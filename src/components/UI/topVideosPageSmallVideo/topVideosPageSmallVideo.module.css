@@ -1,0 +1,4 @@
+.TopVideosPageSmallVideo > div {
+  height: 25vh !important;
+  width: 100% !important;
+}

@@ -28,7 +28,7 @@ const WebNavbar = () => {
             alt="NXTGEM"
           />
         </Link>
-        <label className={searchStyles.search} for="inpt_search">
+        <label className={searchStyles.search} htmlFor="inpt_search">
           <input id="inpt_search" type="text" />
         </label>
       </div>

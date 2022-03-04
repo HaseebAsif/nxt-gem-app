@@ -1,29 +1,31 @@
 import React from "react";
+import SanityBlockContent from "@sanity/block-content-to-react";
+import Link from "next/link";
 
-const TopStoriesPageSmallCard = ({ Title, Image, body }) => {
+const TopStoriesPageSmallCard = ({ Title, Image, body, currentSlug }) => {
   return (
-    <div>
-      <div class="container container m-auto flex flex-wrap md:flex-row items-center justify-start bg-[#023844]">
-        <div class="w-full">
-          <div class="flex flex-row rounded overflow-hidden h-auto xl:h-40  shadow shadow-lg">
+    <Link href={`/blog/${currentSlug}`}>
+      <div className="container container m-auto flex flex-wrap md:flex-row items-center justify-start bg-[#023844] cursor-pointer">
+        <div className="w-full">
+          <div className="flex flex-row rounded overflow-hidden h-auto xl:h-40  shadow shadow-lg">
             <img
-              class="block h-28 w-32 xl:w-40 xl:h-auto object-cover  flex-none bg-c over p-4"
+              className="block h-28 w-32 xl:w-40 xl:h-auto object-cover  flex-none bg-c over p-4"
               src={Image}
             />
-            <div class="rounded-b lg:rounded-b-none lg:rounded-r pt-4 pr-2 flex flex-col justify-between leading-normal">
+            <div className="rounded-b lg:rounded-b-none lg:rounded-r pt-4 pr-2 flex flex-col justify-between leading-normal">
               <div>
-                <h3 class="text-[#1bd6fa] font-bold text-md xl:text-xl mb-0 xl:mb-2 leading-tight">
+                <h3 className="text-[#1bd6fa] font-bold text-sm md:text-md xl:text-xl mb-0 xl:mb-2 leading-tight">
                   {Title}
                 </h3>
-                <p class="text-[white] text-sm mb-2 leading-tight">
-                  <a>Read More </a>
-                </p>
+                <div className="text-white text-xs md:text-sm h-12 md:h-14 overflow-hidden">
+                  <SanityBlockContent blocks={body?.slice(0, 1)} />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
