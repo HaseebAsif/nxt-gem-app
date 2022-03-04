@@ -1,6 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import styles from './topVideosPageMainVideo.module.css'
+import styles from "./topVideosPageMainVideo.module.css";
 
 const CustomIcon = () => (
   <div className="relative bottom-[40%] left-[42%] bg-black text-white rounded-full border border-white h-6 md:h-12 w-6 md:w-12 grid place-items-center">

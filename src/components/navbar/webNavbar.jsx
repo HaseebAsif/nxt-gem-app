@@ -67,7 +67,7 @@ const WebNavbar = () => {
               Community
             </div>
           </Link>
-          <Link href="/coming-soon">
+          <Link href="/exchange">
             <div
               className={value === 5 ? active : notActive}
               onClick={() => setValue(5)}

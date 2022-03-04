@@ -1,0 +1,87 @@
+.coinTableRow {
+  border: none;
+}
+
+.responsiveTable {
+  width: 85%;
+}
+
+.mainTableSection > Th,
+.mainTableSection > Td {
+  border-bottom: solid 3px #efefef;
+}
+
+.mainTableSection > Table {
+  line-height: 60px;
+  padding: 0 55px 0 100px;
+  border-collapse: collapse;
+}
+
+.coinsNameSection img {
+  position: relative;
+  top: 8px;
+  right: 7px;
+}
+
+.table-hr {
+  width: 330%;
+  height: 1px;
+  background-color: lightgrey;
+}
+
+@media only screen and (max-width: 980px) {
+  .table-hr {
+    width: 340%;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .table-hr {
+    width: 360%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .table-hr {
+    width: 400%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .table-hr {
+    width: 600%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .coinTableRow {
+    border: none;
+    padding: 0;
+  }
+
+  .mainTableSection > Table{
+    padding: 0;
+  }
+
+  .coinTableRow Tr:last-child {
+    border-bottom: solid 3px #efefef;
+  }
+
+  .coinsNameSection img {
+    height: 19px;
+    width: 19px;
+    position: relative;
+    top: 4px;
+    right: 7px;
+  }
+
+  .table-hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+}
