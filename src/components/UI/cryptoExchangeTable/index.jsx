@@ -5,17 +5,22 @@ import styles from "./cryptoExchange.module.css";
 // import GradientButton from "./Gradient-Button";
 
 const CrytoExchangeTable = ({ Coins }) => {
+  console.log(Coins);
+  let count = 1;
   return (
-    <div className={`text-white bg-black border-none ${styles.mainTableSection}`}>
+    <div
+      className={`text-white bg-black border-none h-[70vh] overflow-y-scroll ${styles.mainTableSection}`}
+    >
       <Table>
-        <Thead>
+        <Thead className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black">
           <Tr>
-            <Th style={{ fontWeight: 700, textAlign: "left" }}>Name</Th>
-            <Th style={{ fontWeight: 700, textAlign: "left" }}>Symbol</Th>
-            <Th style={{ fontWeight: 700, textAlign: "left" }}>Price</Th>
-            <Th style={{ fontWeight: 700, textAlign: "left" }}>Volume</Th>
-            <Th style={{ fontWeight: 700, textAlign: "left" }}>Percentage</Th>
-            <Th style={{ fontWeight: 700, textAlign: "left" }}>Market Cap</Th>
+            <Th style={{ fontWeight: 700, textAlign: "left" }}>RANKING</Th>
+            <Th style={{ fontWeight: 700, textAlign: "left" }}>NAME</Th>
+            <Th style={{ fontWeight: 700, textAlign: "left" }}>COIN</Th>
+            <Th style={{ fontWeight: 700, textAlign: "left" }}>PRICE</Th>
+            <Th style={{ fontWeight: 700, textAlign: "left" }}>24H VOLUME</Th>
+            <Th style={{ fontWeight: 700, textAlign: "left" }}>24H</Th>
+            <Th style={{ fontWeight: 700, textAlign: "left" }}>MARKET CAP</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -25,6 +30,8 @@ const CrytoExchangeTable = ({ Coins }) => {
               key={coin.name}
               style={{ border: "none" }}
             >
+              <Td>{count++}</Td>
+
               <Td className={`flex items-baseline ${styles.coinsNameSection}`}>
                 <img
                   src={coin.image}
