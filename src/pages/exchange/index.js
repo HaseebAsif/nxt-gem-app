@@ -17,7 +17,8 @@ const Exchange = () => {
 
   return (
     <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-28">
-      <div className="">
+      <div className="grid grid-cols-12">
+        <div className="col-span-3">Hello</div>
         <CrytoExchangeTable Coins={coins} />
       </div>
     </div>

@@ -2,20 +2,24 @@ import React, { useState, useEffect } from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import styles from "./cryptoExchange.module.css";
-// import GradientButton from "./Gradient-Button";
 
 const CrytoExchangeTable = ({ Coins }) => {
   console.log(Coins);
   let count = 1;
   return (
     <div
-      className={`text-white bg-black border-none h-[70vh] overflow-y-scroll ${styles.mainTableSection}`}
+      className={`text-white col-span-9 bg-black border-none h-[70vh] overflow-y-scroll ${styles.mainTableSection}`}
     >
       <Table>
         <Thead className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black">
           <Tr>
             <Th style={{ fontWeight: 700, textAlign: "left" }}>RANKING</Th>
-            <Th style={{ fontWeight: 700, textAlign: "left" }}>NAME</Th>
+            <Th
+              style={{ fontWeight: 700, textAlign: "left" }}
+              className={styles.nameHeading}
+            >
+              NAME
+            </Th>
             <Th style={{ fontWeight: 700, textAlign: "left" }}>COIN</Th>
             <Th style={{ fontWeight: 700, textAlign: "left" }}>PRICE</Th>
             <Th style={{ fontWeight: 700, textAlign: "left" }}>24H VOLUME</Th>

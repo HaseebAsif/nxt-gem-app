@@ -6,6 +6,13 @@
   width: 85%;
 }
 
+.nameHeading {
+  width: 18%;
+}
+
+.mainTableSection::-webkit-scrollbar{
+  display: none;
+}
 .mainTableSection > Th,
 .mainTableSection > Td {
   border-bottom: solid 3px #efefef;
@@ -21,12 +28,6 @@
   position: relative;
   top: 8px;
   right: 7px;
-}
-
-.table-hr {
-  width: 330%;
-  height: 1px;
-  background-color: lightgrey;
 }
 
 @media only screen and (max-width: 980px) {
@@ -58,8 +59,11 @@
     border: none;
     padding: 0;
   }
+  .nameHeading {
+    width: 100%;
+  }
 
-  .mainTableSection > Table{
+  .mainTableSection > Table {
     padding: 0;
   }
 
