@@ -11,9 +11,11 @@ const CrytoExchangeTable = ({ Coins }) => {
       className={`text-white col-span-9 bg-black border-none h-[70vh] overflow-y-scroll ${styles.mainTableSection}`}
     >
       <Table>
-        <Thead className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black">
+        <Thead className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black sticky top-0 z-10">
           <Tr>
-            <Th style={{ fontWeight: 700, textAlign: "left" }}>RANKING</Th>
+            <Th style={{ fontWeight: 700, textAlign: "left" }} className="pl-4">
+              RANKING
+            </Th>
             <Th
               style={{ fontWeight: 700, textAlign: "left" }}
               className={styles.nameHeading}
@@ -30,11 +32,11 @@ const CrytoExchangeTable = ({ Coins }) => {
         <Tbody>
           {Coins.map((coin) => (
             <Tr
-              className={`${styles.coinTableRow}`}
+              className={styles.coinTableRow}
               key={coin.name}
               style={{ border: "none" }}
             >
-              <Td>{count++}</Td>
+              <Td className="pl-8">{count++}</Td>
 
               <Td className={`flex items-baseline ${styles.coinsNameSection}`}>
                 <img
