@@ -1,0 +1,15 @@
+.exchangeSmallCard {
+  text-decoration: none;
+  transform: skewX(-48deg);
+  -ms-transform: skewX(-48deg);
+  -webkit-transform: skewX(-48deg);
+  color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  position: relative;
+  right: 13px;
+}
+
+.exchangeTitle {
+  transform: skewX(48deg);
+  -webkit-transform: skewX(48deg);
+}
