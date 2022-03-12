@@ -7,7 +7,7 @@ const CrytoExchangeTable = ({ Coins }) => {
   console.log(Coins);
   return (
     <div
-      className={`text-white col-span-9 bg-black border-none h-[74vh] overflow-y-scroll ${styles.mainTableSection}`}
+      className={`text-white col-span-9 bg-black border-none h-[550px] overflow-y-scroll ${styles.mainTableSection}`}
     >
       <Table>
         <Thead className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black sticky top-0 z-10">
