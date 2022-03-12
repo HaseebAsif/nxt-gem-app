@@ -8,7 +8,7 @@ const CrytoExchangeTable = ({ Coins }) => {
   let count = 1;
   return (
     <div
-      className={`text-white col-span-9 bg-black border-none h-[70vh] overflow-y-scroll ${styles.mainTableSection}`}
+      className={`text-white col-span-9 bg-black border-none h-[74vh] overflow-y-scroll ${styles.mainTableSection}`}
     >
       <Table>
         <Thead className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black sticky top-0 z-10">
@@ -42,8 +42,7 @@ const CrytoExchangeTable = ({ Coins }) => {
                 <img
                   src={coin.image}
                   alt={coin.name}
-                  height="30px"
-                  width="30px"
+                  className="inline-block top-[0px] h-auto md:h-[30px] w-auto xl:w-[30px]"
                 />
                 {coin.name}
               </Td>

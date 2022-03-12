@@ -45,16 +45,19 @@
   font-weight: 600;
 }
 
-.more-nxt-gem-blog-text{
+.more-nxt-gem-blog-text {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   height: 40px;
 }
-@media (max-width: 768px){
-.more-nxt-gem-blog-text{
-  -webkit-line-clamp: 2;
-  height: 32px;
+@media (max-width: 768px) {
+  .more-nxt-gem-blog-text {
+    -webkit-line-clamp: 2;
+    height: 32px;
+  }
 }
+.cryptoMovingHeading .ticker {
+  top: 3px;
 }
