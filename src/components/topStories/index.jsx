@@ -1,6 +1,7 @@
 import SectionHeader from "components/sectionHeading";
 import React, { useEffect, useState } from "react";
 import imageUrlBuilder from "@sanity/image-url";
+import Link from "next/link";
 
 import SingleCard from "../UI/topStoriesSingleCard/singlecard";
 import styles from "./topstories.module.css";
@@ -50,6 +51,11 @@ const TopStories = () => {
           })}
         </div>
       </div>
+      <Link href="/top-stories">
+        <button className="flex border-2 border-white text-white m-auto font-medium my-6 hover:bg-white hover:text-black  rounded text-lg py-3 px-12 bg-[#04748D]">
+          More Articles
+        </button>
+      </Link>
     </div>
   );
 };
