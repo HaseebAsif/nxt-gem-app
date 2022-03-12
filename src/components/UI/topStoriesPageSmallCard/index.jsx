@@ -10,7 +10,7 @@ const TopStoriesPageSmallCard = ({ Title, Image, body, currentSlug }) => {
           <div className="flex flex-row rounded overflow-hidden h-auto xl:h-40  shadow shadow-lg">
             <img
               className="block h-28 w-32 xl:w-40 xl:h-auto object-cover  flex-none bg-c over p-4"
-              src={Image}
+              src={Image && Image}
             />
             <div className="rounded-b lg:rounded-b-none lg:rounded-r pt-4 pr-2 flex flex-col justify-between leading-normal">
               <div>

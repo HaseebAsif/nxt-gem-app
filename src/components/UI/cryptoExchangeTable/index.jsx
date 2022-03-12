@@ -5,7 +5,6 @@ import styles from "./cryptoExchange.module.css";
 
 const CrytoExchangeTable = ({ Coins }) => {
   console.log(Coins);
-  let count = 1;
   return (
     <div
       className={`text-white col-span-9 bg-black border-none h-[74vh] overflow-y-scroll ${styles.mainTableSection}`}
@@ -36,7 +35,7 @@ const CrytoExchangeTable = ({ Coins }) => {
               key={coin.name}
               style={{ border: "none" }}
             >
-              <Td className="pl-8">{count++}</Td>
+              <Td className="pl-8">{coin.market_cap_rank}</Td>
 
               <Td className={`flex items-baseline ${styles.coinsNameSection}`}>
                 <img

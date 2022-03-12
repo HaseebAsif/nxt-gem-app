@@ -1,6 +1,6 @@
 import React from "react";
 
-const CoinSearchBar = () => {
+const CoinSearchBar = ({ setSearchValue }) => {
   return (
     <div className="hidden xl:block ">
       <i className="fas fa-search text-white text-sm font-bold absolute left-[78px] top-[162px] cursor-text hidden xl:block "></i>
@@ -12,7 +12,7 @@ const CoinSearchBar = () => {
           name="search"
           placeholder="Search Coin"
           onChange={(event) => {
-            setSearchTerm(event.target.value);
+            setSearchValue(event.target.value);
           }}
         />
       </div>

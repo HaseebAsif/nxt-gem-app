@@ -94,7 +94,7 @@ const TopStories = () => {
               key={i}
               index={i}
               Title={title}
-              Image={imgBuilder(mainImage)}
+              Image={mainImage && imgBuilder(mainImage)}
               body={body}
               currentSlug={slug.current}
             />
@@ -102,7 +102,7 @@ const TopStories = () => {
         })}
       </Slider>
       <div className="flex flex-col pt-10 xl:flex-row">
-        {topStoriesData.map((prev, i) => {
+        {topStoriesData.slice(0, 3).map((prev, i) => {
           const { title, mainImage, body, slug } = prev;
 
           return (
@@ -110,7 +110,7 @@ const TopStories = () => {
               key={i}
               index={i}
               Title={title}
-              Image={imgBuilder(mainImage)}
+              Image={mainImage && imgBuilder(mainImage)}
               body={body}
               currentSlug={slug.current}
             />
@@ -126,6 +126,7 @@ const TopStories = () => {
             .sort(
               (a, b) => parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
             )
+            .slice(0, 3)
 
             .map((prev, i) => {
               const { title, mainImage, body, slug } = prev;
@@ -135,7 +136,7 @@ const TopStories = () => {
                   key={i}
                   index={i}
                   Title={title}
-                  Image={imgBuilder(mainImage)}
+                  Image={mainImage && imgBuilder(mainImage)}
                   body={body}
                   currentSlug={slug.current}
                 />
@@ -146,7 +147,7 @@ const TopStories = () => {
           <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
             MOST <span className="text-white">POPULAR</span>
           </h2>
-          {topStoriesData.map((prev, i) => {
+          {topStoriesData.slice(0, 3).map((prev, i) => {
             const { title, mainImage, body, slug } = prev;
 
             return (
@@ -154,7 +155,7 @@ const TopStories = () => {
                 key={i}
                 index={i}
                 Title={title}
-                Image={imgBuilder(mainImage)}
+                Image={mainImage && imgBuilder(mainImage)}
                 body={body}
                 currentSlug={slug.current}
               />
