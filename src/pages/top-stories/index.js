@@ -6,14 +6,14 @@ import TopStoriesPageSmallCard from "components/UI/topStoriesPageSmallCard";
 import FeaturedDyorSources from "components/featuredDyorSources";
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, onClick, topStyle } = props;
   return (
     <div
       className={`topStories_page_arrow ${className}`}
       style={{
         ...style,
         display: "block",
-        top: "75vh",
+        top: !topStyle ? "75vh" : topStyle,
         right: "1%",
         fontWeight: "bolder",
         zIndex: "1",
@@ -26,14 +26,14 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, onClick, topStyle } = props;
   return (
     <div
       className={`topStories_page_arrow ${className}`}
       style={{
         ...style,
         display: "block",
-        top: "75vh",
+        top: !topStyle ? "75vh" : topStyle,
         left: "1%",
         fontWeight: "bolder",
         zIndex: "1",
@@ -73,6 +73,15 @@ const TopStories = () => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+  };
+  const settingsSmall = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow topStyle={"65vh"} />,
+    prevArrow: <SamplePrevArrow topStyle={"65vh"} />,
   };
 
   console.log(
@@ -118,52 +127,96 @@ const TopStories = () => {
         })}
       </div>
       <div className="flex flex-wrap md:flex-nowrap">
-        <div className="pt-4 pr-8">
+        <div className="pt-4 w-full lg:w-1/2 lg:pr-8">
           <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
             NEW <span className="text-white">STORIES</span>
           </h2>
-          {topStoriesData
-            .sort(
-              (a, b) => parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
-            )
-            .slice(0, 3)
-
-            .map((prev, i) => {
-              const { title, mainImage, body, slug } = prev;
-              console.log(prev);
-              return (
-                <TopStoriesPageSmallCard
-                  key={i}
-                  index={i}
-                  Title={title}
-                  Image={mainImage && imgBuilder(mainImage)}
-                  body={body}
-                  currentSlug={slug.current}
-                />
-              );
-            })}
+          <Slider {...settingsSmall}>
+            {topStoriesData
+              .sort(
+                (a, b) => parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
+              )
+              .slice(0, 9)
+              .map((prev, i) => {
+                const { title, mainImage, body, slug } = prev;
+                return (
+                  <>
+                    <TopStoriesPageSmallCard
+                      key={i}
+                      index={i}
+                      Title={title}
+                      Image={mainImage && imgBuilder(mainImage)}
+                      body={body}
+                      currentSlug={slug.current}
+                    />
+                    <TopStoriesPageSmallCard
+                      key={i}
+                      index={i}
+                      Title={title}
+                      Image={mainImage && imgBuilder(mainImage)}
+                      body={body}
+                      currentSlug={slug.current}
+                    />
+                    <TopStoriesPageSmallCard
+                      key={i}
+                      index={i}
+                      Title={title}
+                      Image={mainImage && imgBuilder(mainImage)}
+                      body={body}
+                      currentSlug={slug.current}
+                    />
+                  </>
+                );
+              })}
+          </Slider>
         </div>
-        <div className="pt-4">
+        <div className="pt-4 w-full lg:w-1/2 lg:pr-8">
           <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
             MOST <span className="text-white">POPULAR</span>
           </h2>
-          {topStoriesData.slice(0, 3).map((prev, i) => {
-            const { title, mainImage, body, slug } = prev;
-
-            return (
-              <TopStoriesPageSmallCard
-                key={i}
-                index={i}
-                Title={title}
-                Image={mainImage && imgBuilder(mainImage)}
-                body={body}
-                currentSlug={slug.current}
-              />
-            );
-          })}
+          <Slider {...settingsSmall}>
+            {topStoriesData
+              .sort(
+                (a, b) => parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
+              )
+              .slice(0, 9)
+              .map((prev, i) => {
+                const { title, mainImage, body, slug } = prev;
+                return (
+                  <>
+                    <TopStoriesPageSmallCard
+                      key={i}
+                      index={i}
+                      Title={title}
+                      Image={mainImage && imgBuilder(mainImage)}
+                      body={body}
+                      currentSlug={slug.current}
+                    />
+                    <TopStoriesPageSmallCard
+                      key={i}
+                      index={i}
+                      Title={title}
+                      Image={mainImage && imgBuilder(mainImage)}
+                      body={body}
+                      currentSlug={slug.current}
+                    />
+                    <TopStoriesPageSmallCard
+                      key={i}
+                      index={i}
+                      Title={title}
+                      Image={mainImage && imgBuilder(mainImage)}
+                      body={body}
+                      currentSlug={slug.current}
+                    />
+                  </>
+                );
+              })}
+          </Slider>
         </div>
       </div>
-      <FeaturedDyorSources />
+      <div className="pt-6">
+        <FeaturedDyorSources />
+      </div>
     </div>
   );
 };
