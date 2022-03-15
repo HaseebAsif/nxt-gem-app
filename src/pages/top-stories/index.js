@@ -84,11 +84,6 @@ const TopStories = () => {
     prevArrow: <SamplePrevArrow topStyle={"102%"} />,
   };
 
-  console.log(
-    topStoriesData.sort(
-      (a, b) => parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
-    )
-  );
   return (
     <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
       <h2 className="text-[#1bd6fa] text-4xl font-bold py-2">

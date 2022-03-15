@@ -4,7 +4,6 @@ import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import styles from "./cryptoExchange.module.css";
 
 const CrytoExchangeTable = ({ Coins }) => {
-  console.log(Coins);
   return (
     <div
       className={`text-white col-span-9 bg-black border-none h-[550px] overflow-y-scroll ${styles.mainTableSection}`}

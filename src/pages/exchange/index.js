@@ -18,7 +18,6 @@ const Exchange = () => {
       .then((res) => {
         setCoins(res.data);
         setFilteredCoins(res.data);
-        console.log(res.data);
       })
       .catch((error) => console.log(error));
   }, []);
