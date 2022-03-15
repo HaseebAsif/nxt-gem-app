@@ -3,7 +3,7 @@ import Units from "cryptocurrency-unit-convert";
 
 const CryptoConverter = () => {
   // Convert 1.5 btc to satoshi
-  const convertedBTC = Units.convertBTC("1", "btc", "satoshi"); // '150000000'
+  const convertedBTC = Units.convertBTC("1", "btc", "bit"); // '150000000'
 
   // Convert 1 satoshi to bch
   const convertedBCH = Units.convertBCH("1", "satoshi", "bch"); // '0.00000001'
@@ -24,6 +24,6 @@ const CryptoConverter = () => {
   const convertedZEC = Units.convertZEC("1", "zatoshi", "zec"); // '0.00000001'
 
   return <div>{convertedBTC}</div>;
-};
+};;
 
 export default CryptoConverter;
