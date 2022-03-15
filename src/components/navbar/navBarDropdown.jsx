@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const DropDown = ({ value, setValue, active, notActive }) => {
+const DropDown = ({
+  value,
+  setValue,
+  active = "bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium",
+  notActive = "cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium",
+}) => {
   const [showOptions, setShowOptions] = useState(false);
   return (
     <div className="relative inline-block text-left">
@@ -12,7 +17,7 @@ const DropDown = ({ value, setValue, active, notActive }) => {
             setValue(3);
           }}
           type="button"
-          className={value === 3 ? active : notActive}
+          className={value && value === 3 ? active : notActive}
           id="menu-button"
           aria-expanded="true"
           aria-haspopup="true"
@@ -64,5 +69,6 @@ const DropDown = ({ value, setValue, active, notActive }) => {
     </div>
   );
 };
+
 
 export default DropDown;

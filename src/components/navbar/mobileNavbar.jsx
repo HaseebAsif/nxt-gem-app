@@ -31,7 +31,7 @@ const MobileNavbar = ({ isOpen }) => {
             Community
           </div>
         </Link>
-        <Link href="/coming-soon">
+        <Link href="/exchange">
           <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
             Exchange
           </div>
