@@ -4,6 +4,7 @@ import axios from "axios";
 import ExchangePageSmallCard from "components/UI/exchangePageSmallCard";
 import CryptoMovingHeading from "components/cryptoMovingHeadline";
 import CoinSearchBar from "components/UI/coinSearch";
+import CryptoConverter from "components/crptoConverter";
 
 const Exchange = () => {
   const [coins, setCoins] = useState([]);
@@ -46,6 +47,9 @@ const Exchange = () => {
             <div className="grid grid-cols-6 xl:grid-cols-12 pt-12">
               <div className="col-span-3 pb-2 xl:pb-0">
                 <CoinSearchBar setSearchValue={setSearchValue} />
+                {/* <div>
+                  <CryptoConverter />
+                </div> */}
                 <div className="pt-4">
                   <ExchangePageSmallCard
                     Coins={coins && coins}
