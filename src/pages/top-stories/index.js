@@ -80,8 +80,8 @@ const TopStories = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow topStyle={"65vh"} />,
-    prevArrow: <SamplePrevArrow topStyle={"65vh"} />,
+    nextArrow: <SampleNextArrow topStyle={"102%"} />,
+    prevArrow: <SamplePrevArrow topStyle={"102%"} />,
   };
 
   console.log(
