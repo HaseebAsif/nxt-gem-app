@@ -126,7 +126,7 @@ const TopStories = () => {
           );
         })}
       </div>
-      <div className="flex flex-wrap md:flex-nowrap">
+      <div className="flex flex-wrap lg:flex-nowrap">
         <div className="pt-4 w-full lg:w-1/2 lg:pr-8">
           <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
             NEW <span className="text-white">STORIES</span>
