@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import SectionHeader from "components/sectionHeading";
 import SingleLargeVideoViews from "components/singleLargeVideoViews";
 import SingleSmallVideoViews from "components/singleSmallVideoViews";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 import Fade from "react-reveal/Fade";
 
 const TopViews = () => {
@@ -29,7 +30,7 @@ const TopViews = () => {
   };
   return (
     <Fade left>
-      <div className="mb-24 sm:mb-32">
+      <div className="mb-16 sm:mb-20">
         <div className="mt-8">
           <SectionHeader heading="Top Views" value="2" />
         </div>
@@ -64,6 +65,11 @@ const TopViews = () => {
           </div>
         </div>
       </div>
+      <Link href="/top-videos">
+        <button className="flex border-2 border-white text-white m-auto font-medium hover:bg-white hover:text-black  rounded text-lg py-3 px-12 bg-[#04748D]">
+          More Videos
+        </button>
+      </Link>
     </Fade>
   );
 };

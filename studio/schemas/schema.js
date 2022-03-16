@@ -20,6 +20,7 @@ import movingHeading from "./movingHeading";
 import mainVideo from "./mainVideo";
 import comingSoonAdvertisements from "./comingSoonAdvertisements";
 import comingSoonProjects from "./comingSoonProjects";
+import featuredDYORSources from "./featuredDYORSources";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -42,6 +43,7 @@ export default createSchema({
     blockContent,
     comingSoonProjects,
     comingSoonAdvertisements,
+    featuredDYORSources,
     comment,
     author,
 
