@@ -66,9 +66,10 @@ const TopStories = () => {
   };
 
   const settings = {
+    autoplay: true,
+    speed: 1000,
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
@@ -77,7 +78,9 @@ const TopStories = () => {
   const settingsSmall = {
     dots: true,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    fade: true,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow topStyle={"102%"} />,
@@ -165,7 +168,7 @@ const TopStories = () => {
               })}
           </Slider>
         </div>
-        <div className="pt-10 w-full lg:w-1/2">
+        <div className="pt-10 md:pt-4 w-full lg:w-1/2">
           <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
             MOST <span className="text-white">POPULAR</span>
           </h2>
@@ -177,6 +180,7 @@ const TopStories = () => {
               .slice(0, 9)
               .map((prev, i) => {
                 const { title, mainImage, body, slug } = prev;
+
                 return (
                   <>
                     <TopStoriesPageSmallCard

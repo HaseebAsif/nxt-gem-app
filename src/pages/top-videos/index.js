@@ -23,17 +23,14 @@ const TopVideos = () => {
       </h2>
       <div className="grid grid-cols-6 lg:grid-cols-12 ">
         <div className="col-span-8">
-          {TopViewsData.slice(0, 1).map((link) => (
+          {TopViewsData.slice(0, 1).map(({ link }) => (
             <TopVideosPageMainVideo videoUrl={link} />
           ))}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 col-span-6 lg:col-span-4 pt-2 lg:pt-0">
-          <TopVideosPageSmallVideo />
-          <TopVideosPageSmallVideo />
-          <TopVideosPageSmallVideo />
-          <TopVideosPageSmallVideo />
-          <TopVideosPageSmallVideo />
-          <TopVideosPageSmallVideo />
+          {TopViewsData.slice(1, 7).map(({ link }) => (
+            <TopVideosPageSmallVideo videoUrl={link} />
+          ))}
         </div>
       </div>
       <div className="flex flex-wrap md:flex-nowrap">
@@ -41,17 +38,25 @@ const TopVideos = () => {
           <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
             NEW <span className="text-white">VIDEOS</span>
           </h2>
-          <TopVideosPageSmallCard />
-          <TopVideosPageSmallCard />
-          <TopVideosPageSmallCard />
+          {TopViewsData.slice(0, 3).map(({ link, name, description }) => (
+            <TopVideosPageSmallCard
+              videoUrl={link}
+              Title={name}
+              Body={description}
+            />
+          ))}
         </div>
         <div className="pt-4">
           <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
             MOST <span className="text-white">POPULAR</span>
           </h2>
-          <TopVideosPageSmallCard />
-          <TopVideosPageSmallCard />
-          <TopVideosPageSmallCard />
+          {TopViewsData.slice(0, 3).map(({ link, name, description }) => (
+            <TopVideosPageSmallCard
+              videoUrl={link}
+              Title={name}
+              Body={description}
+            />
+          ))}
         </div>
       </div>
       <FeaturedDyorSources />

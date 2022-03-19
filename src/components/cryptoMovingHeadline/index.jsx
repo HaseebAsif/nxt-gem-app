@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import Ticker from "react-ticker";
-import PageVisibility from "react-page-visibility";
 
 const MovingHeading = ({ Coins }) => (
   <div className="px-4 flex items-center pt-1">
@@ -25,18 +24,11 @@ const MovingHeading = ({ Coins }) => (
 );
 
 const CryptoMovingHeading = ({ Coins }) => {
-  const [pageIsVisible, setPageIsVisible] = useState(true);
-
-  const handleVisibilityChange = (isVisible) => {
-    setPageIsVisible(isVisible);
-  };
-  console.log(pageIsVisible);
+  console.log(Coins);
   return (
-    <PageVisibility onChange={handleVisibilityChange}>
-      {pageIsVisible && Coins && (
-        <Ticker>{() => <MovingHeading Coins={Coins} />}</Ticker>
-      )}
-    </PageVisibility>
+    <>
+      <Ticker>{() => <MovingHeading Coins={Coins} />}</Ticker>
+    </>
   );
 };
 
