@@ -38,7 +38,7 @@ const Exchange = () => {
       {coins && (
         <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover pt-16">
           {coins && (
-            <div className="h-10 cryptoMovingHeading bg-[#012c33] text-white ">
+            <div className="h-10 cryptoMovingHeading bg-[#012c33] text-white 3xl:hidden ">
               <CryptoMovingHeading Coins={coins && coins} />
             </div>
           )}
@@ -46,9 +46,9 @@ const Exchange = () => {
             <div className="grid grid-cols-6 xl:grid-cols-12 pt-12">
               <div className="col-span-6 xl:col-span-3 pb-2 xl:pb-0">
                 <CoinSearchBar setSearchValue={setSearchValue} />
-                {/* <div>
+                <div>
                   <CryptoConverter />
-                </div> */}
+                </div>
                 <div className="pt-4">
                   <ExchangePageSmallCard
                     Coins={coins && coins}

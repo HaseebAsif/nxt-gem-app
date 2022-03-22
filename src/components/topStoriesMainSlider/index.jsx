@@ -10,7 +10,7 @@ const TopStoriesMainSlider = ({ Image, Title, body, currentSlug }) => {
           className="object-cover h-full bg-no-repeat bg-cover flex justify-end"
           style={{ backgroundImage: `url(${Image})` }}
         >
-          <div className=" h-[16.2rem] md:h-[19.5rem] w-80 bg-[#023844] truncate whitespace-normal mr-20 p-4 py-6">
+          <div className=" h-[16.2rem] md:h-[19.5rem] w-80 bg-[black] opacity-[60%] truncate whitespace-normal mr-20 p-4 py-6">
             <h3 className="text-[#1bd6fa] text-xl md:text-2xl">{Title}</h3>
             <div className="text-white text-md md:text-lg py-2 md:py-6">
               <SanityBlockContent blocks={body?.slice(0, 1)} />

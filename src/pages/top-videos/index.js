@@ -3,6 +3,7 @@ import FeaturedDyorSources from "components/featuredDyorSources";
 import TopVideosPageMainVideo from "components/UI/topVideosPageMainVideo";
 import TopVideosPageSmallCard from "components/UI/topVideosPageSmallCard";
 import TopVideosPageSmallVideo from "components/UI/topVideosPageSmallVideo";
+import Slider from "react-slick";
 
 const TopVideos = () => {
   const [TopViewsData, setTopViewsData] = useState([]);
@@ -16,9 +17,68 @@ const TopVideos = () => {
     );
   }, []);
   console.log(TopViewsData);
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick, topStyle } = props;
+    return (
+      <div
+        className={`topStories_page_arrow ${className}`}
+        style={{
+          ...style,
+          display: "block",
+          top: !topStyle ? "74vh" : topStyle,
+          right: "1%",
+          fontWeight: "bolder",
+          zIndex: "1",
+          color: "#1bd6fa",
+          backgroundColor: "black",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick, topStyle } = props;
+    return (
+      <div
+        className={`topStories_page_arrow ${className}`}
+        style={{
+          ...style,
+          display: "block",
+          top: !topStyle ? "74vh" : topStyle,
+          left: "1%",
+          fontWeight: "bolder",
+          zIndex: "1",
+          color: "#1bd6fa",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  const settingsSmall = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    fade: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow topStyle={"100%"} />,
+    prevArrow: <SamplePrevArrow topStyle={"100%"} />,
+  };
+
+  const chunkSize = 3;
+  const sliderGroup = TopViewsData.map((e, i) => {
+    return i % chunkSize === 0 ? TopViewsData.slice(i, i + chunkSize) : null;
+  }).filter((e) => {
+    return e;
+  });
+  console.log(sliderGroup);
   return (
     <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
-      <h2 className="text-[#1bd6fa] text-4xl font-bold py-2">
+      <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
         TOP <span className="text-white">VIDEOS</span>
       </h2>
       <div className="grid grid-cols-6 lg:grid-cols-12 ">
@@ -34,32 +94,60 @@ const TopVideos = () => {
         </div>
       </div>
       <div className="flex flex-wrap md:flex-nowrap">
-        <div className="pt-4 pr-8">
-          <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
+        <div className="pt-4  w-full lg:w-1/2 lg:pr-8">
+          <h2 className="text-[#1bd6fa] text-2xl font-bold py-2 ">
             NEW <span className="text-white">VIDEOS</span>
           </h2>
-          {TopViewsData.slice(0, 3).map(({ link, name, description }) => (
-            <TopVideosPageSmallCard
-              videoUrl={link}
-              Title={name}
-              Body={description}
-            />
-          ))}
+          <Slider {...settingsSmall}>
+            {sliderGroup
+              .sort(
+                (a, b) => parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
+              )
+              .map((item, i) => {
+                console.log(item);
+                if (item.length % 3 === 0)
+                  return (
+                    <div>
+                      {item.map(({ link, name, description }) => (
+                        <TopVideosPageSmallCard
+                          videoUrl={link}
+                          Title={name}
+                          Body={description}
+                        />
+                      ))}
+                    </div>
+                  );
+              })}
+          </Slider>
         </div>
-        <div className="pt-4">
-          <h2 className="text-[#1bd6fa] text-2xl font-bold py-2">
+        <div className="pt-4  w-full lg:w-1/2 ">
+          <h2 className="text-[#1bd6fa] text-2xl font-bold py-2 ">
             MOST <span className="text-white">POPULAR</span>
           </h2>
-          {TopViewsData.slice(0, 3).map(({ link, name, description }) => (
-            <TopVideosPageSmallCard
-              videoUrl={link}
-              Title={name}
-              Body={description}
-            />
-          ))}
+          <Slider {...settingsSmall}>
+            {sliderGroup.reverse().map((item, i) => {
+              if (item.length % 3 === 0)
+                return (
+                  <div>
+                    {item
+                      .slice(0, 3)
+                      .reverse()
+                      .map(({ link, name, description }) => (
+                        <TopVideosPageSmallCard
+                          videoUrl={link}
+                          Title={name}
+                          Body={description}
+                        />
+                      ))}
+                  </div>
+                );
+            })}
+          </Slider>
         </div>
       </div>
-      <FeaturedDyorSources />
+      <div className="pt-6">
+        <FeaturedDyorSources />
+      </div>
     </div>
   );
 };
