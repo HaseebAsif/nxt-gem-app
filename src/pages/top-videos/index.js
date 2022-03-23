@@ -4,6 +4,7 @@ import TopVideosPageMainVideo from "components/UI/topVideosPageMainVideo";
 import TopVideosPageSmallCard from "components/UI/topVideosPageSmallCard";
 import TopVideosPageSmallVideo from "components/UI/topVideosPageSmallVideo";
 import Slider from "react-slick";
+import SideIcons from "components/sideSocialIcons";
 
 const TopVideos = () => {
   const [TopViewsData, setTopViewsData] = useState([]);
@@ -93,6 +94,8 @@ const TopVideos = () => {
           ))}
         </div>
       </div>
+      <SideIcons />
+
       <div className="flex flex-wrap md:flex-nowrap">
         <div className="pt-4  w-full lg:w-1/2 lg:pr-8">
           <h2 className="text-[#1bd6fa] text-2xl font-bold py-2 ">

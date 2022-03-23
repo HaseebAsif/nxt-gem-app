@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 
 const SingleFeaturedDyor = ({ text, link }) => (
-  <a
-    href={link}
-    target="_blank"
-    className="p-4 border-solid border-[#1bd6fa] border-[1px]"
-  >
+  <div className="p-4 border-solid border-[#1bd6fa] border-[1px]">
     {text}
-  </a>
+    <a
+      href={link}
+      target="_blank"
+      className="text-[white] cursor-pointer text-[10px] hover:bg-white hover:text-black ml-8 relative top-1 p-2 border border-white bg-black rounded-lg"
+    >
+      <a>Read More</a>
+    </a>
+  </div>
 );
 
 const FeaturedDyorSources = () => {
@@ -23,11 +26,11 @@ const FeaturedDyorSources = () => {
   }, []);
   console.log(DYORSources);
   return (
-    <div className="pt-4 cursor-pointer">
+    <div className="pt-4 cursor-default">
       <h2 className="text-[#1bd6fa] text-3xl font-bold py-2">
         FEATURED <span className="text-white">DYOR SOURCES</span>
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 bg-[#023844] text-white ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 bg-black text-white ">
         {DYORSources.map(({ name, link }) => (
           <SingleFeaturedDyor text={name} link={link} />
         ))}
