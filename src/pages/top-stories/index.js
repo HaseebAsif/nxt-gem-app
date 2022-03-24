@@ -4,6 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import Slider from "react-slick";
 import TopStoriesPageSmallCard from "components/UI/topStoriesPageSmallCard";
 import FeaturedDyorSources from "components/featuredDyorSources";
+import SideIcons from "components/sideSocialIcons";
 
 function SampleNextArrow(props) {
   const { className, style, onClick, topStyle } = props;
@@ -119,6 +120,8 @@ const TopStories = () => {
           );
         })}
       </Slider>
+      <SideIcons />
+
       <div className="flex flex-col pt-10  xl:flex-row">
         {topStoriesData.slice(0, 3).map((prev, i) => {
           const { title, mainImage, body, slug } = prev;

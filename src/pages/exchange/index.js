@@ -5,6 +5,7 @@ import ExchangePageSmallCard from "components/UI/exchangePageSmallCard";
 import CryptoMovingHeading from "components/cryptoMovingHeadline";
 import CoinSearchBar from "components/UI/coinSearch";
 import CryptoConverter from "components/crptoConverter";
+import SideIcons from "components/sideSocialIcons";
 
 const Exchange = () => {
   const [coins, setCoins] = useState([]);
@@ -42,7 +43,9 @@ const Exchange = () => {
               <CryptoMovingHeading Coins={coins && coins} />
             </div>
           )}
-          <div className="pb-12 xl:pb-0 px-4 md:px-16">
+          <SideIcons />
+
+          <div className="pb-12 xl:pb-0 px-4 md:px-24">
             <div className="grid grid-cols-6 xl:grid-cols-12 pt-12">
               <div className="col-span-6 xl:col-span-3 pb-2 xl:pb-0">
                 <CoinSearchBar setSearchValue={setSearchValue} />
