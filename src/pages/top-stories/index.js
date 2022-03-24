@@ -13,7 +13,7 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: "block",
-        top: !topStyle ? "74vh" : topStyle,
+        top: !topStyle ? "74.2vh" : topStyle,
         right: "2%",
         fontWeight: "bolder",
         zIndex: "1",
@@ -33,7 +33,7 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        top: !topStyle ? "74vh" : topStyle,
+        top: !topStyle ? "74.2vh" : topStyle,
         left: "1%",
         fontWeight: "bolder",
         zIndex: "1",
