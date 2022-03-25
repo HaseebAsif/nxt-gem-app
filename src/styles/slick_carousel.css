@@ -56,6 +56,10 @@
   background-color: #00d7fe;
 }
 
+.slick-custom-dots.slick-dots li button:before {
+  color: #000000 !important;
+}
+
 .slick-custom-arrows::before {
   color: black !important;
 }
