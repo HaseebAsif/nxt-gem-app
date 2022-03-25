@@ -7,10 +7,12 @@ import FeaturedDyorSources from "components/featuredDyorSources";
 import SideIcons from "components/sideSocialIcons";
 
 function SampleNextArrow(props) {
-  const { className, style, onClick, topStyle } = props;
+  const { className, style, customClass, onClick, topStyle } = props;
   return (
     <div
-      className={`topStories_page_arrow ${className}`}
+      className={`topStories_page_arrow ${
+        customClass && customClass
+      } ${className}`}
       style={{
         ...style,
         display: "block",
@@ -18,8 +20,6 @@ function SampleNextArrow(props) {
         right: "2%",
         fontWeight: "bolder",
         zIndex: "1",
-        color: "#1bd6fa",
-        backgroundColor: "black",
       }}
       onClick={onClick}
     />
@@ -27,10 +27,12 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick, topStyle } = props;
+  const { className, style, customClass, onClick, topStyle } = props;
   return (
     <div
-      className={`topStories_page_arrow ${className}`}
+      className={`topStories_page_arrow ${
+        customClass && customClass
+      } ${className}`}
       style={{
         ...style,
         display: "block",
@@ -38,7 +40,6 @@ function SamplePrevArrow(props) {
         left: "1%",
         fontWeight: "bolder",
         zIndex: "1",
-        color: "#1bd6fa",
       }}
       onClick={onClick}
     />
@@ -84,8 +85,13 @@ const TopStories = () => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow topStyle={"100%"} />,
-    prevArrow: <SamplePrevArrow topStyle={"100%"} />,
+    dotsClass: "slick-dots slick-custom-dots",
+    nextArrow: (
+      <SampleNextArrow topStyle={"100%"} customClass="slick-custom-arrows" />
+    ),
+    prevArrow: (
+      <SamplePrevArrow topStyle={"100%"} customClass="slick-custom-arrows" />
+    ),
   };
 
   const chunkSize = 3;

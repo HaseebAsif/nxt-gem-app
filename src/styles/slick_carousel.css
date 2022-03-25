@@ -51,3 +51,11 @@
   color: #1bd6fa !important;
   font-size: 30px !important;
 }
+
+.slick-custom-dots {
+  background-color: #00d7fe;
+}
+
+.slick-custom-arrows::before {
+  color: black !important;
+}
