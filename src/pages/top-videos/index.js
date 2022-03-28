@@ -6,8 +6,49 @@ import TopVideosPageSmallVideo from "components/UI/topVideosPageSmallVideo";
 import Slider from "react-slick";
 import SideIcons from "components/sideSocialIcons";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick, topStyle } = props;
+  return (
+    <div
+      className={`topStories_page_arrow ${className}`}
+      style={{
+        ...style,
+        display: "block",
+        top: !topStyle ? "74vh" : topStyle,
+        right: "1%",
+        fontWeight: "bolder",
+        zIndex: "1",
+        color: "#1bd6fa",
+        backgroundColor: "black",
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick, topStyle } = props;
+  return (
+    <div
+      className={`topStories_page_arrow ${className}`}
+      style={{
+        ...style,
+        display: "block",
+        top: !topStyle ? "74vh" : topStyle,
+        left: "1%",
+        fontWeight: "bolder",
+        zIndex: "1",
+        color: "#1bd6fa",
+      }}
+      onClick={onClick}
+    />
+  );
+}
 const TopVideos = () => {
   const [TopViewsData, setTopViewsData] = useState([]);
+  const [mainVideo, setMainVideo] = useState("1");
+  const [largeVideo, setLargeVideo] = useState([]);
+  const [smallVideo, setSmallVideo] = useState([]);
   useEffect(async () => {
     const query = encodeURIComponent(`*[ _type == "topViews" ]`);
     const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
@@ -17,46 +58,13 @@ const TopVideos = () => {
       result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
     );
   }, []);
-  console.log(TopViewsData);
-
-  function SampleNextArrow(props) {
-    const { className, style, onClick, topStyle } = props;
-    return (
-      <div
-        className={`topStories_page_arrow ${className}`}
-        style={{
-          ...style,
-          display: "block",
-          top: !topStyle ? "74vh" : topStyle,
-          right: "1%",
-          fontWeight: "bolder",
-          zIndex: "1",
-          color: "#1bd6fa",
-          backgroundColor: "black",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, style, onClick, topStyle } = props;
-    return (
-      <div
-        className={`topStories_page_arrow ${className}`}
-        style={{
-          ...style,
-          display: "block",
-          top: !topStyle ? "74vh" : topStyle,
-          left: "1%",
-          fontWeight: "bolder",
-          zIndex: "1",
-          color: "#1bd6fa",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
+  useEffect(() => {
+    setLargeVideo(TopViewsData.filter((value) => value.order === mainVideo));
+    setSmallVideo(TopViewsData.filter((value) => value.order !== mainVideo));
+  }, [TopViewsData, mainVideo]);
+  const SetMainVideoFunction = (orderProp) => {
+    setMainVideo(orderProp);
+  };
 
   const settingsSmall = {
     dots: true,
@@ -84,13 +92,24 @@ const TopVideos = () => {
       </h2>
       <div className="grid grid-cols-6 lg:grid-cols-12 ">
         <div className="col-span-8">
-          {TopViewsData.slice(0, 1).map(({ link }) => (
-            <TopVideosPageMainVideo videoUrl={link} />
-          ))}
+          {largeVideo.map(({ link, order }) => {
+            console.log(order);
+            return (
+              <TopVideosPageMainVideo
+                videoUrl={link}
+                handleClick={() => SetMainVideoFunction(order)}
+                image={false}
+              />
+            );
+          })}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 col-span-6 lg:col-span-4 pt-2 lg:pt-0">
-          {TopViewsData.slice(1, 7).map(({ link }) => (
-            <TopVideosPageSmallVideo videoUrl={link} />
+          {smallVideo.map(({ link, order }) => (
+            <TopVideosPageSmallVideo
+              videoUrl={link}
+              handleClick={() => SetMainVideoFunction(order)}
+              image={false}
+            />
           ))}
         </div>
       </div>

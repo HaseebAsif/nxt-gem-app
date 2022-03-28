@@ -8,14 +8,18 @@ const CustomIcon = () => (
   </div>
 );
 
-const TopVideosPageMainVideo = ({ videoUrl, handleClick, autoPlay }) => {
+const TopVideosPageMainVideo = ({ videoUrl, image, handleClick, autoPlay }) => {
   return (
     <div className={`flex ${styles.TopVideosPageMainVideo} justify-center`}>
       <ReactPlayer
         url={videoUrl}
         playIcon={<CustomIcon />}
-        light="https://images.unsplash.com/photo-1517332953775-0fecf924e8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRhcmslMjBwbGF5ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+        light={
+          image &&
+          "https://images.unsplash.com/photo-1517332953775-0fecf924e8bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRhcmslMjBwbGF5ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+        }
         playing
+        onPlay={handleClick}
       />
     </div>
   );
