@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 const SingleFeaturedDyor = ({ text, link }) => (
-  <div className="p-4 border-solid border-[#1bd6fa] border-[1px]">
-    {text}
-    <a
-      href={link}
-      target="_blank"
-      className="text-[white] cursor-pointer text-[10px] hover:bg-white hover:text-black ml-8 relative top-1 p-2 border border-white bg-black rounded-lg"
-    >
-      <a>Read More</a>
-    </a>
+  <div className="p-4 border-solid border-[#1bd6fa] border-[1px] ">
+    <div>{text}</div>
+    <div className="flex justify-end">
+      <a
+        href={link}
+        target="_blank"
+        className="text-[white] w-fit  cursor-pointer text-[10px] hover:bg-white hover:text-black   relative top-1 p-2 border border-white bg-black rounded-lg"
+      >
+        <a>Read More</a>
+      </a>
+    </div>
   </div>
 );
 
