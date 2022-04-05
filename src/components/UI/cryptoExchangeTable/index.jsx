@@ -6,7 +6,7 @@ import styles from "./cryptoExchange.module.css";
 const CrytoExchangeTable = ({ Coins }) => {
   return (
     <div
-      className={`text-white col-span-9 bg-black border-none h-[550px] overflow-y-scroll ${styles.mainTableSection}`}
+      className={`text-white col-span-9  border-none h-[550px] overflow-y-scroll ${styles.mainTableSection}`}
     >
       <Table>
         <Thead className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black sticky top-0 z-10">
@@ -27,7 +27,7 @@ const CrytoExchangeTable = ({ Coins }) => {
             <Th style={{ fontWeight: 700, textAlign: "left" }}>MARKET CAP</Th>
           </Tr>
         </Thead>
-        <Tbody>
+        <Tbody className="bg-[black]/80">
           {Coins.map((coin) => (
             <Tr
               className={styles.coinTableRow}

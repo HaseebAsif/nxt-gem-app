@@ -81,7 +81,7 @@ const TopStories = () => {
     dots: true,
     infinite: true,
     autoplay: true,
-    fade: true,
+    fadeInRight: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -146,7 +146,7 @@ const TopStories = () => {
       </div>
       <div className="flex flex-wrap lg:flex-nowrap">
         <div className="pt-4 w-full lg:w-1/2 lg:pr-8">
-          <h2 className="text-[#1bd6fa] text-[30px] font-bold py-2">
+          <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
             NEW <span className="text-white">STORIES</span>
           </h2>
           <Slider {...settingsSmall}>
@@ -178,7 +178,7 @@ const TopStories = () => {
           </Slider>
         </div>
         <div className="pt-10 md:pt-4 w-full lg:w-1/2">
-          <h2 className="text-[#1bd6fa] text-[30px] font-bold py-2">
+          <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
             MOST <span className="text-white">POPULAR</span>
           </h2>
           <Slider {...settingsSmall}>

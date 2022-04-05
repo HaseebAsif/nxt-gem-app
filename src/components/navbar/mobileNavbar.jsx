@@ -1,8 +1,12 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import DropDown from "./navBarDropdown";
 
-const MobileNavbar = ({ isOpen }) => {
+const MobileNavbar = ({ isOpen, setIsOpen }) => {
+  const [value, setValue] = useState(0);
+  const handleClose = () => {
+    setIsOpen(false);
+  };
   return (
     <div
       className={`${isOpen ? "block" : "hidden"} lg:hidden`}
@@ -13,31 +17,44 @@ const MobileNavbar = ({ isOpen }) => {
           <div
             className="bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium"
             aria-current="page"
+            onClick={handleClose}
           >
             Home
           </div>
         </Link>
 
         <Link href="/coming-soon">
-          <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          <div
+            onClick={handleClose}
+            className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          >
             Project List
           </div>
         </Link>
 
-        <DropDown />
+        <DropDown value={value} setValue={setValue} handleClose={handleClose} />
 
         <Link href="/coming-soon">
-          <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          <div
+            onClick={handleClose}
+            className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          >
             Community
           </div>
         </Link>
         <Link href="/exchange">
-          <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          <div
+            onClick={handleClose}
+            className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          >
             Exchange
           </div>
         </Link>
         <Link href="/coming-soon">
-          <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          <div
+            onClick={handleClose}
+            className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          >
             Marketplace
           </div>
         </Link>
@@ -45,12 +62,18 @@ const MobileNavbar = ({ isOpen }) => {
           href="https://drive.google.com/file/d/17wtQyZ54vM4LaSFRN7x5MC2D-B2YWlxo/view?usp=sharing"
           target="_blank"
         >
-          <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          <div
+            onClick={handleClose}
+            className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          >
             About Us
           </div>
         </a>
         <Link href="/coming-soon">
-          <div className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          <div
+            onClick={handleClose}
+            className="cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          >
             Submit Project
           </div>
         </Link>

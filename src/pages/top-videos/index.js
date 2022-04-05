@@ -7,19 +7,19 @@ import Slider from "react-slick";
 import SideIcons from "components/sideSocialIcons";
 
 function SampleNextArrow(props) {
-  const { className, style, onClick, topStyle } = props;
+  const { className, style, customClass, onClick, topStyle } = props;
   return (
     <div
-      className={`topStories_page_arrow ${className}`}
+      className={`topStories_page_arrow ${
+        customClass && customClass
+      } ${className}`}
       style={{
         ...style,
         display: "block",
-        top: !topStyle ? "74vh" : topStyle,
-        right: "1%",
+        top: !topStyle ? "74.2vh" : topStyle,
+        right: "2%",
         fontWeight: "bolder",
         zIndex: "1",
-        color: "#1bd6fa",
-        backgroundColor: "black",
       }}
       onClick={onClick}
     />
@@ -27,23 +27,25 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick, topStyle } = props;
+  const { className, style, customClass, onClick, topStyle } = props;
   return (
     <div
-      className={`topStories_page_arrow ${className}`}
+      className={`topStories_page_arrow ${
+        customClass && customClass
+      } ${className}`}
       style={{
         ...style,
         display: "block",
-        top: !topStyle ? "74vh" : topStyle,
+        top: !topStyle ? "74.2vh" : topStyle,
         left: "1%",
         fontWeight: "bolder",
         zIndex: "1",
-        color: "#1bd6fa",
       }}
       onClick={onClick}
     />
   );
 }
+
 const TopVideos = () => {
   const [TopViewsData, setTopViewsData] = useState([]);
   const [mainVideo, setMainVideo] = useState("1");
@@ -70,12 +72,17 @@ const TopVideos = () => {
     dots: true,
     infinite: true,
     autoplay: true,
-    fade: true,
+    fadeInRight: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow topStyle={"100%"} />,
-    prevArrow: <SamplePrevArrow topStyle={"100%"} />,
+    dotsClass: "slick-dots slick-custom-dots",
+    nextArrow: (
+      <SampleNextArrow topStyle={"100%"} customClass="slick-custom-arrows" />
+    ),
+    prevArrow: (
+      <SamplePrevArrow topStyle={"100%"} customClass="slick-custom-arrows" />
+    ),
   };
 
   const chunkSize = 3;
@@ -117,7 +124,7 @@ const TopVideos = () => {
 
       <div className="flex flex-wrap md:flex-nowrap">
         <div className="pt-4  w-full lg:w-1/2 lg:pr-8">
-          <h2 className="text-[#1bd6fa] text-2xl font-bold py-2 ">
+          <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2 ">
             NEW <span className="text-white">VIDEOS</span>
           </h2>
           <Slider {...settingsSmall}>
@@ -143,7 +150,7 @@ const TopVideos = () => {
           </Slider>
         </div>
         <div className="pt-4  w-full lg:w-1/2 ">
-          <h2 className="text-[#1bd6fa] text-2xl font-bold py-2 ">
+          <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2 ">
             MOST <span className="text-white">POPULAR</span>
           </h2>
           <Slider {...settingsSmall}>

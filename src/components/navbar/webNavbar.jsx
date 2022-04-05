@@ -57,6 +57,7 @@ const WebNavbar = () => {
             value={value}
             setValue={setValue}
             active={active}
+            handleClose={() => {}}
             notActive={notActive}
           />
           <Link href="/coming-soon">

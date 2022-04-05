@@ -6,6 +6,7 @@ import CryptoMovingHeading from "components/cryptoMovingHeadline";
 import CoinSearchBar from "components/UI/coinSearch";
 import CryptoConverter from "components/crptoConverter";
 import SideIcons from "components/sideSocialIcons";
+import ExchangePageAdd from "components/exchangePageAdd";
 
 const Exchange = () => {
   const [coins, setCoins] = useState([]);
@@ -70,6 +71,7 @@ const Exchange = () => {
                     Name={"RECENTLY ADDED"}
                   />
                 </div>
+                {/* <ExchangePageAdd /> */}
               </div>
               <CrytoExchangeTable Coins={filteredCoins && filteredCoins} />
             </div>

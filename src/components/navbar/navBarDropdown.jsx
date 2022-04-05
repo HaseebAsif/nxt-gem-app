@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const DropDown = ({
   value,
+  handleClose,
   setValue,
   active = "bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium",
   notActive = "cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium",
@@ -44,6 +45,7 @@ const DropDown = ({
                 onClick={() => {
                   setShowOptions(!showOptions);
                   setValue(3);
+                  handleClose();
                 }}
               >
                 Top Stories
@@ -58,6 +60,7 @@ const DropDown = ({
                 onClick={() => {
                   setShowOptions(!showOptions);
                   setValue(3);
+                  handleClose();
                 }}
               >
                 Top Videos
@@ -69,6 +72,5 @@ const DropDown = ({
     </div>
   );
 };
-
 
 export default DropDown;

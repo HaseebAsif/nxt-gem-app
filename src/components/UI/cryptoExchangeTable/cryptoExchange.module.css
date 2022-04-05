@@ -10,14 +10,25 @@
   width: 18%;
 }
 
-.mainTableSection::-webkit-scrollbar{
-  display: none;
+.mainTableSection::-webkit-scrollbar {
+  background: linear-gradient(#1295bd, #ccf7ff);
+  width: 5px;
+}
+
+.mainTableSection::-webkit-scrollbar-track {
+  background: transparent;
+}
+.mainTableSection::-webkit-scrollbar-thumb {
+  background-color: white;
+  height: 50px;
+  width: 0.5px;
+
+  border-radius: 6px;
 }
 .mainTableSection > Th,
 .mainTableSection > Td {
   border-bottom: solid 3px #efefef;
 }
-
 .mainTableSection > Table {
   line-height: 60px;
   padding: 0 55px 0 100px;
