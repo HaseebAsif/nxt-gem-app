@@ -43,6 +43,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+        <script src="https://kit.fontawesome.com/54fb93fd66.js" crossorigin="anonymous"></script>
       </Html>
     );
   }

@@ -49,9 +49,11 @@ const Exchange = () => {
           <div className="pb-12 xl:pb-0 px-4 md:px-24">
             <div className="grid grid-cols-6 xl:grid-cols-12 pt-12">
               <div className="col-span-6 xl:col-span-3 pb-2 xl:pb-0">
-                <CoinSearchBar setSearchValue={setSearchValue} />
+                <div className="pb-2">
+                  <CoinSearchBar setSearchValue={setSearchValue} />
+                </div>
                 <div>
-                  <CryptoConverter />
+                  <CryptoConverter Coins={filteredCoins && filteredCoins} />
                 </div>
                 <div className="pt-4">
                   <ExchangePageSmallCard

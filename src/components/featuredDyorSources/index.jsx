@@ -1,3 +1,4 @@
+import RssFeader from "components/rssFeeder";
 import React, { useState, useEffect } from "react";
 
 const SingleFeaturedDyor = ({ text, link }) => (
@@ -37,6 +38,7 @@ const FeaturedDyorSources = () => {
           <SingleFeaturedDyor text={name} link={link} />
         ))}
       </div>
+      {/* <RssFeader /> */}
     </div>
   );
 };
