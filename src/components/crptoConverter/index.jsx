@@ -26,7 +26,7 @@ const CryptoConverter = ({ Coins }) => {
   };
 
   return (
-    <div className="w-auto xl:w-[90%] p-4 bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] ">
+    <div className="w-auto xl:w-fit p-4 bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] ">
       <div className="border-2 border-black ">
         <button
           id="dropdownDefault"

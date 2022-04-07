@@ -5,7 +5,7 @@ import styles from "./cryptoExchange.module.css";
 const CrytoExchangeTable = ({ Coins }) => {
   return (
     <div
-      className={`text-white col-span-9  border-none h-[88vh] overflow-y-scroll ${styles.mainTableSection}`}
+      className={`text-white col-span-9  border-none h-[630px] overflow-y-scroll ${styles.mainTableSection}`}
     >
       <Table>
         <Thead className="bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black sticky top-0 z-10">
