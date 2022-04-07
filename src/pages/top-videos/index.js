@@ -110,7 +110,7 @@ const TopVideos = () => {
             );
           })}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 col-span-6 lg:col-span-4 pt-2 lg:pt-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 col-span-6 lg:col-span-4 pt-2 px-2 md:px-0 lg:pt-0">
           {smallVideo.map(({ link, order }) => (
             <TopVideosPageSmallVideo
               videoUrl={link}
@@ -120,6 +120,7 @@ const TopVideos = () => {
           ))}
         </div>
       </div>
+
       <SideIcons />
 
       <div className="flex flex-wrap md:flex-nowrap">

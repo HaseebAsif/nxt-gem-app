@@ -25,6 +25,8 @@ const CryptoConverter = ({ Coins }) => {
     setFilteredSecondData(temp);
   };
 
+  const handleChange = () => {};
+
   return (
     <div className="w-auto xl:w-fit p-4 bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] ">
       <div className="border-2 border-black ">
@@ -79,10 +81,13 @@ const CryptoConverter = ({ Coins }) => {
             className="py-1 px-3 text-sm text-gray-700 dark:text-gray-200 "
             aria-labelledby="dropdownDefault"
           >
-            {Coins.slice(0, 3).map((item) => (
+            {Coins.slice(0, 10).map((item) => (
               <li
-                className="flex py-1"
-                onClick={() => setFirstInputId(item.id)}
+                className="flex py-1 cursor-pointer"
+                onClick={() => {
+                  setFirstInputId(item.id);
+                  setShowOptions(false);
+                }}
               >
                 <img
                   src={item.image}
@@ -139,10 +144,10 @@ const CryptoConverter = ({ Coins }) => {
         {filteredFirstData && (
           <input
             className="bg-transparent  w-40 text-xl px-2 outline-none"
-            value={
+            value={(
               (filteredFirstData.current_price * firstInputChange) /
               filteredSecondData.current_price
-            }
+            ).toFixed(5)}
             disabled
             onChange={(e) => setSecondInputChange(e.target.value)}
           />
@@ -158,10 +163,13 @@ const CryptoConverter = ({ Coins }) => {
             className="py-1 px-2 text-sm text-gray-700 dark:text-gray-200 "
             aria-labelledby="dropdownDefaulta"
           >
-            {Coins.slice(0, 3).map((item) => (
+            {Coins.slice(0, 10).map((item) => (
               <li
-                className="flex py-1"
-                onClick={() => setSecondInputId(item.id)}
+                className="flex py-1 cursor-pointer"
+                onClick={() => {
+                  setSecondInputId(item.id);
+                  setShowOptions2(false);
+                }}
               >
                 <img
                   src={item.image}
