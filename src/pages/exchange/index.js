@@ -7,6 +7,7 @@ import CoinSearchBar from "components/UI/coinSearch";
 import CryptoConverter from "components/crptoConverter";
 import SideIcons from "components/sideSocialIcons";
 import ExchangePageAdd from "components/exchangePageAdd";
+import Slider from "react-slick";
 
 const Exchange = () => {
   const [coins, setCoins] = useState([]);
@@ -35,6 +36,19 @@ const Exchange = () => {
     }
   }, [searchValue, coins]);
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fadeInRight: true,
+    pauseOnHover:false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  };
+
   return (
     <>
       {coins && (
@@ -55,25 +69,39 @@ const Exchange = () => {
                 <div>
                   <CryptoConverter Coins={filteredCoins && filteredCoins} />
                 </div>
-                <div className="pt-4">
-                  <ExchangePageSmallCard
-                    Coins={coins && coins}
-                    Name={"TRENDING"}
-                  />
-                </div>
-                <div className="pt-2">
-                  <ExchangePageSmallCard
-                    Coins={coins && coins}
-                    Name={"BIGGEST GAINERS"}
-                  />
-                </div>
-                <div className="pt-2">
-                  <ExchangePageSmallCard
-                    Coins={coins && coins}
-                    Name={"RECENTLY ADDED"}
-                  />
-                </div>
-                {/* <ExchangePageAdd /> */}
+                <Slider {...settings}>
+                  <div className="pt-4">
+                    <ExchangePageSmallCard
+                      Coins={coins && coins}
+                      Name={"TRENDING"}
+                    />
+                  </div>
+                  <div className="pt-4">
+                    <ExchangePageAdd />
+                  </div>
+                </Slider>
+                <Slider {...settings}>
+                  <div className="pt-2">
+                    <ExchangePageSmallCard
+                      Coins={coins && coins}
+                      Name={"BIGGEST GAINERS"}
+                    />
+                  </div>
+                  <div className="pt-2">
+                    <ExchangePageAdd />
+                  </div>
+                </Slider>
+                <Slider {...settings}>
+                  <div className="pt-2">
+                    <ExchangePageSmallCard
+                      Coins={coins && coins}
+                      Name={"RECENTLY ADDED"}
+                    />
+                  </div>
+                  <div className="pt-2">
+                    <ExchangePageAdd />
+                  </div>
+                </Slider>
               </div>
               <CrytoExchangeTable Coins={filteredCoins && filteredCoins} />
             </div>
