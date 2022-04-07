@@ -19,6 +19,12 @@ const CryptoConverter = ({ Coins }) => {
     setFilteredFirstData(Coins.find((item) => item.id === firstInputId));
   }, [firstInputId, Coins]);
 
+  const handleChangeArrow = () => {
+    const temp = filteredFirstData;
+    setFilteredFirstData(filteredSecondData);
+    setFilteredSecondData(temp);
+  };
+
   return (
     <div className="w-auto md:w-[19vw] p-4 bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] ">
       <div className="border-2 border-black ">
@@ -90,7 +96,10 @@ const CryptoConverter = ({ Coins }) => {
         </div>
       </div>
       <div className="py-2 text-center">
-        <i className="fa-solid fa-arrow-right-arrow-left"></i>
+        <i
+          className="fa-solid fa-arrow-right-arrow-left cursor-pointer"
+          onClick={handleChangeArrow}
+        ></i>
       </div>
       <div className="border-2 border-black">
         <button
@@ -134,6 +143,7 @@ const CryptoConverter = ({ Coins }) => {
               (filteredFirstData.current_price * firstInputChange) /
               filteredSecondData.current_price
             }
+            disabled
             onChange={(e) => setSecondInputChange(e.target.value)}
           />
         )}
