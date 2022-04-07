@@ -61,3 +61,59 @@
 .cryptoMovingHeading .ticker {
   top: 3px;
 }
+
+@media screen and (max-width: 40em) {
+  /*
+    Force table elements to not behave like tables anymore
+    Hide table headers (but not display: none;, for accessibility)
+  */
+
+  .responsiveTable table,
+  .responsiveTable thead,
+  .responsiveTable tbody,
+  .responsiveTable th,
+  .responsiveTable td,
+  .responsiveTable tr {
+    display: revert !important;
+  }
+  .responsiveTable th {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .responsiveTable thead tr {
+    position: static !important;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .responsiveTable tbody tr {
+    border: 1px solid #000;
+    padding: 0.25em;
+  }
+
+  .responsiveTable td.pivoted[data-testid="td"] {
+    /* Behave like a "row" */
+    border: none !important;
+    position: static !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    text-align: left !important;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+
+  .responsiveTable td .tdBefore {
+    /* Now like a table header */
+    position: static !important;
+    display: none !important;
+
+    /* Top/left values mimic padding */
+    left: 1rem;
+    width: calc(50% - 20px);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: left !important;
+    font-weight: 600;
+  }
+}

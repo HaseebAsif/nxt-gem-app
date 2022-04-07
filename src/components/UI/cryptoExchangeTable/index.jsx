@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
-import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import styles from "./cryptoExchange.module.css";
 
 const CrytoExchangeTable = ({ Coins }) => {

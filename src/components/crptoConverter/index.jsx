@@ -127,14 +127,16 @@ const CryptoConverter = ({ Coins }) => {
             ></path>
           </svg>
         </button>
-        <input
-          className="bg-transparent w-32 text-xl px-2 outline-none"
-          value={
-            (filteredFirstData.current_price * firstInputChange) /
-            filteredSecondData.current_price
-          }
-          onChange={(e) => setSecondInputChange(e.target.value)}
-        />
+        {filteredFirstData && (
+          <input
+            className="bg-transparent w-32 text-xl px-2 outline-none"
+            value={
+              (filteredFirstData.current_price * firstInputChange) /
+              filteredSecondData.current_price
+            }
+            onChange={(e) => setSecondInputChange(e.target.value)}
+          />
+        )}
 
         <div
           id="dropdown1"
