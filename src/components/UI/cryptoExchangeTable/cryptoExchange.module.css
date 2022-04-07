@@ -13,6 +13,7 @@
 .mainTableSection::-webkit-scrollbar {
   background: linear-gradient(#1295bd, #ccf7ff);
   width: 5px;
+  height: 5px;
 }
 
 .mainTableSection::-webkit-scrollbar-track {
@@ -21,6 +22,7 @@
 .mainTableSection::-webkit-scrollbar-thumb {
   background-color: white;
   height: 50px;
+  
   width: 0.5px;
 
   border-radius: 6px;

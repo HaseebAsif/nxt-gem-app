@@ -38,7 +38,7 @@ const Exchange = () => {
   return (
     <>
       {coins && (
-        <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover pt-16">
+        <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen xl:h-[120vh] bg-no-repeat bg-cover pt-16">
           {coins && (
             <div className="h-10 cryptoMovingHeading bg-[#012c33] text-white 3xl:hidden ">
               <CryptoMovingHeading Coins={coins && coins} />

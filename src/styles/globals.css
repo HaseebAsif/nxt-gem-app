@@ -52,6 +52,8 @@
   -webkit-line-clamp: 2;
   height: 40px;
 }
+
+
 @media (max-width: 768px) {
   .more-nxt-gem-blog-text {
     -webkit-line-clamp: 2;
@@ -60,6 +62,14 @@
 }
 .cryptoMovingHeading .ticker {
   top: 3px;
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 40em) {

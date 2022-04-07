@@ -26,7 +26,7 @@ const CryptoConverter = ({ Coins }) => {
   };
 
   return (
-    <div className="w-auto md:w-[19vw] p-4 bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] ">
+    <div className="w-auto xl:w-[90%] p-4 bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] ">
       <div className="border-2 border-black ">
         <button
           id="dropdownDefault"
@@ -63,7 +63,7 @@ const CryptoConverter = ({ Coins }) => {
           </svg>
         </button>
         <input
-          className="bg-transparent w-32 text-xl px-2 outline-none"
+          className={`bg-transparent  w-40 text-xl px-2 outline-none`}
           type="number"
           value={firstInputChange}
           onChange={(e) => setFirstInputChange(e.target.value)}
@@ -138,7 +138,7 @@ const CryptoConverter = ({ Coins }) => {
         </button>
         {filteredFirstData && (
           <input
-            className="bg-transparent w-32 text-xl px-2 outline-none"
+            className="bg-transparent  w-40 text-xl px-2 outline-none"
             value={
               (filteredFirstData.current_price * firstInputChange) /
               filteredSecondData.current_price

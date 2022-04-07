@@ -7,7 +7,7 @@ const ExchangePageSmallCard = ({ Coins, Name }) => {
   let count = 1;
 
   return (
-    <div className="h-[159px] mx-auto xl:mx-0 w-fit bg-[black]/80 text-white overflow-hidden">
+    <div className="h-[133px] mx-auto xl:mx-0 w-fit bg-[black]/80 text-white overflow-hidden">
       <div
         className={`bg-gradient-to-r from-[#ccf7ff] to-[#1295bd] text-black sticky top-0 w-fit px-4 z-10 -skew-x-[48deg] before:skew-x-[42deg] ${styles.exchangeSmallCard}`}
       >
