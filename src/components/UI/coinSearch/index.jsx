@@ -3,7 +3,7 @@ import React from "react";
 const CoinSearchBar = ({ setSearchValue }) => {
   return (
     <div className=" ">
-      <i className="fas fa-search text-white text-sm font-bold absolute left-[30px] md:left-[110px] top-[164px] cursor-text hidden xl:block "></i>
+      <i className="fas fa-search text-white text-sm font-bold absolute left-[30px] md:left-[110px] top-[164px] 3xl:top-[124px] cursor-text hidden xl:block "></i>
 
       <div className="bg-gradient-to-r p-[5px] from-[#ccf7ff] to-[#1295bd] w-72  ">
         <input

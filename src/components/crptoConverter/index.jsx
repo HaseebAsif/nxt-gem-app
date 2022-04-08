@@ -83,7 +83,7 @@ const CryptoConverter = ({ Coins }) => {
           >
             {Coins.slice(0, 10).map((item) => (
               <li
-                className="flex py-1 cursor-pointer"
+                className="flex py-2 cursor-pointer px-1"
                 onClick={() => {
                   setFirstInputId(item.id);
                   setShowOptions(false);
@@ -165,7 +165,7 @@ const CryptoConverter = ({ Coins }) => {
           >
             {Coins.slice(0, 10).map((item) => (
               <li
-                className="flex py-1 cursor-pointer"
+                className="flex py-2 cursor-pointer px-1"
                 onClick={() => {
                   setSecondInputId(item.id);
                   setShowOptions2(false);
