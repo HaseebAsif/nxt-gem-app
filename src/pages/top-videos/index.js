@@ -154,7 +154,7 @@ const TopVideos = () => {
               })}
           </Slider>
         </div>
-        <div className="pt-4  w-full lg:w-1/2 ">
+        <div className="pt-10 md:pt-4 w-full lg:w-1/2 ">
           <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2 ">
             MOST <span className="text-white">POPULAR</span>
           </h2>
