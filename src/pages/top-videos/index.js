@@ -86,11 +86,13 @@ const TopVideos = () => {
   };
 
   const chunkSize = 3;
-  const sliderGroup = TopViewsData.map((e, i) => {
-    return i % chunkSize === 0 ? TopViewsData.slice(i, i + chunkSize) : null;
-  }).filter((e) => {
-    return e;
-  });
+  const sliderGroup = smallVideo
+    .map((e, i) => {
+      return i % chunkSize === 0 ? smallVideo.slice(i, i + chunkSize) : null;
+    })
+    .filter((e) => {
+      return e;
+    });
   console.log(sliderGroup);
   return (
     <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
@@ -138,11 +140,13 @@ const TopVideos = () => {
                 if (item.length % 3 === 0)
                   return (
                     <div>
-                      {item.map(({ link, name, description }) => (
+                      {item.map(({ link, name, description, order }) => (
                         <TopVideosPageSmallCard
                           videoUrl={link}
                           Title={name}
                           Body={description}
+                          handleClick={() => SetMainVideoFunction(order)}
+                          image={false}
                         />
                       ))}
                     </div>
@@ -162,11 +166,13 @@ const TopVideos = () => {
                     {item
                       .slice(0, 3)
                       .reverse()
-                      .map(({ link, name, description }) => (
+                      .map(({ link, name, description, order }) => (
                         <TopVideosPageSmallCard
                           videoUrl={link}
                           Title={name}
                           Body={description}
+                          handleClick={() => SetMainVideoFunction(order)}
+                          image={false}
                         />
                       ))}
                   </div>
