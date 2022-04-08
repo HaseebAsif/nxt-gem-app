@@ -44,7 +44,7 @@ const CryptoConverter = ({ Coins }) => {
               <img
                 src={filteredFirstData.image}
                 alt={filteredFirstData.name}
-                className="inline-block top-[0px] h-[20px] w-auto xl:w-[20px]"
+                className="inline-block top-[0px] h-[20px] w-[20px]"
               />
               <p className="pl-2">{filteredFirstData.symbol.toUpperCase()}</p>
             </div>
@@ -121,7 +121,7 @@ const CryptoConverter = ({ Coins }) => {
               <img
                 src={filteredSecondData.image}
                 alt={filteredSecondData.name}
-                className="inline-block top-[0px] h-[20px] w-auto xl:w-[20px]"
+                className="inline-block top-[0px] h-[20px] w-[20px]"
               />
               <p className="pl-2">{filteredSecondData.symbol.toUpperCase()}</p>
             </div>
