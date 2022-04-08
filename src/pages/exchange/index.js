@@ -44,7 +44,7 @@ const Exchange = () => {
     slidesToScroll: 1,
     arrows: false,
     fadeInRight: true,
-    pauseOnHover:false,
+    pauseOnHover: false,
     autoplay: true,
     autoplaySpeed: 4000,
   };
@@ -76,7 +76,7 @@ const Exchange = () => {
                       Name={"TRENDING"}
                     />
                   </div>
-                  <div className="pt-4">
+                  <div className="mx-auto pt-4">
                     <ExchangePageAdd />
                   </div>
                 </Slider>
@@ -87,7 +87,7 @@ const Exchange = () => {
                       Name={"BIGGEST GAINERS"}
                     />
                   </div>
-                  <div className="pt-2">
+                  <div className="mx-auto pt-2">
                     <ExchangePageAdd />
                   </div>
                 </Slider>
@@ -98,7 +98,7 @@ const Exchange = () => {
                       Name={"RECENTLY ADDED"}
                     />
                   </div>
-                  <div className="pt-2">
+                  <div className="mx-auto pt-2">
                     <ExchangePageAdd />
                   </div>
                 </Slider>
