@@ -1,6 +1,6 @@
-import RssFeader from "components/rssFeeder";
 import React, { useState, useEffect } from "react";
-
+let Parser = require("rss-parser");
+let parser = new Parser();
 const SingleFeaturedDyor = ({ text, link }) => (
   <div className="p-4 border-solid border-[#1bd6fa] border-[1px] ">
     <div>{text}</div>
@@ -18,15 +18,21 @@ const SingleFeaturedDyor = ({ text, link }) => (
 
 const FeaturedDyorSources = () => {
   const [DYORSources, setDYORSources] = useState([]);
-  useEffect(async () => {
-    const query = encodeURIComponent(`*[ _type == "featuredDYORSources" ]`);
-    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
-
-    const result = await fetch(url).then((res) => res.json());
-    setDYORSources(
-      result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
-    );
+  useEffect(() => {
+    async function fetchData() {
+      const response = await parser
+        .parseURL("https://cointelegraph.com/rss")
+        .then((rss) => rss.items.slice(0, 5));
+      const response2 = await parser
+        .parseURL(
+          "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"
+        )
+        .then((rss) => rss.items.slice(0, 4));
+      setDYORSources(response.concat(response2));
+    }
+    fetchData();
   }, []);
+
   console.log(DYORSources);
   return (
     <div className="pt-4 cursor-default">
@@ -34,11 +40,10 @@ const FeaturedDyorSources = () => {
         FEATURED <span className="text-white">DYOR SOURCES</span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 bg-black text-white ">
-        {DYORSources.map(({ name, link }) => (
-          <SingleFeaturedDyor text={name} link={link} />
+        {DYORSources.slice(0, 9).map(({ title, link }) => (
+          <SingleFeaturedDyor text={title} link={link} />
         ))}
       </div>
-      {/* <RssFeader /> */}
     </div>
   );
 };

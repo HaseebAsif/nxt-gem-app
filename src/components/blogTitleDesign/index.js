@@ -18,11 +18,14 @@ const BlogTitleDesign = ({ title, date, author }) => {
           <div className="flex justify-between items-end w-11/12">
             <div className="w-fit">
               <h3 className="text-sm lg:text-lg w-fit">
-                <span className="text-gray-400">Date Published:</span>{" "}
+                <span className="text-gray-400 font-light pr-2">
+                  Date Published:
+                </span>{" "}
                 {datePosted}
               </h3>
               <h3 className="text-sm lg:text-lg w-fit">
-                <span className="text-gray-400"> Author:</span> {author.name}
+                <span className="text-gray-400 font-light pr-2">Author:</span>{" "}
+                {author.name}
               </h3>
             </div>
             {/* <div className="flex items-center justify-center w-[inherit] sm:w-auto">

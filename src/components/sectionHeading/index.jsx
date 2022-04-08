@@ -14,7 +14,7 @@ const SectionHeader = ({ heading, value }) => {
     } else if (value === "2") {
       return (
         <img
-          src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_520/v1640600240/TOP-VIEWS_dgwdqp.png"
+          src="https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_957/v1649448907/TOP_VIDEOS_ziwls5.png"
           className="w-[250px]  md:w-[300px] lg:w-[400px] 2xl:w-[500px] mb-12 sm:mb-0"
           alt=""
         />

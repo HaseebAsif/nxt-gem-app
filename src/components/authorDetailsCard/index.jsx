@@ -89,7 +89,7 @@ const AuthorDetailSlide = ({ author, AuthorData, setAuthorData, allPost }) => {
             </div>
           </div>
           <div className="px-2 py-0 xl:py-8 xl:px-8">
-            <h3 className="text-md xl:text-2xl">DETAILS:</h3>
+            <h3 className="text-md xl:text-2xl">ABOUT THE AUTHOR:</h3>
             <p>
               <SanityBlockContent blocks={AuthorData.bio} />
             </p>
