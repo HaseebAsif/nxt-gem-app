@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
 let Parser = require("rss-parser");
-let parser = new Parser();
+const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+let parser = new Parser({
+  headers: new Headers({
+    "Access-Control-Allow-Credentials": true,
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+    "Access-Control-Allow-Headers":
+      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+    origin: "x-requested-with",
+  }),
+});
 const SingleFeaturedDyor = ({ text, link }) => (
   <div className="p-4 border-solid border-[#1bd6fa] border-[1px] ">
     <div>{text}</div>
@@ -21,11 +31,12 @@ const FeaturedDyorSources = () => {
   useEffect(() => {
     async function fetchData() {
       const response = await parser
-        .parseURL("https://cointelegraph.com/rss")
+        .parseURL(CORS_PROXY + "https://cointelegraph.com/rss")
         .then((rss) => rss.items.slice(0, 5));
       const response2 = await parser
         .parseURL(
-          "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"
+          CORS_PROXY +
+            "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"
         )
         .then((rss) => rss.items.slice(0, 4));
       setDYORSources(response.concat(response2));
