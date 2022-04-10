@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 let Parser = require("rss-parser");
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+const CORS_PROXY = "https://cors-anywhere-usman.herokuapp.com/";
 let parser = new Parser({
   headers: new Headers({
     "Access-Control-Allow-Credentials": true,
