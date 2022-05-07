@@ -62,24 +62,24 @@ export const Arrow = styled.div`
   animation-iteration-count: infinite;
   @keyframes left {
     0% {
-      left: 10px;
+      left: 80px;
     }
     50% {
-      left: 40px;
+      left: 110px;
     }
     100% {
-      left: 10px;
+      left: 80px;
     }
   }
   @keyframes right {
     0% {
-      right: 10px;
+      right: 80px;
     }
     50% {
-      right: 40px;
+      right: 110px;
     }
     100% {
-      right: 10px;
+      right: 80px;
     }
   }
   @media (max-width: 768px) {

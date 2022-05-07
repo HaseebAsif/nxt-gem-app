@@ -161,6 +161,10 @@ const BlogSlider = ({
                     </div>
                   </div> */}
                     </div>
+                    <h1 className="text-center text-4xl underline underline-offset-4 mb-4">
+                      {postTitle}
+                    </h1>
+
                     <img
                       src={postImage}
                       alt={postTitle}
