@@ -7,17 +7,7 @@ import DropDown from "./navBarDropdown";
 const WebNavbar = () => {
   const [value, setValue] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const [topStoriesData, setTopStoriesData] = useState([]);
-  useEffect(async () => {
-    const query = encodeURIComponent(`*[ _type == "post" ]`);
-    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
 
-    const result = await fetch(url).then((res) => res.json());
-
-    setTopStoriesData(
-      result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
-    );
-  }, []);
   const active =
     "bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium";
   const notActive =
@@ -46,22 +36,26 @@ const WebNavbar = () => {
       <div className="hidden lg:block lg:ml-6">
         <div className="flex space-x-4 items-center">
           <Link href="/">
-            <div
-              className={value === 1 ? active : notActive}
-              onClick={() => setValue(1)}
-              aria-current="page"
-            >
-              Home
-            </div>
+            <a href="/">
+              <div
+                className={value === 1 ? active : notActive}
+                onClick={() => setValue(1)}
+                aria-current="page"
+              >
+                Home
+              </div>
+            </a>
           </Link>
 
           <Link href="/coming-soon">
-            <div
-              className={value === 2 ? active : notActive}
-              onClick={() => setValue(2)}
-            >
-              Project List
-            </div>
+            <a href="/coming-soon">
+              <div
+                className={value === 2 ? active : notActive}
+                onClick={() => setValue(2)}
+              >
+                Project List
+              </div>
+            </a>
           </Link>
 
           <DropDown
@@ -72,28 +66,34 @@ const WebNavbar = () => {
             notActive={notActive}
           />
           <Link href="/coming-soon">
-            <div
-              className={value === 4 ? active : notActive}
-              onClick={() => setValue(4)}
-            >
-              Community
-            </div>
+            <a href="/coming-soon">
+              <div
+                className={value === 4 ? active : notActive}
+                onClick={() => setValue(4)}
+              >
+                Community
+              </div>
+            </a>
           </Link>
           <Link href="/exchange">
-            <div
-              className={value === 5 ? active : notActive}
-              onClick={() => setValue(5)}
-            >
-              Exchange
-            </div>
+            <a href="/exchange">
+              <div
+                className={value === 5 ? active : notActive}
+                onClick={() => setValue(5)}
+              >
+                Exchange
+              </div>
+            </a>
           </Link>
           <Link href="/coming-soon">
-            <div
-              className={value === 6 ? active : notActive}
-              onClick={() => setValue(6)}
-            >
-              Marketplace
-            </div>
+            <a href="/coming-soon">
+              <div
+                className={value === 6 ? active : notActive}
+                onClick={() => setValue(6)}
+              >
+                Marketplace
+              </div>
+            </a>
           </Link>
           <a
             href="https://drive.google.com/file/d/17wtQyZ54vM4LaSFRN7x5MC2D-B2YWlxo/view?usp=sharing"
@@ -107,16 +107,19 @@ const WebNavbar = () => {
             </div>
           </a>
           <Link href="/coming-soon">
-            <div
-              className={value === 8 ? active : notActive}
-              onClick={() => setValue(8)}
-            >
-              Submit Project
-            </div>
+            <a href="/coming-soon">
+              <div
+                className={value === 8 ? active : notActive}
+                onClick={() => setValue(8)}
+              >
+                Submit Project
+              </div>
+            </a>
           </Link>
-          <div className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block relative">
+
+          <div className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block relative ">
             <input
-              className="bg-black px-5 py-[0.55rem] text-white relative"
+              className="bg-black px-6 py-[0.55rem] text-white relative"
               type="search"
               name="search"
               placeholder="Search"
