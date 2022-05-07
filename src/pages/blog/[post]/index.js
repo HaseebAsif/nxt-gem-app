@@ -3,6 +3,7 @@ import imageUrlBuilder from "@sanity/image-url";
 
 import BlogSlider from "components/blogSlider";
 import SideIcons from "components/sideSocialIcons";
+import Head from "next/head";
 
 const SinglePost = ({ image, body, title, youtubeLink, post }) => {
   const [PostSlides, setPostSlides] = useState([]);
@@ -43,6 +44,9 @@ const SinglePost = ({ image, body, title, youtubeLink, post }) => {
   const imageSrc = imgBuilder.image(image);
   return (
     <>
+      <Head>
+        <title>Top Stories | NXTGEM</title>
+      </Head>
       <div>
         <BlogSlider
           author={post.author}

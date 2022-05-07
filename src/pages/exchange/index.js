@@ -8,6 +8,7 @@ import CryptoConverter from "components/crptoConverter";
 import SideIcons from "components/sideSocialIcons";
 import ExchangePageAdd from "components/exchangePageAdd";
 import Slider from "react-slick";
+import Head from "next/head";
 
 const Exchange = () => {
   const [coins, setCoins] = useState([]);
@@ -51,6 +52,9 @@ const Exchange = () => {
 
   return (
     <>
+      <Head>
+        <title>Exchange | NXTGEM</title>
+      </Head>
       {coins && (
         <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen xl:h-[120vh] bg-no-repeat bg-cover pt-16">
           {coins && (

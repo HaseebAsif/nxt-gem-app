@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import TopStoriesPageSmallCard from "components/UI/topStoriesPageSmallCard";
 import FeaturedDyorSources from "components/featuredDyorSources";
 import SideIcons from "components/sideSocialIcons";
+import Head from "next/head";
 
 function SampleNextArrow(props) {
   const { className, style, customClass, onClick, topStyle } = props;
@@ -106,60 +107,92 @@ const TopStories = () => {
     });
 
   return (
-    <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
-      <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
-        TOP <span className="text-white">STORIES</span>
-      </h2>
-      <Slider {...settings}>
-        {topStoriesData.map((prev, i) => {
-          const { title, mainImage, body, slug } = prev;
+    <>
+      <Head>
+        <title>Top Stories | NXTGEM</title>
+      </Head>
+      <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
+        <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
+          TOP <span className="text-white">STORIES</span>
+        </h2>
+        <Slider {...settings}>
+          {topStoriesData.map((prev, i) => {
+            const { title, mainImage, body, slug } = prev;
 
-          return (
-            <TopStoriesMainSlider
-              key={i}
-              index={i}
-              Title={title}
-              Image={mainImage && imgBuilder(mainImage)}
-              body={body}
-              currentSlug={slug.current}
-            />
-          );
-        })}
-      </Slider>
-      <SideIcons />
+            return (
+              <TopStoriesMainSlider
+                key={i}
+                index={i}
+                Title={title}
+                Image={mainImage && imgBuilder(mainImage)}
+                body={body}
+                currentSlug={slug.current}
+              />
+            );
+          })}
+        </Slider>
+        <SideIcons />
 
-      <div className="flex flex-col pt-10  xl:flex-row">
-        {topStoriesData.slice(0, 3).map((prev, i) => {
-          const { title, mainImage, body, slug } = prev;
+        <div className="flex flex-col pt-10  xl:flex-row">
+          {topStoriesData.slice(0, 3).map((prev, i) => {
+            const { title, mainImage, body, slug } = prev;
 
-          return (
-            <TopStoriesPageSmallCard
-              key={i}
-              index={i}
-              Title={title}
-              Image={mainImage && imgBuilder(mainImage)}
-              body={body}
-              currentSlug={slug.current}
-            />
-          );
-        })}
-      </div>
-      <div className="flex flex-wrap lg:flex-nowrap">
-        <div className="pt-4 w-full lg:w-1/2 lg:pr-8">
-          <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
-            NEW <span className="text-white">STORIES</span>
-          </h2>
-          <Slider {...settingsSmall}>
-            {sliderGroup
-              .sort(
-                (a, b) => parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
-              )
-              .map((item, i) => {
-                console.log(item);
+            return (
+              <TopStoriesPageSmallCard
+                key={i}
+                index={i}
+                Title={title}
+                Image={mainImage && imgBuilder(mainImage)}
+                body={body}
+                currentSlug={slug.current}
+              />
+            );
+          })}
+        </div>
+        <div className="flex flex-wrap lg:flex-nowrap">
+          <div className="pt-4 w-full lg:w-1/2 lg:pr-8">
+            <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
+              NEW <span className="text-white">STORIES</span>
+            </h2>
+            <Slider {...settingsSmall}>
+              {sliderGroup
+                .sort(
+                  (a, b) =>
+                    parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
+                )
+                .map((item, i) => {
+                  console.log(item);
+                  if (item.length % 3 === 0)
+                    return (
+                      <div>
+                        {item.map((prev) => {
+                          const { title, mainImage, body, slug } = prev;
+                          return (
+                            <TopStoriesPageSmallCard
+                              key={i}
+                              index={i}
+                              Title={title}
+                              Image={mainImage && imgBuilder(mainImage)}
+                              body={body}
+                              currentSlug={slug.current}
+                            />
+                          );
+                        })}
+                      </div>
+                    );
+                })}
+            </Slider>
+          </div>
+          <div className="pt-10 md:pt-4 w-full lg:w-1/2">
+            <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
+              MOST <span className="text-white">POPULAR</span>
+            </h2>
+            <Slider {...settingsSmall}>
+              {sliderGroup.reverse().map((item, i) => {
                 if (item.length % 3 === 0)
                   return (
                     <div>
-                      {item.map((prev) => {
+                      {item.reverse().map((prev) => {
                         const { title, mainImage, body, slug } = prev;
                         return (
                           <TopStoriesPageSmallCard
@@ -175,40 +208,14 @@ const TopStories = () => {
                     </div>
                   );
               })}
-          </Slider>
+            </Slider>
+          </div>
         </div>
-        <div className="pt-10 md:pt-4 w-full lg:w-1/2">
-          <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
-            MOST <span className="text-white">POPULAR</span>
-          </h2>
-          <Slider {...settingsSmall}>
-            {sliderGroup.reverse().map((item, i) => {
-              if (item.length % 3 === 0)
-                return (
-                  <div>
-                    {item.reverse().map((prev) => {
-                      const { title, mainImage, body, slug } = prev;
-                      return (
-                        <TopStoriesPageSmallCard
-                          key={i}
-                          index={i}
-                          Title={title}
-                          Image={mainImage && imgBuilder(mainImage)}
-                          body={body}
-                          currentSlug={slug.current}
-                        />
-                      );
-                    })}
-                  </div>
-                );
-            })}
-          </Slider>
+        <div className="pt-6">
+          <FeaturedDyorSources />
         </div>
       </div>
-      <div className="pt-6">
-        <FeaturedDyorSources />
-      </div>
-    </div>
+    </>
   );
 };
 

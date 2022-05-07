@@ -5,6 +5,7 @@ import TopVideosPageSmallCard from "components/UI/topVideosPageSmallCard";
 import TopVideosPageSmallVideo from "components/UI/topVideosPageSmallVideo";
 import Slider from "react-slick";
 import SideIcons from "components/sideSocialIcons";
+import Head from "next/head";
 
 function SampleNextArrow(props) {
   const { className, style, customClass, onClick, topStyle } = props;
@@ -95,96 +96,102 @@ const TopVideos = () => {
     });
   console.log(sliderGroup);
   return (
-    <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
-      <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
-        TOP <span className="text-white">VIDEOS</span>
-      </h2>
-      <div className="grid grid-cols-6 lg:grid-cols-12 ">
-        <div className="col-span-8">
-          {largeVideo.map(({ link, order }) => {
-            console.log(order);
-            return (
-              <TopVideosPageMainVideo
+    <>
+      <Head>
+        <title>Top Videos | NXTGEM</title>
+      </Head>
+      <div className="bg-[url('https://res.cloudinary.com/nxtgem-io/image/upload/c_scale,w_680/v1640600879/background_app_klirup.png')] min-h-screen bg-no-repeat bg-cover p-8 pt-24 sm:p-24 lg:p-26">
+        <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2">
+          TOP <span className="text-white">VIDEOS</span>
+        </h2>
+        <div className="grid grid-cols-6 lg:grid-cols-12 ">
+          <div className="col-span-8">
+            {largeVideo.map(({ link, order }) => {
+              console.log(order);
+              return (
+                <TopVideosPageMainVideo
+                  videoUrl={link}
+                  handleClick={() => SetMainVideoFunction(order)}
+                  image={false}
+                />
+              );
+            })}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 col-span-6 lg:col-span-4 pt-2 px-2 md:px-0 lg:pt-0">
+            {smallVideo.map(({ link, order }) => (
+              <TopVideosPageSmallVideo
                 videoUrl={link}
                 handleClick={() => SetMainVideoFunction(order)}
                 image={false}
               />
-            );
-          })}
+            ))}
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 col-span-6 lg:col-span-4 pt-2 px-2 md:px-0 lg:pt-0">
-          {smallVideo.map(({ link, order }) => (
-            <TopVideosPageSmallVideo
-              videoUrl={link}
-              handleClick={() => SetMainVideoFunction(order)}
-              image={false}
-            />
-          ))}
-        </div>
-      </div>
 
-      <SideIcons />
+        <SideIcons />
 
-      <div className="flex flex-wrap md:flex-nowrap">
-        <div className="pt-4  w-full lg:w-1/2 lg:pr-8">
-          <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2 ">
-            NEW <span className="text-white">VIDEOS</span>
-          </h2>
-          <Slider {...settingsSmall}>
-            {sliderGroup
-              .sort(
-                (a, b) => parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
-              )
-              .map((item, i) => {
-                console.log(item);
+        <div className="flex flex-wrap md:flex-nowrap">
+          <div className="pt-4  w-full lg:w-1/2 lg:pr-8">
+            <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2 ">
+              NEW <span className="text-white">VIDEOS</span>
+            </h2>
+            <Slider {...settingsSmall}>
+              {sliderGroup
+                .sort(
+                  (a, b) =>
+                    parseFloat(b.publishedAt) - parseFloat(a.publishedAt)
+                )
+                .map((item, i) => {
+                  console.log(item);
+                  if (item.length % 3 === 0)
+                    return (
+                      <div>
+                        {item.map(({ link, name, description, order }) => (
+                          <TopVideosPageSmallCard
+                            videoUrl={link}
+                            Title={name}
+                            Body={description}
+                            handleClick={() => SetMainVideoFunction(order)}
+                            image={false}
+                          />
+                        ))}
+                      </div>
+                    );
+                })}
+            </Slider>
+          </div>
+          <div className="pt-10 md:pt-4 w-full lg:w-1/2 ">
+            <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2 ">
+              MOST <span className="text-white">POPULAR</span>
+            </h2>
+            <Slider {...settingsSmall}>
+              {sliderGroup.reverse().map((item, i) => {
                 if (item.length % 3 === 0)
                   return (
                     <div>
-                      {item.map(({ link, name, description, order }) => (
-                        <TopVideosPageSmallCard
-                          videoUrl={link}
-                          Title={name}
-                          Body={description}
-                          handleClick={() => SetMainVideoFunction(order)}
-                          image={false}
-                        />
-                      ))}
+                      {item
+                        .slice(0, 3)
+                        .reverse()
+                        .map(({ link, name, description, order }) => (
+                          <TopVideosPageSmallCard
+                            videoUrl={link}
+                            Title={name}
+                            Body={description}
+                            handleClick={() => SetMainVideoFunction(order)}
+                            image={false}
+                          />
+                        ))}
                     </div>
                   );
               })}
-          </Slider>
+            </Slider>
+          </div>
         </div>
-        <div className="pt-10 md:pt-4 w-full lg:w-1/2 ">
-          <h2 className="text-[#1bd6fa] text-[40px] font-bold py-2 ">
-            MOST <span className="text-white">POPULAR</span>
-          </h2>
-          <Slider {...settingsSmall}>
-            {sliderGroup.reverse().map((item, i) => {
-              if (item.length % 3 === 0)
-                return (
-                  <div>
-                    {item
-                      .slice(0, 3)
-                      .reverse()
-                      .map(({ link, name, description, order }) => (
-                        <TopVideosPageSmallCard
-                          videoUrl={link}
-                          Title={name}
-                          Body={description}
-                          handleClick={() => SetMainVideoFunction(order)}
-                          image={false}
-                        />
-                      ))}
-                  </div>
-                );
-            })}
-          </Slider>
+        <div className="pt-6">
+          <FeaturedDyorSources />
         </div>
       </div>
-      <div className="pt-6">
-        <FeaturedDyorSources />
-      </div>
-    </div>
+    </>
   );
 };
 

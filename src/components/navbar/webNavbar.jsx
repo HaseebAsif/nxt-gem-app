@@ -7,6 +7,17 @@ import DropDown from "./navBarDropdown";
 const WebNavbar = () => {
   const [value, setValue] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [topStoriesData, setTopStoriesData] = useState([]);
+  useEffect(async () => {
+    const query = encodeURIComponent(`*[ _type == "post" ]`);
+    const url = `https://cqnczxva.api.sanity.io/v1/data/query/production?query=${query}`;
+
+    const result = await fetch(url).then((res) => res.json());
+
+    setTopStoriesData(
+      result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
+    );
+  }, []);
   const active =
     "bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium";
   const notActive =
@@ -103,8 +114,7 @@ const WebNavbar = () => {
               Submit Project
             </div>
           </Link>
-
-          <div className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block ">
+          <div className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block relative">
             <input
               className="bg-black px-5 py-[0.55rem] text-white relative"
               type="search"
@@ -114,7 +124,13 @@ const WebNavbar = () => {
                 setSearchTerm(event.target.value);
               }}
             />
+            <ul className="absolute skew-x-12 bg-white w-64 mx-[2px] mt-3">
+              <li className=" p-2 border-b-2 cursor-pointer">Haseeb</li>
+              <li className=" p-2 border-b-2">Haseeb</li>
+              <li className=" p-2 border-b-2">Haseeb</li>
+            </ul>
           </div>
+
           <i className="fas fa-search text-white font-bold relative right-[65px] cursor-text hidden xl:block"></i>
         </div>
       </div>
