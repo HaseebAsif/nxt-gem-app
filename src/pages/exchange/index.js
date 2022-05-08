@@ -71,7 +71,7 @@ const Exchange = () => {
                   <CoinSearchBar setSearchValue={setSearchValue} />
                 </div>
                 <div>
-                  <CryptoConverter Coins={filteredCoins && filteredCoins} />
+                  <CryptoConverter Coins={coins} />
                 </div>
                 <Slider {...settings}>
                   <div className="pt-4">
