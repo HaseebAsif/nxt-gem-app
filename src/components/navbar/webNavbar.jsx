@@ -26,7 +26,7 @@ const WebNavbar = () => {
     const temp = topStoriesData.filter(coin =>
       coin.title.toLowerCase().includes(e.target.value.toLowerCase())
     )
-    console.log(temp)
+      setShowDropdown(true)
     setFilteredData(temp)
   }
 
@@ -148,15 +148,17 @@ const WebNavbar = () => {
               placeholder="Search"
               onChange={handleChange}
             />
-            <ul className="absolute skew-x-12 bg-white w-64 mx-[2px] mt-3">
-              {showDropDown && filteredData.map((item) => (
+            <ul className="absolute skew-x-12 bg-white left-[70px] w-64 mx-[2px] mt-3">
+              {showDropDown && filteredData.map((item) => {
+                console.log(item)
+                return (
                 <li 
                 onClick={() => setShowDropdown(true)}
-                className=" p-2 border-b-2 cursor-pointer"
+                className=" px-4 py-2 border-b-2 cursor-pointer text-left"
                 >
                   {item.title}
                 </li>
-              ))}
+              )})}
             </ul>
           </div>
 
