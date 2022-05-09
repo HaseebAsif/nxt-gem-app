@@ -6,9 +6,9 @@ import DropDown from "./navBarDropdown";
 
 const WebNavbar = () => {
   const [value, setValue] = useState(1);
-  const [filteredData, setFilteredData] = useState([])
+  const [filteredData, setFilteredData] = useState([]);
   const [topStoriesData, setTopStoriesData] = useState([]);
-  const [showDropDown, setShowDropdown] = useState(false)
+  const [showDropDown, setShowDropdown] = useState(false);
 
   useEffect(async () => {
     const query = encodeURIComponent(`*[ _type == "post" ]`);
@@ -20,22 +20,21 @@ const WebNavbar = () => {
       result.result.sort((a, b) => parseFloat(a.order) - parseFloat(b.order))
     );
   }, []);
-  
 
   const handleChange = (e) => {
-    const temp = topStoriesData.filter(coin =>
+    const temp = topStoriesData.filter((coin) =>
       coin.title.toLowerCase().includes(e.target.value.toLowerCase())
-    )
-      setShowDropdown(true)
-    setFilteredData(temp)
-  }
+    );
+    setShowDropdown(true);
+    setFilteredData(temp);
+  };
 
   const active =
     "bg-gray-900 cursor-pointer text-white px-3 py-2 rounded-md text-sm font-medium";
   const notActive =
     "cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium";
   return (
-    <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start" >
+    <div className="flex-1 flex items-center justify-center lg:items-stretch lg:justify-start">
       <div className="flex-shrink-0 flex items-center">
         <Link href="/">
           <img
@@ -139,7 +138,10 @@ const WebNavbar = () => {
             </a>
           </Link>
 
-          <div onClick={() => setShowDropdown(true)} className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block relative ">
+          <div
+            onClick={() => setShowDropdown(true)}
+            className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block relative "
+          >
             <input
               className="bg-black px-6 py-[0.55rem] text-white relative"
               type="search"
@@ -148,24 +150,30 @@ const WebNavbar = () => {
               placeholder="Search"
               onChange={handleChange}
             />
-            <ul className="absolute skew-x-12 bg-white left-[70px] w-64 mx-[2px] mt-3">
-              {showDropDown && filteredData.map((item) => {
-                console.log(item)
-                return (
-                <li 
-                onClick={() => setShowDropdown(true)}
-                className=" px-4 py-2 border-b-2 cursor-pointer text-left"
-                >
-                  {item.title}
-                </li>
-              )})}
+            <ul className="absolute bg-white  mx-[2px] mt-3">
+              {showDropDown &&
+                filteredData.slice(0, 4).map((item) => {
+                  return (
+                    <Link href={item.slug.current}>
+                      <li
+                        onClick={() => setShowDropdown(true)}
+                        className=" px-4 py-2 border-b-2 cursor-pointer text-left"
+                      >
+                        {item.title}
+                      </li>
+                    </Link>
+                  );
+                })}
             </ul>
           </div>
 
           <i className="fas fa-search text-white font-bold relative right-[65px] cursor-text hidden xl:block"></i>
         </div>
       </div>
-      <div className="fixed h-full w-full inset-0 -z-10" onClick={() => setShowDropdown(false)}></div>
+      <div
+        className="fixed h-full w-full inset-0 -z-10"
+        onClick={() => setShowDropdown(false)}
+      ></div>
     </div>
   );
 };
