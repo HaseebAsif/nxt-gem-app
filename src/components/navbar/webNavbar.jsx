@@ -139,13 +139,14 @@ const WebNavbar = () => {
           </Link>
 
           <div
-            onClick={() => setShowDropdown(true)}
+                  onMouseEnter={() => setShowDropdown(true)}
+                  onMouseLeave={() => setShowDropdown(false)}
             className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block relative "
           >
             <input
               className="bg-black px-6 py-[0.55rem] text-white relative"
               type="search"
-              onClick={() => setShowDropdown(true)}
+      
               name="search"
               placeholder="Search"
               onChange={handleChange}
@@ -154,9 +155,9 @@ const WebNavbar = () => {
               {showDropDown &&
                 filteredData.slice(0, 4).map((item) => {
                   return (
-                    <Link href={item.slug.current}>
+                    <Link href={`/blog/${item.slug.current}`}>
                       <li
-                        onClick={() => setShowDropdown(true)}
+                        onClick={() => setShowDropdown(false)}
                         className=" px-4 py-2 border-b-2 cursor-pointer text-left"
                       >
                         {item.title}
@@ -170,10 +171,6 @@ const WebNavbar = () => {
           <i className="fas fa-search text-white font-bold relative right-[65px] cursor-text hidden xl:block"></i>
         </div>
       </div>
-      <div
-        className="fixed h-full w-full inset-0 -z-10"
-        onClick={() => setShowDropdown(false)}
-      ></div>
     </div>
   );
 };
