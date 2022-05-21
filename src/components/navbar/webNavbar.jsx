@@ -150,6 +150,7 @@ const WebNavbar = () => {
               placeholder="Search"
               onChange={handleChange}
             />
+
             <ul className="absolute bg-white  mx-[2px] mt-3">
               {showDropDown &&
                 filteredData.slice(0, 4).map((item) => {
@@ -166,8 +167,9 @@ const WebNavbar = () => {
                 })}
             </ul>
           </div>
-
-          <i className="fas fa-search text-white font-bold relative right-[65px] cursor-text hidden xl:block"></i>
+          <div className="hidden xl:block">
+            <i className="fas fa-search text-white font-bold relative right-16 object-cover cursor-text hidden xl:block"></i>
+          </div>
         </div>
       </div>
     </div>
