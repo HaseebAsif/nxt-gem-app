@@ -20,6 +20,7 @@ import {
 
 const Indicator = ({ currentSlide, amountSlides, nextSlide }) => {
   return (
+    // <div className="relative">
     <IndicatorWrapper>
       {Array(amountSlides)
         .fill(1)
@@ -31,6 +32,7 @@ const Indicator = ({ currentSlide, amountSlides, nextSlide }) => {
           />
         ))}
     </IndicatorWrapper>
+    // </div>
   );
 };
 
@@ -161,14 +163,14 @@ const BlogSlider = ({
                     </div>
                   </div> */}
                     </div>
-                    <h1 className="text-center text-4xl underline underline-offset-4 mb-4">
+                    <h1 className=" text-center text-4xl underline underline-offset-4 mb-4">
                       {postTitle}
                     </h1>
 
                     <img
                       src={postImage}
                       alt={postTitle}
-                      className="w-[70vw] h-[60vh] object-cover rounded-[33px] shadow-2xl"
+                      className="m-auto w-[70vw] h-[60vh] object-cover rounded-[33px] shadow-2xl"
                     />
                   </div>
                 </div>
@@ -194,7 +196,7 @@ const BlogSlider = ({
                     date={post.publishedAt}
                     author={AuthorData}
                   />
-                  <div className="lg:h-[60%] flex items-center justify-center">
+                  <div className="h-screen lg:h-[60%] flex items-start justify-center">
                     <div
                       className={`${styles.slider__data} ${
                         index === 0 && styles.slider__data__first
@@ -220,8 +222,13 @@ const BlogSlider = ({
                   backgroundImage: `url(${imageUrlBuilding(backgroundImage)})`,
                 }}
               >
+                <BlogTitleDesign
+                  title={postTitle}
+                  date={post.publishedAt}
+                  author={AuthorData}
+                />
                 <div
-                  className={`flex items-center justify-center min-h-screen h-full text-white text-lg`}
+                  className={`flex items-center md:items-start justify-center min-h-[40vh] md:min-h-screen h-auto text-white `}
                 >
                   <SingleLargeVideoViews
                     videoUrl={
@@ -248,7 +255,7 @@ const BlogSlider = ({
                 }}
               >
                 <div
-                  className={`${styles.slider__data} flex py-0 py-24 xl:py-16 justify-center min-h-screen h-full text-white text-lg m-auto`}
+                  className={`${styles.slider__data} flex py-0 py-24 xl:py-8 justify-center min-h-screen  text-white text-lg m-auto`}
                 >
                   <AuthorDetailSlide
                     author={author}
@@ -273,7 +280,7 @@ const BlogSlider = ({
                 }}
               >
                 <div
-                  className={`${styles.slider__data} py-24 flex items-center justify-center min-h-screen h-full text-white text-lg m-auto`}
+                  className={`${styles.slider__data} py-6 flex items-center justify-center min-h-screen text-white text-lg m-auto`}
                 >
                   <div className="flex items-center py-4">
                     <div className="w-full">

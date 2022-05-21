@@ -28,23 +28,34 @@ const RelatedArticleCard = ({ allPost, articleSlug }) => {
   }
   return (
     <div>
-      <div className="container container max-w-xl m-auto flex flex-wrap flex-row md:flex-row items-center justify-start bg-[#023844]">
+      <div className="container container max-w-lg m-auto flex flex-wrap flex-row md:flex-row items-center justify-start bg-[#023844]">
         <div className="w-full">
-          <div className="flex flex-col xl:flex-row rounded overflow-hidden h-auto xl:h-36  shadow shadow-lg">
+          <div className="flex flex-col xl:flex-row rounded overflow-hidden h-auto xl:h-32  shadow shadow-lg">
             {relatedData.mainImage && (
-              <img
-                className="block h-auto w-0 xl:w-48 object-cover  flex-none bg-cover py-2 px-4"
-                src={imageUrlBuilding(relatedData.mainImage)}
-              />
+              <a href={`/blog/${relatedData.slug.current}`}>
+                <img
+                  className="block h-auto max-w-lg w-0 xl:w-48 object-cover  flex-none bg-cover py-2 px-4"
+                  src={imageUrlBuilding(relatedData.mainImage)}
+                />
+              </a>
             )}
             <div className="rounded-b lg:rounded-b-none lg:rounded-r  p-4 flex flex-col justify-between leading-normal">
               <div>
                 <h3 className="text-[#1bd6fa] font-bold text-md xl:text-xl mb-0 xl:mb-2 leading-tight">
-                  {relatedData.title}
+                  {relatedData.title && (
+                    <a href={`/blog/${relatedData.slug.current}`}>
+                      {relatedData.title}
+                    </a>
+                  )}
                 </h3>
                 <p className="text-[white] text-sm mb-2 leading-tight">
                   {allPost && relatedData.slug && (
-                    <a href={`/blog/${relatedData.slug.current}`}>Read More</a>
+                    <a
+                      href={`/blog/${relatedData.slug.current}`}
+                      className="text-[white] w-fit  cursor-pointer text-[10px] hover:bg-white text-black relative top-1 p-2 border border-white bg-[#00d7fe] rounded-lg"
+                    >
+                      Read More
+                    </a>
                   )}
                 </p>
               </div>

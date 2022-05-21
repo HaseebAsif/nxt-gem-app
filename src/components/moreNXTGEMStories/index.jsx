@@ -52,15 +52,21 @@ const MoreNXTGemStories = ({ allPost, articleSlug, slides }) => {
         <div className="w-full">
           <div className="flex flex-col sm:flex-row rounded h-auto sm:h-44 shadow shadow-lg">
             {moreStories.mainImage && (
-              <img
-                className="block h-24 md:h-36 w-full sm:w-52 object-cover flex-none bg-cover py-2 px-4"
-                src={imageUrlBuilding(moreStories.mainImage)}
-              />
+              <a href={`/blog/${moreStories.slug.current}`}>
+                <img
+                  className="block md:h-24 md:h-40 max-w-md sm:w-52 object-cover flex-none bg-cover py-2 px-4"
+                  src={imageUrlBuilding(moreStories.mainImage)}
+                />
+              </a>
             )}
             <div className="rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div>
                 <h3 className="text-[#1bd6fa] font-bold text-md mb-2 leading-tight">
-                  {moreStories.title}
+                  {moreStories.title && (
+                    <a href={`/blog/${moreStories.slug.current}`}>
+                      {moreStories.title}
+                    </a>
+                  )}
                 </h3>
                 <span className="text-[white] text-sm sm:text-md mb-2 more-nxt-gem-blog-text leading-tight">
                   {allPost && moreStoriesText && (
@@ -69,9 +75,14 @@ const MoreNXTGemStories = ({ allPost, articleSlug, slides }) => {
                     />
                   )}
                 </span>
-                <span className="text-[white] text-sm sm:text-lg mb-2 leading-tight underline">
+                <span className=" ">
                   {allPost && moreStories.slug && (
-                    <a href={`/blog/${moreStories.slug.current}`}>Read More</a>
+                    <a
+                      href={`/blog/${moreStories.slug.current}`}
+                      className="text-[white] w-fit  cursor-pointer text-[10px] hover:bg-white text-black relative top-1 p-2 border border-white bg-[#00d7fe] rounded-lg"
+                    >
+                      Read More
+                    </a>
                   )}
                 </span>
               </div>

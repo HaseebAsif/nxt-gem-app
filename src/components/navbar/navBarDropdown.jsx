@@ -9,11 +9,12 @@ const DropDown = ({
   notActive = "cursor-pointer text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium",
 }) => {
   const [showOptions, setShowOptions] = useState(false);
+  console.log(showOptions);
   return (
     <div className="relative inline-block text-left">
       <div>
         <button
-          onClick={() => {
+          onMouseEnter={() => {
             setShowOptions(!showOptions);
             setValue(3);
           }}
@@ -34,6 +35,13 @@ const DropDown = ({
           aria-orientation="vertical"
           aria-labelledby="menu-button"
           tabindex="0"
+          onMouseEnter={() => {
+            setShowOptions(true);
+            setValue(3);
+          }}
+          onMouseLeave={() => {
+            setShowOptions(false);
+          }}
         >
           <div className="py-1" role="none">
             <Link href="/top-stories">

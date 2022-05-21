@@ -7,8 +7,17 @@ export const IndicatorWrapper = styled.div`
   bottom: 15px;
   width: 98vw;
   justify-content: center;
+  @media (max-width: 1240px) {
+    bottom: -80px;
+  }
   @media (max-width: 768px) {
-    bottom: -130px;
+    bottom: 0px;
+  }
+  @media (max-width: 590px) {
+    bottom: -70px;
+  }
+  @media (max-width: 470px) {
+    bottom: -160px;
   }
 `;
 
@@ -86,5 +95,27 @@ export const Arrow = styled.div`
     height: 20px;
     width: 20px;
     font-size: 10px;
+    @keyframes left {
+      0% {
+        left: 10px;
+      }
+      50% {
+        left: 20px;
+      }
+      100% {
+        left: 10px;
+      }
+    }
+    @keyframes right {
+      0% {
+        right: 10px;
+      }
+      50% {
+        right: 20px;
+      }
+      100% {
+        right: 10px;
+      }
+    }
   }
 `;

@@ -6,7 +6,7 @@ import styles from "./singleLargeVideoViews.module.css";
 const SingleLargeVideoViews = ({ videoUrl, handleClick, autoPlay }) => {
   return (
     <div
-      className={`flex items-center justify-center mt-5 ${styles.single_large_video_views}`}
+      className={`flex items-cente justify-center mt-5 ${styles.single_large_video_views}`}
     >
       <ReactPlayer url={videoUrl} onPlay={handleClick} />
     </div>

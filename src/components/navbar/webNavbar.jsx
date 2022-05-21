@@ -139,14 +139,13 @@ const WebNavbar = () => {
           </Link>
 
           <div
-                  onMouseEnter={() => setShowDropdown(true)}
-                  onMouseLeave={() => setShowDropdown(false)}
+            onMouseEnter={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
             className="bg-gradient-to-r p-[11px] from-[#ccf7ff] to-[#1295bd] -skew-x-12 hidden xl:block relative "
           >
             <input
               className="bg-black px-6 py-[0.55rem] text-white relative"
               type="search"
-      
               name="search"
               placeholder="Search"
               onChange={handleChange}
