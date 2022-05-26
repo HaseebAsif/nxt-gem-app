@@ -54,7 +54,7 @@ const MoreNXTGemStories = ({ allPost, articleSlug, slides }) => {
             {moreStories.mainImage && (
               <a href={`/blog/${moreStories.slug.current}`}>
                 <img
-                  className="block md:h-24 md:h-40 max-w-md sm:w-52 object-cover flex-none bg-cover py-2 px-4"
+                  className="block md:h-24 md:h-40 md:max-w-md sm:w-52 object-cover flex-none bg-cover py-2 px-4"
                   src={imageUrlBuilding(moreStories.mainImage)}
                 />
               </a>

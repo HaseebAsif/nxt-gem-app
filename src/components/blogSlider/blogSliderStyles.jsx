@@ -17,7 +17,10 @@ export const IndicatorWrapper = styled.div`
     bottom: -70px;
   }
   @media (max-width: 470px) {
-    bottom: -160px;
+    bottom: calc(100% - 1250px);
+  }
+  @media (max-width: 376px) {
+    bottom: calc(100% - 1180px);
   }
 `;
 
